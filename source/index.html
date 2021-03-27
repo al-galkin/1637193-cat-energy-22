@@ -1,12 +1,305 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи</title>
-  </head>
-  <body>
+<html class="page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Кэт энерджи</title>
+</head>
+<body class="page__body">
+<header class="page-header">
+  <a class="page-header__icon">
+    <img class="page-header__icon-image" src="img/mobile/logo-mobile.svg" width="34" height="38"
+         alt="Иконка сайта кэт энерджи">
+  </a>
+  <div class="page-header__logo">
+    <img class="page-header__logo-image" src="img/mobile/logo-label-mobile.svg" width="101" height="18"
+         alt="Кэт энерджи">
+  </div>
+  <nav class="main-nav">
+    <button class="main-nav__toggle" type="button">
+    <span class="visually-hidden">
+      Открыть меню
+    </span>
+    </button>
+    <div class="main-nav__wrapper">
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item site-list__item--current">
+          <a href="/">
+            Главная
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a href="catalog.html">
+            Каталог продукции
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a href="form.html">
+            Подбор программы
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
+<main class="page-main">
 
-  </body>
+  <section class="promo">
+    <div class="promo__wrapper">
+      <div class="promo__header">
+        <h1 class="promo__title">
+          Функциональное<br>
+          питание для котов
+        </h1>
+        <p class="promo__slogan">
+          Занялся собой? Займись котом!
+        </p>
+        <p class="button promo__link">
+          <a class="promo__link--item" href="form.html">
+            Подобрать программу
+          </a>
+        </p>
+      </div>
+      <div class="promo__footer">
+        <div class="promo__footer--image">
+          <img src="img/mobile/index-can-mobile-1.png" width="280" height="270" alt="Cat Pro Energy со вкусом курицы">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reasons">
+    <div class="reasons__wrapper">
+      <h2 class="visually-hidden">
+        Причины обратиться к нам
+      </h2>
+      <div class="reasons__weight-loss reasons_item">
+        <div class="reasons__icon">
+          <img src="img/mobile/cat_back_weight-loss.svg" width="36" height="50" alt="Худеющий кот">
+        </div>
+        <h3 class="reasons__title">
+          Похудение
+        </h3>
+        <div class="reasons__description">
+          <p class="reasons__description--text">
+            Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
+            поможет вашему питомцу сбросить лишний вес.
+          </p>
+        </div>
+        <div class="reasons__link">
+          <a class="reasons__link--item" href="catalog.html#slim">
+            каталог slim
+            <span class="reasons__link--image button__arrow">
+              Перейти
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="reasons__weight-gain reasons_item">
+        <div class="reasons__icon">
+          <img src="img/mobile/cat_back_weight-gain.svg" width="67" height="28" alt="Кот, набирающий массу">
+        </div>
+        <h3 class="reasons__title">
+          Набор массы
+        </h3>
+        <div class="reasons__description">
+          <p class="reasons__description--text">
+            Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить
+            необходимые мышцы!
+          </p>
+        </div>
+        <div class="reasons__link">
+          <a class="reasons__link--item" href="catalog.html#pro">
+            каталог pro
+            <span class="reasons__link--image button__arrow">
+              Перейти
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="benefits__wrapper">
+      <h2 class="benefits__title">
+        Как это работает
+      </h2>
+      <ul class="benefits__list">
+        <li class="benefits__item">
+          <div class="benefits__item--icon">
+            <img src="img/mobile/icon_leaf.svg" width="25" height="28" alt="Содержит полезные питательные вещества">
+          </div>
+          <p class="benefits__item--text">
+            Функциональное питание<br>
+            содержит только полезные<br>
+            питательные вещества.
+          </p>
+        </li>
+        <li class="benefits__item">
+          <div class="benefits__item--icon">
+            <img src="img/mobile/icon_tub.svg" width="29" height="31" alt="Выпускается в виде порошка">
+          </div>
+          <p class="benefits__item--text">
+            Выпускается в виде порошка,<br>
+            который нужно лишь залить<br>
+            кипятком и готово.
+          </p>
+        </li>
+        <li class="benefits__item">
+          <div class="benefits__item--icon">
+            <img src="img/mobile/icon_eat.svg" width="25" height="30" alt="Добавьте в меню питомца наше питание">
+          </div>
+          <p class="benefits__item--text">
+            Замените один-два приема<br>
+            обычной еды на наше<br>
+            функциональное питание.
+          </p>
+        </li>
+        <li class="benefits__item">
+          <div class="benefits__item--icon">
+            <img src="img/mobile/icon_leaf.svg" width="25" height="28" alt="Содержит полезные питательные вещества">
+          </div>
+          <p class="benefits__item--text">
+            Уже через месяц наслаждайтесь
+            изменениями к лучшему
+            вашего питомца!
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="case">
+    <div class="case__wrapper">
+      <div class="case_header">
+        <h2 class="case__title">
+          Живой пример
+        </h2>
+      </div>
+      <div class="case__footer">
+
+        <div class="case__footer--top">
+          <div class="case__description">
+            <p class="case__description--text">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат
+              без
+              изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+            </p>
+          </div>
+        </div>
+        <div class="case__footer--middle case__middle">
+          <ul class="case__middle--list case-result">
+            <li class="case-result__item">
+              <b class="case-result__item--title">5 КГ</b>
+              <span class="case-result__item--desc">снижение веса</span>
+            </li>
+            <li class="case-result__item">
+              <b class="case-result__item--title">60 ДНЕЙ</b>
+              <span class="case-result__item--desc">затрачено времени</span>
+            </li>
+          </ul>
+          <div class="case__middle--expenses case-expenses">
+            <p class="case-expenses__title">
+              Затраты на питание:
+            </p>
+            <p class="case-expenses__text">
+              15 000 РУБ.
+            </p>
+          </div>
+        </div>
+        <div class="case__footer--bottom case-before-after">
+          <img src="img/mobile/before-mobile_1.png" alt="Бегунок с демонстрацией до\после">
+          <p class="case-before-after__slider case__slider">
+            <span class="case__slider--text">
+              Было
+            </span>
+            <button class="case__slider--toggle" type="button">
+              Переключатель
+            </button>
+            <span class="case__slider--text">
+              Стало
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="page-footer">
+
+  <section class="contacts">
+    <div class="contacts__wrapper">
+      <h2 class="visually-hidden">
+        Контакты
+      </h2>
+      <div class="contacts__invite">
+        <p class="contacts__invite--title">
+          приглашаем<br>
+          к сотрудничеству<br>
+          дилеров!
+        </p>
+      </div>
+      <div class="contacts__address">
+        <p class="contacts__address--street">
+          ул. Большая<br>
+          Конюшенная, д. 19/8
+        </p>
+        <p class="contacts__address--city">
+          Санкт-Петербург
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="map">
+    <h2 class="visually-hidden">
+      Карта
+    </h2>
+    <img src="img/mobile/location-mobile.png" width="640" height="724"
+         alt="ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+  </section>
+
+  <section class="copyright">
+    <h2 class="visually-hidden">
+      Разработчик и соц.сети
+    </h2>
+    <div class="copyright__wrapper">
+      <div class="copyright__logo">
+        <img src="img/mobile/footer-logo-2.png" width="128" height="24" alt="Логотип CAT ENERGY">
+      </div>
+      <ul class="copyright__social social__list">
+        <li class="social__item">
+          <a class="social__item--link" href="#">
+            Вконтакте
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__item--link" href="#">
+            Instagram
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__item--link" href="#">
+            Facebook
+          </a>
+        </li>
+      </ul>
+      <div class="copyright__developer">
+        <span class="copyright__developer--text">
+          <a class="developer__text--link" href="https://htmlacademy.ru/intensive/adaptive">
+            HTML Academy
+          </a>
+        </span>
+        <span class="developer__logo">
+          <img src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+        </span>
+      </div>
+    </div>
+  </section>
+
+</footer>
+
+</body>
 </html>
