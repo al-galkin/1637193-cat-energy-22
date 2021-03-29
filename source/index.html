@@ -6,12 +6,10 @@
 </head>
 <body class="page__body">
 <header class="page-header">
-  <a class="page-header__icon">
-    <img class="page-header__icon-image" src="img/mobile/logo-mobile.svg" width="34" height="38" alt="Иконка сайта кэт энерджи">
+  <a class="page-header__logo">
+    <img class="page-header__logo--icon" src="img/mobile/logo-mobile.svg" width="34" height="38" alt="Иконка сайта кэт энерджи">
+    <img class="page-header__logo--image" src="img/mobile/logo-label-mobile.svg" width="101" height="18" alt="Кэт энерджи">
   </a>
-  <div class="page-header__logo">
-    <img class="page-header__logo-image" src="img/mobile/logo-label-mobile.svg" width="101" height="18" alt="Кэт энерджи">
-  </div>
   <nav class="main-nav">
     <button class="main-nav__toggle" type="button">
     <span class="visually-hidden">
@@ -19,7 +17,7 @@
     </span>
     </button>
     <div class="main-nav__wrapper">
-      <ul class="main-nav__list site-list">
+      <ul class="main-nav__list site--list">
         <li class="site-list__item site-list__item--current">
           <a href="/">
             Главная
@@ -46,14 +44,15 @@
     <div class="promo__wrapper">
       <div class="promo__header">
         <h1 class="promo__title">
-          Функциональное<br>
+          Функциональное
           питание для котов
         </h1>
         <p class="promo__slogan">
           Занялся собой? Займись котом!
         </p>
         <p class="button promo__link">
-          <a class="promo__link--item" href="form.html">
+          <a class="promo__link--item" href="form.html"
+             aria-label="Переход на страницу подбора программы">
             Подобрать программу
           </a>
         </p>
@@ -85,7 +84,8 @@
           </p>
         </div>
         <div class="reasons__link">
-          <a class="reasons__link--item" href="catalog.html#slim">
+          <a class="reasons__link--item" href="catalog.html#slim"
+             aria-label="Переход на страницу каталога на товары серии Cat Energy Slim">
             каталог slim
             <span class="reasons__link--image button__arrow">
               Перейти
@@ -107,7 +107,8 @@
           </p>
         </div>
         <div class="reasons__link">
-          <a class="reasons__link--item" href="catalog.html#pro">
+          <a class="reasons__link--item" href="catalog.html#pro"
+             aria-label="Переход на страницу каталога на товары серии Cat Energy Pro">
             каталог pro
             <span class="reasons__link--image button__arrow">
               Перейти
@@ -129,8 +130,8 @@
             <img src="img/mobile/icon_leaf.svg" width="25" height="28" alt="Содержит полезные питательные вещества">
           </div>
           <p class="benefits__item--text">
-            Функциональное питание<br>
-            содержит только полезные<br>
+            Функциональное питание
+            содержит только полезные
             питательные вещества.
           </p>
         </li>
@@ -139,8 +140,8 @@
             <img src="img/mobile/icon_tub.svg" width="29" height="31" alt="Выпускается в виде порошка">
           </div>
           <p class="benefits__item--text">
-            Выпускается в виде порошка,<br>
-            который нужно лишь залить<br>
+            Выпускается в виде порошка,
+            который нужно лишь залить
             кипятком и готово.
           </p>
         </li>
@@ -149,8 +150,8 @@
             <img src="img/mobile/icon_eat.svg" width="25" height="30" alt="Добавьте в меню питомца наше питание">
           </div>
           <p class="benefits__item--text">
-            Замените один-два приема<br>
-            обычной еды на наше<br>
+            Замените один-два приема
+            обычной еды на наше
             функциональное питание.
           </p>
         </li>
@@ -234,14 +235,14 @@
       </h2>
       <div class="contacts__invite">
         <p class="contacts__invite--title">
-          приглашаем<br>
-          к сотрудничеству<br>
+          приглашаем
+          к сотрудничеству
           дилеров!
         </p>
       </div>
       <div class="contacts__address">
         <p class="contacts__address--street">
-          ул. Большая<br>
+          ул. Большая
           Конюшенная, д. 19/8
         </p>
         <p class="contacts__address--city">
@@ -268,29 +269,36 @@
       </div>
       <ul class="copyright__social social__list">
         <li class="social__item">
-          <a class="social__item--link" href="#">
+          <a class="social__item--link" href="#"
+             aria-label="Переход на страницу HTML Academy в соц.сети Вконтакте">
             Вконтакте
           </a>
         </li>
         <li class="social__item">
-          <a class="social__item--link" href="#">
+          <a class="social__item--link" href="#"
+             aria-label="Переход на страницу HTML Academy в соц.сети Instagram">
             Instagram
           </a>
         </li>
         <li class="social__item">
-          <a class="social__item--link" href="#">
+          <a class="social__item--link" href="#"
+             aria-label="Переход на страницу HTML Academy в соц.сети Facebook">
             Facebook
           </a>
         </li>
       </ul>
       <div class="copyright__developer">
-        <span class="copyright__developer--text">
-          <a class="developer__text--link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="copyright__developer--text developer__text">
+          <a class="developer__text--link" href="https://htmlacademy.ru/intensive/adaptive"
+             aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
             HTML Academy
           </a>
         </span>
         <span class="developer__logo">
-          <img src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+          <a class="developer__logo--link" href="https://htmlacademy.ru/intensive/adaptive"
+             aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
+            <img src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+          </a>
         </span>
       </div>
     </div>
