@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Кэт энерджи</title>
+</head>
+<body class="page__body">
+<header class="page-header">
+  <a class="page-header__logo">
+    <img class="page-header__logo--icon" src="img/mobile/logo-mobile.svg" width="34" height="38" alt="Иконка сайта кэт энерджи">
+    <img class="page-header__logo--image" src="img/mobile/logo-label-mobile.svg" width="101" height="18" alt="Кэт энерджи">
+  </a>
+  <nav class="main-nav">
+    <button class="main-nav__toggle" type="button">
+    <span class="visually-hidden">
+      Открыть меню
+    </span>
+    </button>
+    <div class="main-nav__wrapper">
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item">
+          <a href="index.html">
+            Главная
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a href="catalog.html">
+            Каталог продукции
+          </a>
+        </li>
+        <li class="site-list__item site-list__item--current">
+          <a href="">
+            Подбор программы
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main class="page-main">
+  <form action="https://echo.htmlacademy.ru" method="post">
+    <section class="form-title">
+      <h1 class="page__title">
+        Подбор программы
+      </h1>
+      <p class="form-title__text">
+        Заполните анкету, и мы подберем
+        программу питания для вашего кота
+      </p>
+      <h2 class="visually-hidden">
+        Заполните контактные данные кота
+      </h2>
+      <ul class="form-title__cat-data cat-data__list">
+        <li class="cat-data__item">
+          <label class="cat-data__name" for="cat-name">ИМЯ:*</label>
+          <input class="cat-data__name--input" type="text" name="cat-name" id="cat-name" placeholder="Барсик" required>
+        </li>
+        <li class="cat-data__item">
+          <label class="cat-data__weight" for="cat-weight">Вес (кг):*</label>
+          <input class="cat-data__weight--input" type="text" name="cat-weight" id="cat-weight" placeholder="7" required>
+        </li>
+        <li class="cat-data__item">
+          <label class="cat-data__age" for="cat-age">Возраст (лет):</label>
+          <input class="cat-data__age--input" type="text" name="cat-age" id="cat-age" placeholder="7">
+        </li>
+      </ul>
+
+      <ul class="form-title__reasons reasons__list">
+        <li class="reasons__item">
+          <input class="cat-data__slim--input" type="radio" name="cat-slim" id="cat-slim">
+          <label class="cat-data__slim" for="cat-slim">похудение</label>
+        </li>
+        <li class="reasons__item">
+          <input class="cat-data__weight-gain--input" type="radio" name="cat-weight-gain" id="cat-weight-gain">
+          <label class="cat-data__weight-gain" for="cat-weight-gain">Набор массы</label>
+        </li>
+        <li class="reasons__item">
+          <input class="cat-data__advise--input" type="radio" name="cat-advise" id="cat-advise">
+          <label class="cat-data__advise" for="cat-advise">Не знаю (Нужен ваш совет)</label>
+        </li>
+      </ul>
+    </section>
+
+    <section class="owner">
+      <h2 class="owner__title">
+        Контактные данные
+        (владельца кота)
+      </h2>
+      <ul class="owner__contact contact__list">
+        <li class="contact__item">
+          <label class="contact__email" for="owner-email">E-mail:*</label>
+          <input class="contact__email--input" type="email" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com" required>
+        </li>
+        <li class="contact__item">
+          <label class="contact__phone" for="owner-phone">Телефон:*</label>
+          <input class="contact__email--input" type="tel" name="owner-phone" id="owner-phone" placeholder="8 (960) 900-60-90" required>
+        </li>
+      </ul>
+    </section>
+
+    <section class="comment">
+      <h2 class="comment__title">
+        Комментарий
+      </h2>
+      <div class="comment__text">
+      <textarea class="comment__text--textarea" name="comment_textarea" id="comment-text" cols="30" rows="5">
+        Расскажите обо всех повАдках кота
+      </textarea>
+      </div>
+    </section>
+
+    <section class="additionally">
+      <h2 class="additionally__title">
+        Дополнительно
+      </h2>
+      <ul class="additionally__list">
+        <li class="additionally__item">
+          <input class="additionally__item--input" type="checkbox" name="additionally-sugar" id="additionally-sugar">
+          <label class="additionally__item--label" for="additionally-sugar">сахарозаменитель</label>
+        </li>
+        <li class="additionally__item">
+          <input class="additionally__item--input" type="checkbox" name="additionally-water" id="additionally-water">
+          <label class="additionally__item--label" for="additionally-water">питьевая вода</label>
+        </li>
+        <li class="additionally__item">
+          <input class="additionally__item--input" type="checkbox" name="additionally-milk" id="additionally-milk">
+          <label class="additionally__item--label" for="additionally-milk">молоко</label>
+        </li>
+        <li class="additionally__item">
+          <input class="additionally__item--input" type="checkbox" name="additionally-vitamins" id="additionally-vitamins">
+          <label class="additionally__item--label" for="additionally-vitamins">витамины</label>
+        </li>
+      </ul>
+    </section>
+    <section class="add-form">
+      <h2 class="visually-hidden">
+        Отправить заполненную заявку
+      </h2>
+      <input type="submit" name="add-form__button" id="add-form__button" value="Отправить заявку">
+      <p class="add-form__description">
+        * — Обязательные поля
+      </p>
+    </section>
+  </form>
+</main>
+
+<footer class="page-footer">
+
+  <section class="contacts">
+    <div class="contacts__wrapper">
+      <h2 class="visually-hidden">
+        Контакты
+      </h2>
+      <div class="contacts__invite">
+        <p class="contacts__invite--title">
+          приглашаем
+          к сотрудничеству
+          дилеров!
+        </p>
+      </div>
+      <div class="contacts__address">
+        <p class="contacts__address--street">
+          ул. Большая
+          Конюшенная, д. 19/8
+        </p>
+        <p class="contacts__address--city">
+          Санкт-Петербург
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="map">
+    <h2 class="visually-hidden">
+      Карта
+    </h2>
+    <img src="img/mobile/location-mobile.png" width="640" height="724" alt="ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+  </section>
+
+  <section class="copyright">
+    <h2 class="visually-hidden">
+      Разработчик и соц.сети
+    </h2>
+    <div class="copyright__wrapper">
+      <div class="copyright__logo">
+        <img src="img/mobile/footer-logo-2.png" width="128" height="24" alt="Логотип CAT ENERGY">
+      </div>
+      <ul class="copyright__social social__list">
+        <li class="social__item">
+          <a class="social__item--link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Вконтакте">
+            Вконтакте
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__item--link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Instagram">
+            Instagram
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__item--link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Facebook">
+            Facebook
+          </a>
+        </li>
+      </ul>
+      <div class="copyright__developer">
+        <span class="copyright__developer--text developer__text">
+          <a class="developer__text--link" href="https://htmlacademy.ru/intensive/adaptive"
+              aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
+            HTML Academy
+          </a>
+        </span>
+        <span class="developer__logo">
+          <a class="developer__logo--link" href="https://htmlacademy.ru/intensive/adaptive"
+              aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
+            <img src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+          </a>
+        </span>
+      </div>
+    </div>
+  </section>
+
+</footer>
+
+</body>
+</html>
