@@ -7,29 +7,31 @@
 <body class="page__body">
 <header class="page-header">
   <a class="page-header__logo">
-    <img class="page-header__logo--icon" src="img/mobile/logo-mobile.svg" width="34" height="38" alt="Иконка сайта кэт энерджи">
-    <img class="page-header__logo--image" src="img/mobile/logo-label-mobile.svg" width="101" height="18" alt="Кэт энерджи">
+    <img class="page-header__icon" src="img/mobile/logo-mobile.svg" width="34" height="38"
+      alt="Иконка сайта кэт энерджи">
+    <img class="page-header__image" src="img/mobile/logo-label-mobile.svg" width="101" height="18"
+      alt="Кэт энерджи">
   </a>
   <nav class="main-nav">
-    <button class="main-nav__toggle" type="button">
-    <span class="visually-hidden">
-      Открыть меню
-    </span>
+    <button class="main-nav__toggle" type="button" name="open-menu" id="open-menu">
+      <label for="open-menu" class="visually-hidden">
+        Открыть меню
+      </label>
     </button>
     <div class="main-nav__wrapper">
-      <ul class="main-nav__list site--list">
+      <ul class="main-nav__list site-list">
         <li class="site-list__item site-list__item--current">
-          <a href="/">
+          <a href="" aria-label="Переход на главную страницу 'Кэт энерджи'">
             Главная
           </a>
         </li>
         <li class="site-list__item">
-          <a href="catalog.html">
+          <a href="catalog.html" aria-label="Переход на страницу каталога 'Кэт энерджи'">
             Каталог продукции
           </a>
         </li>
         <li class="site-list__item">
-          <a href="form.html">
+          <a href="form.html" aria-label="Переход на страницу подбора программы 'Кэт энерджи'">
             Подбор программы
           </a>
         </li>
@@ -51,14 +53,14 @@
           Занялся собой? Займись котом!
         </p>
         <p class="button promo__link">
-          <a class="promo__link--item" href="form.html"
-             aria-label="Переход на страницу подбора программы">
+          <a class="promo__link-item" href="form.html"
+            aria-label="Переход на страницу подбора программы">
             Подобрать программу
           </a>
         </p>
       </div>
       <div class="promo__footer">
-        <div class="promo__footer--image">
+        <div class="promo__image">
           <img src="img/mobile/index-can-mobile-1.png" width="280" height="270" alt="Cat Pro Energy со вкусом курицы">
         </div>
       </div>
@@ -70,7 +72,7 @@
       <h2 class="visually-hidden">
         Причины обратиться к нам
       </h2>
-      <div class="reasons__weight-loss reasons_item">
+      <div class="reasons__weight-loss reasons__item">
         <div class="reasons__icon">
           <img src="img/mobile/cat_back_weight-loss.svg" width="36" height="50" alt="Худеющий кот">
         </div>
@@ -78,22 +80,22 @@
           Похудение
         </h3>
         <div class="reasons__description">
-          <p class="reasons__description--text">
+          <p class="reasons__text">
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
             поможет вашему питомцу сбросить лишний вес.
           </p>
         </div>
         <div class="reasons__link">
-          <a class="reasons__link--item" href="catalog.html#slim"
-             aria-label="Переход на страницу каталога на товары серии Cat Energy Slim">
+          <a class="reasons__link-item" href="catalog.html#slim"
+            aria-label="Переход на страницу каталога на товары серии Cat Energy Slim">
             каталог slim
-            <span class="reasons__link--image button__arrow">
+            <span class="reasons__link-image">
               Перейти
             </span>
           </a>
         </div>
       </div>
-      <div class="reasons__weight-gain reasons_item">
+      <div class="reasons__weight-gain reasons__item">
         <div class="reasons__icon">
           <img src="img/mobile/cat_back_weight-gain.svg" width="67" height="28" alt="Кот, набирающий массу">
         </div>
@@ -101,16 +103,16 @@
           Набор массы
         </h3>
         <div class="reasons__description">
-          <p class="reasons__description--text">
+          <p class="reasons__text">
             Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить
             необходимые мышцы!
           </p>
         </div>
         <div class="reasons__link">
-          <a class="reasons__link--item" href="catalog.html#pro"
-             aria-label="Переход на страницу каталога на товары серии Cat Energy Pro">
+          <a class="reasons__link-item" href="catalog.html#pro"
+            aria-label="Переход на страницу каталога на товары серии Cat Energy Pro">
             каталог pro
-            <span class="reasons__link--image button__arrow">
+            <span class="reasons__link-image">
               Перейти
             </span>
           </a>
@@ -126,40 +128,40 @@
       </h2>
       <ul class="benefits__list">
         <li class="benefits__item">
-          <div class="benefits__item--icon">
+          <div class="benefits__icon">
             <img src="img/mobile/icon_leaf.svg" width="25" height="28" alt="Содержит полезные питательные вещества">
           </div>
-          <p class="benefits__item--text">
+          <p class="benefits__text">
             Функциональное питание
             содержит только полезные
             питательные вещества.
           </p>
         </li>
         <li class="benefits__item">
-          <div class="benefits__item--icon">
+          <div class="benefits__icon">
             <img src="img/mobile/icon_tub.svg" width="29" height="31" alt="Выпускается в виде порошка">
           </div>
-          <p class="benefits__item--text">
+          <p class="benefits__text">
             Выпускается в виде порошка,
             который нужно лишь залить
             кипятком и готово.
           </p>
         </li>
         <li class="benefits__item">
-          <div class="benefits__item--icon">
+          <div class="benefits__icon">
             <img src="img/mobile/icon_eat.svg" width="25" height="30" alt="Добавьте в меню питомца наше питание">
           </div>
-          <p class="benefits__item--text">
+          <p class="benefits__text">
             Замените один-два приема
             обычной еды на наше
             функциональное питание.
           </p>
         </li>
         <li class="benefits__item">
-          <div class="benefits__item--icon">
+          <div class="benefits__icon">
             <img src="img/mobile/icon_leaf.svg" width="25" height="28" alt="Содержит полезные питательные вещества">
           </div>
-          <p class="benefits__item--text">
+          <p class="benefits__text">
             Уже через месяц наслаждайтесь
             изменениями к лучшему
             вашего питомца!
@@ -171,52 +173,51 @@
 
   <section class="case">
     <div class="case__wrapper">
-      <div class="case_header">
+      <div class="case__header">
         <h2 class="case__title">
           Живой пример
         </h2>
       </div>
       <div class="case__footer">
 
-        <div class="case__footer--top">
+        <div class="case__footer-top">
           <div class="case__description">
-            <p class="case__description--text">
+            <p class="case__text">
               Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат
               без
               изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
             </p>
           </div>
         </div>
-        <div class="case__footer--middle case__middle">
-          <ul class="case__middle--list case-result">
+        <div class="case__footer-middle middle">
+          <ul class="middle__list case-result">
             <li class="case-result__item">
-              <b class="case-result__item--title">5 КГ</b>
-              <span class="case-result__item--desc">снижение веса</span>
+              <h3 class="case-result__title">5 КГ</h3>
+              <span class="case-result__desc">снижение веса</span>
             </li>
             <li class="case-result__item">
-              <b class="case-result__item--title">60 ДНЕЙ</b>
-              <span class="case-result__item--desc">затрачено времени</span>
+              <h3 class="case-result__title">60 ДНЕЙ</h3>
+              <span class="case-result__desc">затрачено времени</span>
             </li>
           </ul>
-          <div class="case__middle--expenses case-expenses">
-            <p class="case-expenses__title">
+          <div class="middle__expenses case-expenses">
+            <h3 class="case-expenses__title">
               Затраты на питание:
-            </p>
+            </h3>
             <p class="case-expenses__text">
               15 000 РУБ.
             </p>
           </div>
         </div>
-        <div class="case__footer--bottom case-before-after">
+        <div class="case__footer-bottom before-after">
           <img src="img/mobile/before-mobile_1.png" alt="Бегунок с демонстрацией до\после">
-          <p class="case-before-after__slider case__slider">
-            <span class="case__slider--text">
+          <p class="before-after__slider range">
+            <span class="range__text">
               Было
             </span>
-            <button class="case__slider--toggle" type="button">
-              Переключатель
-            </button>
-            <span class="case__slider--text">
+            <input class="range__slider" type="range" name="case__range" id="case__range">
+            <label class="visually-hidden" for="case__range">Ползунок-переключатель состояния кота</label>
+            <span class="range__text">
               Стало
             </span>
           </p>
@@ -234,21 +235,21 @@
         Контакты
       </h2>
       <div class="contacts__invite">
-        <p class="contacts__invite--title">
+        <h3 class="contacts__title">
           приглашаем
           к сотрудничеству
           дилеров!
-        </p>
+        </h3>
       </div>
-      <div class="contacts__address">
-        <p class="contacts__address--street">
+      <address class="contacts__address">
+        <p class="contacts__street">
           ул. Большая
           Конюшенная, д. 19/8
         </p>
-        <p class="contacts__address--city">
+        <p class="contacts__city">
           Санкт-Петербург
         </p>
-      </div>
+      </address>
     </div>
   </section>
 
@@ -256,7 +257,8 @@
     <h2 class="visually-hidden">
       Карта
     </h2>
-    <img src="img/mobile/location-mobile.png" width="640" height="724" alt="ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+    <img src="img/mobile/location-mobile.png" width="640" height="724"
+      alt="ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
   </section>
 
   <section class="copyright">
@@ -267,36 +269,33 @@
       <div class="copyright__logo">
         <img src="img/mobile/footer-logo-2.png" width="128" height="24" alt="Логотип CAT ENERGY">
       </div>
-      <ul class="copyright__social social__list">
+      <ul class="copyright__social social">
         <li class="social__item">
-          <a class="social__item--link" href="#"
-             aria-label="Переход на страницу HTML Academy в соц.сети Вконтакте">
+          <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Вконтакте">
             Вконтакте
           </a>
         </li>
         <li class="social__item">
-          <a class="social__item--link" href="#"
-             aria-label="Переход на страницу HTML Academy в соц.сети Instagram">
+          <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Instagram">
             Instagram
           </a>
         </li>
         <li class="social__item">
-          <a class="social__item--link" href="#"
-             aria-label="Переход на страницу HTML Academy в соц.сети Facebook">
+          <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Facebook">
             Facebook
           </a>
         </li>
       </ul>
-      <div class="copyright__developer">
-        <span class="copyright__developer--text developer__text">
-          <a class="developer__text--link" href="https://htmlacademy.ru/intensive/adaptive"
-             aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
+      <div class="copyright__developer developer">
+        <span class="developer__text">
+          <a class="developer__text-link" href="https://htmlacademy.ru/intensive/adaptive"
+            aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
             HTML Academy
           </a>
         </span>
         <span class="developer__logo">
-          <a class="developer__logo--link" href="https://htmlacademy.ru/intensive/adaptive"
-             aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
+          <a class="developer__logo-link" href="https://htmlacademy.ru/intensive/adaptive"
+            aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
             <img src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
           </a>
         </span>
