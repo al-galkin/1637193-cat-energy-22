@@ -73,16 +73,25 @@
 
         <ul class="questionary__reasons reasons">
           <li class="reasons__item">
-            <input class="reasons__slim-input" type="radio" name="cat-slim" id="cat-slim">
-            <label class="reasons__slim" for="cat-slim">похудение</label>
+            <label class="reasons__label reasons__weight-gain">
+                <input class="reasons__input visually-hidden" type="radio" name="reason" value="slim">
+                <span class="reasons__radio"></span>
+                похудение
+            </label>
           </li>
           <li class="reasons__item">
-            <input class="reasons__weight-gain-input" type="radio" name="cat-weight-gain" id="cat-weight-gain">
-            <label class="reasons__weight-gain" for="cat-weight-gain">Набор массы</label>
+            <label class="reasons__label reasons__weight-gain">
+                <input class="reasons__input visually-hidden" type="radio" name="reason" value="weight-gain">
+                <span class="reasons__radio"></span>
+                Набор массы
+            </label>
           </li>
           <li class="reasons__item">
-            <input class="reasons__advise-input" type="radio" name="cat-advise" id="cat-advise">
-            <label class="reasons__advise" for="cat-advise">Не знаю (Нужен ваш совет)</label>
+            <label class="reasons__label reasons__advice">
+                <input class="reasons__input visually-hidden" type="radio" name="reason" value="advice">
+                <span class="reasons__radio"></span>
+                Не знаю (Нужен ваш совет)
+            </label>
           </li>
         </ul>
       </fieldset>
