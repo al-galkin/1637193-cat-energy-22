@@ -13,10 +13,8 @@
       alt="Кэт энерджи">
   </a>
   <nav class="main-nav">
-    <button class="main-nav__toggle" type="button" name="open-menu" id="open-menu">
-      <label for="open-menu" class="visually-hidden">
-        Открыть меню
-      </label>
+    <button class="main-nav__button" type="button" aria-label="Открыть меню">
+      <span class="main-nav__toggle"></span>
     </button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list site-list">
@@ -248,44 +246,40 @@
     <h2 class="visually-hidden">
       Разработчик и соц.сети
     </h2>
-
-    <section class="page-footer__copyright copyright">
-      <div class="copyright__logo">
-        <img src="img/mobile/footer-logo-2.png" width="128" height="24" alt="Логотип CAT ENERGY">
-      </div>
-    </section>
-    <ul class="page-footer__social social">
-      <li class="social__item">
-        <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Вконтакте">
-          Вконтакте
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Instagram">
-          Instagram
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Facebook">
-          Facebook
-        </a>
-      </li>
-    </ul>
-    <section class="page-footer__developer developer">
-        <span class="developer__text">
-          <a class="developer__text-link" href="https://htmlacademy.ru/intensive/adaptive"
-            aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
-            HTML Academy
+    <div class="page-footer__copyright copyright">
+      <a class="copyright__logo" href="index.html">
+        <img class="copyright__image" src="img/mobile/footer-logo-2.png" width="128" height="24" alt="Логотип CAT ENERGY">
+      </a>
+    </div>
+    <section>
+      <h3 class="visually-hidden">
+        Социальные сети
+      </h3>
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Вконтакте">
+            Вконтакте
           </a>
-        </span>
-      <span class="developer__logo">
-          <a class="developer__logo-link" href="https://htmlacademy.ru/intensive/adaptive"
-            aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
-            <img src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Instagram">
+            Instagram
           </a>
-        </span>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Facebook">
+            Facebook
+          </a>
+        </li>
+      </ul>
     </section>
-
+    <div class="page-footer__developer developer">
+      <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive"
+        aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
+        <p class="developer__text">HTML Academy</p>
+        <img class="developer__logo" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+      </a>
+    </div>
   </div>
 </footer>
 
