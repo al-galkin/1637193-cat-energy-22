@@ -1,0 +1,12 @@
+.gift {
+  background-image: url("../../img/htmlacademy.svg");
+  width: 280px;
+  height: 289px;
+}
+
+.gift__text {
+  font-family: $font_family_second;
+  font-size: $font_size_medium_mobile;
+  line-height: $line_height_medium_mobile;
+  color: $color_basic-white;
+}

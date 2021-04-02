@@ -1,0 +1,32 @@
+.promo {
+  color: $color_basic-white;
+}
+
+.promo__container {
+  width: 320px;
+  height: 302px;
+  background-image: url("../../img/htmlacademy.svg"); //todo сменить заглушку
+  background-color: rgba(104, 183, 56, 0.85);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.promo__title {
+  font-weight: 400;
+  font-size: $font_size_title_mobile;
+  line-height: $line_height_title_mobile;
+}
+
+.promo__text {
+  font-size: $font_size_base_mobile;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.promo__link,
+.promo__link-item {
+  font-size: $font_size_base_mobile;
+  line-height: $line_height_base_mobile;
+  text-decoration: none;
+}

@@ -1,0 +1,26 @@
+.details__text {
+  font-family: $font_family_second;
+  font-size: $font_size_base_mobile;
+  line-height: $line_height_base_mobile;
+  color: $color_text-dark-grey;
+}
+
+.details__title {
+  font-size: $font_size_title-h3_mobile;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.details__desc {
+  font-family: $font_family_second;
+  font-size: $font_size_small_mobile;
+  line-height: $line_height_small_mobile;
+  color: $color_text-dark-grey;
+  text-transform: lowercase;
+}
+
+.details__expenses {
+  text-transform: uppercase;
+  font-size: $font_size_base_mobile;
+  line-height: $line_height_medium_mobile;
+}

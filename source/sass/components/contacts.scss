@@ -1,0 +1,13 @@
+.contacts__title {
+  font-size: $font_size_medium_mobile;
+  line-height: $line_height_base_mobile;
+  text-transform: uppercase;
+  color: $color_special-black;
+}
+
+.contacts__address {
+  font-family: $font_family_second;
+  font-size: $font_size_base_mobile;
+  line-height: $line_height_medium_mobile;
+  color: $color_text-dark-grey;
+}
