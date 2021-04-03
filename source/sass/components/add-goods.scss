@@ -1,0 +1,20 @@
+.add-goods__title {
+  font-size: $font_size_title-h3_mobile;
+  line-height: 24px;
+}
+
+.add-goods__caption {
+  font-size: $font_size_medium_mobile;
+  line-height: 16px;
+  color: $color_title_dark-grey;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.add-goods__quantity,
+.add-goods__value {
+  font-family: $font_family_second;
+  font-size: $font_size_base_mobile;
+  line-height: 14px;
+  color: $color_text-dark-grey;
+}

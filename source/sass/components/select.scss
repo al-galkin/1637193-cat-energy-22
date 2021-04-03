@@ -1,0 +1,14 @@
+.select__radio,
+.select__checkbox {
+  font-size: $font_size_medium_mobile;
+  line-height: $line_height_base_mobile;
+  text-transform: uppercase;
+}
+
+.select__radio {
+  color: $color_title_dark-grey;
+}
+
+.select__checkbox {
+  color: $color_special-black;
+}
