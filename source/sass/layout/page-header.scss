@@ -1,1 +1,17 @@
-//
+.page-header {
+  padding-top: 11px;
+  padding-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 63px;
+    padding-top: 24px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 73px;
+    padding-top: 53px;
+  }
+}

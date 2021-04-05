@@ -1,5 +1,46 @@
+.range {
+  @media (min-width: $tablet-width) {
+    min-height: 462px;
+  }
+
+  @media (min-width: $desktop-width) {
+    //display: flex;
+    align-items: center;
+  }
+}
+
+//todo вопрос: тут тоже что-то перемудрил, съехал текст "было стало". Пока закомментировал все сетки flex\grid
+
 .range__text {
   font-size: $font_size_medium_mobile;
   line-height: $line_height_medium_mobile;
   text-transform: uppercase;
+
+  width: 230px;
+  //display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    justify-self: center;
+    grid-column: span 2;
+    width: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 460px;
+    z-index: 1;
+  }
+}
+
+.range__slider {
+  @media (min-width: $tablet-width) {
+    //display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-rows: 1fr;
+    grid-template-columns: 325px 325px;
+  }
 }

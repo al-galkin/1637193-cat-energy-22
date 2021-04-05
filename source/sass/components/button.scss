@@ -2,7 +2,7 @@
   display: inline-block;
   padding: 0 50px;
 
-  font-family: $font, $font_family_second;
+  font-family: $font, $font_family_reserve;
   font-size: $font_size_medium_mobile;
   font-weight: normal;
   text-decoration: none;
@@ -18,5 +18,9 @@
   &:hover,
   &:focus {
     background-color: $color_hover_green;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 }

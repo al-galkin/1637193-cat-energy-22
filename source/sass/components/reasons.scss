@@ -1,5 +1,39 @@
+.reasons {
+  padding-top: 22px;
+  padding-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 44px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px 80px;
+    margin-bottom: 71px;
+  }
+}
+
 .reasons__item {
   background-color: $color_basic_grey;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: none;
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .reasons__title {

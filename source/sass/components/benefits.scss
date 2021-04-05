@@ -4,3 +4,19 @@
   line-height: $line_height_base_mobile;
   color: $color_text-dark-grey;
 }
+
+.benefits__list {
+  @include reset_list;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 95px;
+  }
+}

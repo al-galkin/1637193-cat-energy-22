@@ -1,3 +1,8 @@
+.page,
+.page__body {
+  box-sizing: border-box;
+}
+
 .page {
   height: 100%;
 }
@@ -6,7 +11,7 @@
   margin: 0;
   padding: 0;
   font-weight: 400;
-  font-family: $font, $font_family_second;
+  font-family: $font, $font_family_reserve;
   background-color: $color_basic-white;
   min-height: 100%;
 }

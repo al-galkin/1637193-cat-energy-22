@@ -4,4 +4,26 @@
   line-height: $line_height_base_mobile;
   color: $color_text-dark-grey;
   text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.developer__text {
+  font-family: $font_second;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 0;
+  font-size: $font_size_medium_mobile;
+  line-height: $line_height_base_mobile;
+  color: $color_text-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 22px;
+    margin-bottom: 0;
+  }
 }

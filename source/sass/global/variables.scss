@@ -15,17 +15,26 @@ $color_basic-white: #ffffff;
 $color_basic-black: #000000;
 $color_special-black: #111111;
 
+// Viewports
+
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+$desktop-content-width: 1260px;
+
 // font
 $font: "Oswald";
 $font_family: "Oswald", sans-serif;
 $font_second: "Arial";
 $font_family_second: "Arial", sans-serif;
+$font-reserve: "Tahoma";
+$font_family_reserve: "Tahoma", sans-serif;
 
 // font properties - general
 $font_weight_base: normal;
 $font_style_base: normal;
 
-// font properties - mobile //todo вопрос: оставить или убрать?
+// font properties - mobile
 $font_size_base_mobile: 14px;
 $font_size_small_mobile: 12px;
 $font_size_medium_mobile: 16px;
@@ -36,3 +45,15 @@ $line_height_small_mobile: 12px;
 $line_height_medium_mobile: 20px;
 $line_height_title_mobile: 36px;
 $line_height_title-h3_mobile: 37px;
+
+// font properties - tablet //todo заполнить заглушки шрифтов
+$font_size_base_tablet: 20px;
+// $font_size_small_tablet: 0px;
+// $font_size_medium_tablet: 0px;
+$font_size_title_tablet: 60px;
+// $font_size_title-h3_tablet: 0px;
+$line_height_base_tablet: 20px;
+// $line_height_small_tablet: 0px;
+// $line_height_medium_tablet: 0px;
+$line_height_title_tablet: 60px;
+// $line_height_title-h3_tablet: 0px;
