@@ -7,6 +7,14 @@
 }
 
 .contacts__wrapper {
+  &--noindex {
+    background: $color_basic_grey;
+
+    @media (min-width: $desktop-width) {
+      background: $color_basic-white;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     padding-bottom: 60px;
     padding-top: 60px;

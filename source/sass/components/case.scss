@@ -2,17 +2,18 @@
   //position: relative;
   padding-top: 27px;
   padding-bottom: 25px;
+  background: $color_background-grey;
 
   //todo вопрос: посмотри пожалуйста этот блок. Не разобрался, как сделать, чтоб смотрелось нормально. Сейчас заливает полностью экран вместо подложки
-  //&::before {
-  //  position: absolute;
-  //  content: "";
-  //  background: $color_basic_grey;
-  //  width: 100%;
-  //  left: 0;
-  //  right: 0;
-  //  height: 100%;
-  //}
+  &::before {
+    position: absolute;
+    content: "";
+    background: $color_basic_grey;
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 100%;
+  }
 
   @media (min-width: $tablet-width) {
     background: $color_basic-white;

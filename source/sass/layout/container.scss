@@ -1,5 +1,7 @@
 .container {
   padding: 0 20px;
+  outline: 5px solid rgba(239, 187, 29, 0.7);
+  outline-offset: -5px;
 
   @media (min-width: $tablet-width) {
     margin: 0 auto;

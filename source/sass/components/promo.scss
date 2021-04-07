@@ -3,7 +3,7 @@
   position: relative;
   padding-top: 27px;
   margin-bottom: 22px;
-  background-image: url("../img/htmlacademy.svg"); //todo сменить заглушку
+  //background-image: url("../img/htmlacademy.svg"); //todo сменить заглушку
   background-repeat: no-repeat;
   min-height: 302px;
 
@@ -25,10 +25,19 @@
 .promo__wrapper {
   position: relative;
   z-index: 1;
+  outline: 5px solid rgba(239, 29, 78, 0.7);
+  outline-offset: -5px;
 
   @media (min-width: $tablet-width) {
     background-image: none;
     background-color: inherit;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-content-width;
+    padding: 0 20px;
   }
 }
 
@@ -83,18 +92,18 @@
       left: 29px;
       top: 341px;
 
-      background: url("../img/htmlacademy.svg"); //todo сменить заглушку
+      //background: url("../img/htmlacademy.svg"); //todo сменить заглушку
     }
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-content-width) {
     position: absolute;
     width: 720px;
     height: 694px;
     left: 720px;
     top: 0;
-    background-image: url("../img/htmlacademy.svg"); //todo сменить заглушку
-    background-color: rgba(104, 183, 56, 0.85);
+    //background-image: url("../img/htmlacademy.svg"); //todo сменить заглушку
+    //background-color: rgba(104, 183, 56, 0.85);
 
     &::before {
       position: absolute;

@@ -1,5 +1,10 @@
-.map {
-  position: relative;
+//.map {
+//  position: relative;
+//  width: 100%;
+//}
+
+.map__iframe {
+  height: 362px;
   width: 100%;
 
   @media (min-width: $tablet-width) {
