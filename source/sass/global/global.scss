@@ -1,3 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+//убрать обводки сеток
+body > * {
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+
+body > * > * {
+  outline: 2px solid green;
+  outline-offset: -2px;
+}
+
+body > * > * > * {
+  outline: 2px solid blue;
+  outline-offset: -2px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

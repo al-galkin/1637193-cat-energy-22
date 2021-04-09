@@ -8,13 +8,15 @@
     padding-bottom: 0;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-content-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px 80px;
     margin-bottom: 71px;
+    min-height: 374px;
   }
 }
+
 
 .reasons__item {
   background-color: $color_basic_grey;
@@ -26,7 +28,7 @@
     margin-bottom: 30px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-content-width) {
     max-width: none;
     margin-bottom: 0;
   }
@@ -37,24 +39,38 @@
 }
 
 .reasons__title {
-  font-size: $font_size_title-h3_mobile;
-  line-height: $line_height_title-h3_mobile;
+  font-size: $font_size_title_small;
+  line-height: $line_height_title;
   color: $color_special-black;
   text-transform: uppercase;
   font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font_size_title;
+  }
 }
 
 .reasons__text {
-  font-family: $font_family_second;
-  font-size: $font_size_base_mobile;
-  line-height: $line_height_base_mobile;
+  font-family: $font_second, $font_family_reserve;
+  font-size: $font_size_base;
+  line-height: $line_height_base;
   color: $color_text-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font_size_medium;
+    line-height: $line_height_title_small;
+  }
 }
 
 .reasons__link-item {
-  font-size: $font_size_medium_mobile;
-  line-height: 16px;
+  font-size: $font_size_medium;
+  line-height: $line_height_middle;
   text-decoration: none;
   color: $color_basic-black;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font_size_middle;
+    line-height: 30px;
+  }
 }

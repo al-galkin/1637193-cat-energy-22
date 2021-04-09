@@ -10,8 +10,40 @@
     padding-bottom: 0;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-content-width) {
     margin-bottom: 73px;
     padding-top: 53px;
+  }
+}
+
+.page-header__container { //todo: вопрос по размещению блоков в хедере, не встает мобильная верстка. Подключать флекс только с таблета? https://skr.sh/s7U21aimMUw
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    padding-top: 50px;
+  }
+}
+
+.page-header__logo {
+  flex-grow: 3;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }

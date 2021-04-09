@@ -34,26 +34,21 @@ $font_family_reserve: "Tahoma", sans-serif;
 $font_weight_base: normal;
 $font_style_base: normal;
 
-// font properties - mobile
-$font_size_base_mobile: 14px;
-$font_size_small_mobile: 12px;
-$font_size_medium_mobile: 16px;
-$font_size_title_mobile: 36px;
-$font_size_title-h3_mobile: 24px;
-$line_height_base_mobile: 18px;
-$line_height_small_mobile: 12px;
-$line_height_medium_mobile: 20px;
-$line_height_title_mobile: 36px;
-$line_height_title-h3_mobile: 37px;
+//font size
 
-// font properties - tablet //todo заполнить заглушки шрифтов
-$font_size_base_tablet: 20px;
-// $font_size_small_tablet: 0px;
-// $font_size_medium_tablet: 0px;
-$font_size_title_tablet: 60px;
-// $font_size_title-h3_tablet: 0px;
-$line_height_base_tablet: 20px;
-// $line_height_small_tablet: 0px;
-// $line_height_medium_tablet: 0px;
-$line_height_title_tablet: 60px;
-// $line_height_title-h3_tablet: 0px;
+$font_size_small: 12px;
+$font_size_base: 14px;
+$font_size_medium: 16px;
+$font_size_middle: 20px;
+$font_size_title_small: 24px;
+$font_size_title: 36px;
+$font_size_title_big: 60px;
+
+$line_height_small: 12px;
+$line_height_middle: 16px;
+$line_height_base: 18px;
+$line_height_medium: 20px;
+$line_height_title_small: 24px;
+$line_height_title: 36px;
+$line_height_title_middle: 40px;
+$line_height_title_big: 60px;

@@ -3,13 +3,30 @@
   position: relative;
   padding-top: 27px;
   margin-bottom: 22px;
-  //background-image: url("../img/htmlacademy.svg"); //todo сменить заглушку
-  background-repeat: no-repeat;
+  background: url("../img/mobile/index-can-mobile-1.png") 50% 72% no-repeat, url("../img/htmlacademy.svg") 50% 0 no-repeat, linear-gradient(to right, $color_basic-white 100%, $color_basic_green 50%); //todo сменить заглушку
+
   min-height: 302px;
+  z-index: -1;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    background: url("../img/mobile/index-can-mobile-1.png") 48% 100% no-repeat;
+    background-size: 709px 609px;
+    padding-top: 54px;
+    padding-bottom: 532px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    margin-top: -110px;
+    margin-bottom: 82px;
+    background: url("../img/mobile/index-can-mobile-1.png") 560px 140px no-repeat, url("../img/htmlacademy.svg") 100% 0 no-repeat, linear-gradient(to right, $color_basic-white 100%, $color_basic_green 50%) no-repeat;
+    height: 720px;
+  }
+
+  //todo: вопрос нужна помощь по блоку. Отображается крайне криво :(  https://skr.sh/s7Uryf6MGZA банка уходит на задний план - будто перемудрил с градиентом. И не покащывается зеленый фон на пк
 
   &::before {
-    content: "";
-    position: absolute;
+    @include reset_pseudo-element-style();
     top: 0;
     left: 0;
     width: 100%;
@@ -18,6 +35,17 @@
 
     @media (min-width: $tablet-width) {
       background: none;
+    }
+  }
+
+  &::after {
+    @media (min-width: $desktop-width) {
+      @include reset_pseudo-element-style();
+      top: 0;
+      left: 0;
+      width: 50vw;
+      //background-position: right; вопрос: надо ли?
+      background-color: $color_hover_green;
     }
   }
 }
@@ -33,11 +61,14 @@
     background-color: inherit;
     margin: 0 auto;
     padding: 0 30px;
+    display: grid;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-content-width) {
     width: $desktop-content-width;
     padding: 0 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr;
   }
 }
 
@@ -45,73 +76,53 @@
   margin-bottom: 25px;
   text-align: center;
   font-weight: 400;
-  font-size: $font_size_title_mobile;
-  line-height: $line_height_title_mobile;
+  font-size: $font_size_title;
+  line-height: $line_height_title;
+  color: $color_basic-white;
 
   @media (min-width: $tablet-width) {
     color: $color_basic-black;
-    font-size: $font_size_title_tablet;
-    line-height: $line_height_title_tablet;
+    font-size: $font_size_title_big;
+    line-height: $line_height_title_big;
+    margin-bottom: 41px;
+    text-align: left;
+    justify-self: left;
+    order: 1;
+    max-width: 414px;
   }
 }
 
 .promo__slogan {
   margin-bottom: 30px;
-  font-size: $font_size_base_mobile;
+  font-size: $font_size_base;
   line-height: 14px;
   text-transform: uppercase;
   text-align: center;
+  color: $color_basic-white;
 
   @media (min-width: $tablet-width) {
     color: $color_basic-black;
-    font-size: $font_size_base_tablet;
-    line-height: $line_height_base_tablet;
-  }
-}
-
-.promo__link,
-.promo__link-item {
-  font-size: $font_size_base_mobile;
-  line-height: $line_height_base_mobile;
-  text-decoration: none;
-
-  @media (min-width: $tablet-width) {
-    font-size: $font_size_base_tablet;
-    line-height: $line_height_base_tablet;
-  }
-}
-
-//todo вопрос: не разобрался, как нормально показать изображение и блок https://skr.sh/s7QdR4ADZ7M нужна подсказка\помощь, сейчас такое ощущение, что часть правил дублирует\замещает друг друга
-
-.promo__image {
-  @media (min-width: $tablet-width) {
-    &::before {
-      position: absolute;
-      width: 709px;
-      height: 609px;
-      left: 29px;
-      top: 341px;
-
-      //background: url("../img/htmlacademy.svg"); //todo сменить заглушку
-    }
+    font-size: $font_size_medium;
+    line-height: $line_height_medium;
+    order: 2;
+    justify-self: left;
+    margin-bottom: 49px;
   }
 
   @media (min-width: $desktop-content-width) {
-    position: absolute;
-    width: 720px;
-    height: 694px;
-    left: 720px;
-    top: 0;
-    //background-image: url("../img/htmlacademy.svg"); //todo сменить заглушку
-    //background-color: rgba(104, 183, 56, 0.85);
+    grid-column: span 2;
+  }
+}
 
-    &::before {
-      position: absolute;
-      width: 552px;
-      height: 499px;
-      left: 558px;
-      top: 141px;
-      background-image: url("../img/htmlacademy.svg"); //todo сменить заглушку
-    }
+.promo__link {
+  font-size: $font_size_base;
+  line-height: $line_height_base;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    order: 3;
+    justify-self: left;
+    font-size: $font_size_medium;
+    line-height: $line_height_medium;
   }
 }

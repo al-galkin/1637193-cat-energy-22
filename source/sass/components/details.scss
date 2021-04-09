@@ -1,28 +1,7 @@
-.details__text {
-  font-family: $font_family_second;
-  font-size: $font_size_base_mobile;
-  line-height: $line_height_base_mobile;
-  color: $color_text-dark-grey;
-}
-
-.details__title {
-  font-size: $font_size_title-h3_mobile;
-  line-height: 24px;
-  text-transform: uppercase;
-}
-
-.details__desc {
-  font-family: $font_family_second;
-  font-size: $font_size_small_mobile;
-  line-height: $line_height_small_mobile;
-  color: $color_text-dark-grey;
-  text-transform: lowercase;
-}
-
-.details__expenses {
-  text-transform: uppercase;
-  font-size: $font_size_base_mobile;
-  line-height: $line_height_medium_mobile;
+.details {
+  //@media (min-width: $desktop-content-width) {
+  //  width: 440px;
+  //}
 }
 
 .details__result {
@@ -32,8 +11,76 @@
     align-items: center;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-content-width) {
     flex-direction: column;
     align-items: flex-start;
+    width: 440px;
+  }
+}
+
+.details__list {
+  @include reset_list();
+  display: flex;
+}
+
+.details__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  :first-child {
+    margin-outside: 95px;
+  }
+}
+
+.details__text {
+  font-family: $font_family_second;
+  font-size: $font_size_base;
+  line-height: $line_height_base;
+  color: $color_text-dark-grey;
+  margin-bottom: 25px;
+
+  @media (min-width: $desktop-content-width) {
+    width: 440px;
+  }
+}
+
+.details__title {
+  font-family: $font, $font_family_reserve;
+  font-size: $font_size_title_small;
+  line-height: $line_height_title_small;
+  text-transform: uppercase;
+  color: $color_basic-black;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.details__desc {
+  font-family: $font_second, $font_family_reserve;
+  font-size: $font_size_small;
+  line-height: $line_height_small;
+  color: $color_text-dark-grey;
+  text-transform: lowercase;
+  text-align: center;
+  display: inline-block;
+  max-width: 85px;
+}
+
+.details__expenses {
+  font-family: $font, $font_family_reserve;
+  font-size: $font_size_base;
+  line-height: $line_height_medium;
+  text-transform: uppercase;
+  color: $color_basic-black;
+  margin-top: 11px;
+  margin-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 15px;
   }
 }

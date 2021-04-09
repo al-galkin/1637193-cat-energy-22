@@ -1,6 +1,6 @@
 .product__title {
-  font-size: $font_size_medium_mobile;
-  line-height: $line_height_medium_mobile;
+  font-size: $font_size_medium;
+  line-height: $line_height_medium;
   color: $color_title_dark-grey;
   font-weight: 400;
   text-transform: uppercase;
@@ -9,7 +9,11 @@
 .product__item-title,
 .product__item-value {
   font-family: $font_family_second;
-  font-size: $font_size_small_mobile;
+  font-size: $font_size_small;
   line-height: 16px;
   color: $color_text-dark-grey;
+}
+
+.product__params {
+  @include reset_list();
 }

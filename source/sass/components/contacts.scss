@@ -7,6 +7,8 @@
 }
 
 .contacts__wrapper {
+  padding: 28px 0;
+
   &--noindex {
     background: $color_basic_grey;
 
@@ -28,15 +30,16 @@
 }
 
 .contacts__title {
-  font-size: $font_size_medium_mobile;
-  line-height: $line_height_base_mobile;
+  font-family: $font, $font_family_reserve;
+  font-size: $font_size_medium;
+  line-height: $line_height_base;
   text-transform: uppercase;
   color: $color_special-black;
 }
 
 .contacts__address {
-  font-family: $font_family_second;
-  font-size: $font_size_base_mobile;
-  line-height: $line_height_medium_mobile;
+  font-family: $font_second, $font_family_reserve;
+  font-size: $font_size_base;
+  line-height: $line_height_medium;
   color: $color_text-dark-grey;
 }

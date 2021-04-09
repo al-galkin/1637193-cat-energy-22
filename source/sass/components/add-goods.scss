@@ -1,10 +1,14 @@
+.add-goods__list {
+  @include reset_list();
+}
+
 .add-goods__title {
-  font-size: $font_size_title-h3_mobile;
-  line-height: 24px;
+  font-size: $font_size_medium;
+  line-height: $line_height_medium;
 }
 
 .add-goods__caption {
-  font-size: $font_size_medium_mobile;
+  font-size: $font_size_medium;
   line-height: 16px;
   color: $color_title_dark-grey;
   text-transform: uppercase;
@@ -14,7 +18,7 @@
 .add-goods__quantity,
 .add-goods__value {
   font-family: $font_family_second;
-  font-size: $font_size_base_mobile;
+  font-size: $font_size_base;
   line-height: 14px;
   color: $color_text-dark-grey;
 }

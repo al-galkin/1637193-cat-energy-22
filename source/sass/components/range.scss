@@ -4,20 +4,22 @@
   }
 
   @media (min-width: $desktop-width) {
-    //display: flex;
+    display: flex;
     align-items: center;
+    margin-top: -196px;
   }
 }
 
-//todo вопрос: тут тоже что-то перемудрил, съехал текст "было стало". Пока закомментировал все сетки flex\grid
+//todo вопрос: тут тоже что-то перемудрил, съехал текст "было стало". Хз, как пофиксить
 
 .range__text {
-  font-size: $font_size_medium_mobile;
-  line-height: $line_height_medium_mobile;
+  font-size: $font_size_medium;
+  line-height: $line_height_medium;
   text-transform: uppercase;
+  color: $color_basic-black;
 
   width: 230px;
-  //display: flex;
+  display: flex;
   justify-content: space-around;
   align-items: center;
 
@@ -27,20 +29,50 @@
     width: auto;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-content-width) {
     width: 460px;
     z-index: 1;
   }
 }
 
 .range__slider {
+  width: 230px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
   @media (min-width: $tablet-width) {
-    //display: grid;
-    grid-template-columns: 1fr 1fr;
+    justify-self: center;
+    grid-column: span 2;
+    width: auto;
+    position: absolute;
+    bottom: 50px;
   }
 
-  @media (min-width: $desktop-width) {
-    grid-template-rows: 1fr;
-    grid-template-columns: 325px 325px;
+  @media (min-width: $desktop-content-width) {
+    width: 460px;
+    z-index: 1;
+    position: absolute;
+    bottom: 72px;
   }
+}
+
+.range__input {
+  background: $color_basic-white;
+  padding: 3px 6px 4px 6px;
+  width: 84px;
+  height: 14px;
+  border: 1px solid $color_frames-grey;
+  border-radius: 6px;
+
+  @media (min-width: $tablet-width) {
+    width: 428px;
+  }
+}
+
+.range__toggle {
+  width: 50%;
+  height: 6px;
+  background: $color_basic_green;
+  border-radius: 6px;
 }

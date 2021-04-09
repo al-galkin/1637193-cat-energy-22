@@ -1,7 +1,7 @@
 .developer__link {
   font-family: $font_family_second;
-  font-size: $font_size_medium_mobile;
-  line-height: $line_height_base_mobile;
+  font-size: $font_size_medium;
+  line-height: $line_height_base;
   color: $color_text-dark-grey;
   text-decoration: none;
   display: flex;
@@ -18,12 +18,29 @@
   font-style: normal;
   font-weight: normal;
   margin-top: 0;
-  font-size: $font_size_medium_mobile;
-  line-height: $line_height_base_mobile;
+  font-size: $font_size_medium;
+  line-height: $line_height_base;
   color: $color_text-dark-grey;
 
   @media (min-width: $tablet-width) {
     margin-right: 22px;
     margin-bottom: 0;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.developer__logo {
+  fill: $color_icons-grey;
+
+  &:hover {
+    fill: $color_basic_green;
+  }
+
+  &:active {
+    fill: $color_basic_green;
+    opacity: 0.3;
   }
 }

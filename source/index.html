@@ -8,7 +8,7 @@
 </head>
 <body class="page__body">
 <header class="page-header">
-  <div class="container">
+  <div class="container page-header__container">
     <a class="page-header__logo">
       <img class="page-header__icon" src="img/mobile/logo-mobile.svg" width="34" height="38"
         alt="Иконка сайта кэт энерджи">
@@ -22,17 +22,17 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--current">
-            <a aria-label="Переход на главную страницу 'Кэт энерджи'">
+            <a class="site-list__link" aria-label="Переход на главную страницу 'Кэт энерджи'">
               Главная
             </a>
           </li>
           <li class="site-list__item">
-            <a href="catalog.html" aria-label="Переход на страницу каталога 'Кэт энерджи'">
+            <a class="site-list__link" href="catalog.html" aria-label="Переход на страницу каталога 'Кэт энерджи'">
               Каталог продукции
             </a>
           </li>
           <li class="site-list__item">
-            <a href="form.html" aria-label="Переход на страницу подбора программы 'Кэт энерджи'">
+            <a class="site-list__link" href="form.html" aria-label="Переход на страницу подбора программы 'Кэт энерджи'">
               Подбор программы
             </a>
           </li>
@@ -53,14 +53,10 @@
       <p class="promo__slogan">
         Занялся собой? Займись котом!
       </p>
-      <p class="button promo__link">
-        <a class="promo__link-item" href="form.html"
-          aria-label="Переход на страницу подбора программы">
-          Подобрать программу
-        </a>
-      </p>
-      <div class="promo__image">
-      </div>
+      <a class="button promo__link" href="form.html"
+        aria-label="Переход на страницу подбора программы">
+        Подобрать программу
+      </a>
     </div>
   </section>
 
@@ -121,37 +117,17 @@
       Как это работает
     </h2>
     <ul class="benefits__list">
-      <li class="benefits__item">
-        <div class="benefits__icon">
-          <img src="img/mobile/icon_leaf.svg" width="25" height="28" alt="Содержит полезные питательные вещества">
-        </div>
-        <p class="benefits__text">
-          Функциональное питание содержит только полезные питательные вещества.
-        </p>
+      <li class="benefits__item benefits__item--leaf">
+        Функциональное питание содержит только полезные питательные вещества.
       </li>
-      <li class="benefits__item">
-        <div class="benefits__icon">
-          <img src="img/mobile/icon_tub.svg" width="29" height="31" alt="Выпускается в виде порошка">
-        </div>
-        <p class="benefits__text">
-          Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
-        </p>
+      <li class="benefits__item benefits__item--tub">
+        Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
       </li>
-      <li class="benefits__item">
-        <div class="benefits__icon">
-          <img src="img/mobile/icon_eat.svg" width="25" height="30" alt="Добавьте в меню питомца наше питание">
-        </div>
-        <p class="benefits__text">
-          Замените один-два приема обычной еды на наше функциональное питание.
-        </p>
+      <li class="benefits__item benefits__item--eat">
+        Замените один-два приема обычной еды на наше функциональное питание.
       </li>
-      <li class="benefits__item">
-        <div class="benefits__icon">
-          <img src="img/mobile/icon_leaf.svg" width="25" height="28" alt="Содержит полезные питательные вещества">
-        </div>
-        <p class="benefits__text">
-          Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
-        </p>
+      <li class="benefits__item benefits__item--time">
+        Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
       </li>
     </ul>
   </section>
@@ -194,8 +170,9 @@
             <span class="range__text">
               Было
             </span>
-            <input class="range__input" type="range" name="case__range" id="case__range">
-            <label class="visually-hidden" for="case__range">Ползунок-переключатель состояния кота</label>
+            <div class="range__input">
+              <div class="range__toggle" aria-label="Ползунок-переключатель состояния кота"></div>
+            </div>
             <span class="range__text">
               Стало
             </span>

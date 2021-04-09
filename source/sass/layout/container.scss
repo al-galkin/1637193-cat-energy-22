@@ -8,8 +8,9 @@
     padding: 0 30px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $desktop-content-width) {
     width: $desktop-content-width;
     padding: 0 20px;
+    position: relative;
   }
 }
