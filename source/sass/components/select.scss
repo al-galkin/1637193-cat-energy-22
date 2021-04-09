@@ -1,3 +1,113 @@
+.select__input {
+  font-family: $font, $font_family_reserve;
+  font-weight: 400;
+  font-size: $font_size_medium;
+  line-height: $line_height_base;
+  text-transform: uppercase;
+  color: $color_text-dark-grey;
+
+  height: 45px;
+  padding: 13px 15px;
+  border: 1px solid $color_border_grey;
+
+  &--radio {
+    display: none;
+
+    &:checked + label,
+    &:not(:checked) + label {
+      position: relative;
+      padding-left: 50px;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    &:checked + label::before,
+    &:not(:checked) + label::before { //todo вопрос: не появились радио-кнопки, что поправить? https://skr.sh/s7UOSbMagJv и чекбоксы по аналогии https://skr.sh/s7UjnnjFerT
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -7px;
+      width: 30px;
+      height: 30px;
+      border: 1px solid $color_frames_grey;
+      border-radius: 100%;
+      background: $color_basic_white;
+    }
+
+    &:checked + label::after,
+    &:not(:checked) + label::after {
+      content: "";
+      width: 13px;
+      height: 13px;
+      background: $color_basic_green;
+      position: absolute;
+      top: 2px;
+      left: 8px;
+      border-radius: 100%;
+      transition: all 0.2s ease;
+    }
+
+    &:not(:checked) + label::after {
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    &:checked + label::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &--checkbox {
+    display: none;
+
+    &:checked + label,
+    &:not(:checked) + label {
+      position: relative;
+      padding-left: 50px;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    &:checked + label::before,
+    &:not(:checked) + label::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -7px;
+      width: 30px;
+      height: 30px;
+      border: 1px solid $color_frames_grey;
+      background: $color_basic_white;
+    }
+
+    &:checked + label::after,
+    &:not(:checked) + label::after {
+      @include reset_pseudo-element-style;
+      width: 18px;
+      height: 14px;
+      background-image: url("data:image/svg+xml,%3Csvg width='19' height='15' viewBox='0 0 19 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 11.718L1.3 5.26951L0.25 6.45739L7 14.0938L18.25 1.36648L17.2 0.09375L7 11.718Z' fill='%2368B738'/%3E%3C/svg%3E%0A");
+      top: 2px;
+      left: 6px;
+      transition: all 0.2s ease;
+    }
+
+    &:not(:checked) + label::after {
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    &:checked + label::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+  }
+}
+
 .select__radio,
 .select__checkbox {
   font-size: $font_size_medium;
@@ -10,5 +120,5 @@
 }
 
 .select__checkbox {
-  color: $color_special-black;
+  color: $color_special_black;
 }

@@ -2,18 +2,19 @@
 
 $color_basic_green: #68b738;
 $color_basic_grey: #f2f2f2;
-$color_background-grey: #e5e5e5;
+$color_background_grey: #e5e5e5;
+$color_border_grey: #e7e7e7;
 $color_hover_grey: #ebebeb;
-$color_background-grey: #eaeaea;
-$color_frames-grey: #cdcdcd;
+$color_background_grey: #eaeaea;
+$color_frames_grey: #cdcdcd;
 $color_icons-grey: #666666;
 $color_text-dark-grey: #444444;
 $color_title_dark-grey: #222222;
 $color_status_error: #ff8282;
 $color_hover_green: #5eaa2f;
-$color_basic-white: #ffffff;
-$color_basic-black: #000000;
-$color_special-black: #111111;
+$color_basic_white: #ffffff;
+$color_basic_black: #000000;
+$color_special_black: #111111;
 
 // Viewports
 
@@ -49,6 +50,8 @@ $line_height_middle: 16px;
 $line_height_base: 18px;
 $line_height_medium: 20px;
 $line_height_title_small: 24px;
+$line_height_title_intermediate: 26px;
+$line_height_title_median: 30px;
 $line_height_title: 36px;
 $line_height_title_middle: 40px;
 $line_height_title_big: 60px;

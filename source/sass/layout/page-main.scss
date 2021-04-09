@@ -1,5 +1,27 @@
+.page-main__title {
+  font-family: $font, $font_family_reserve;
+  font-size: $font_size_title;
+  line-height: $line_height_title;
+  color: $color_basic_black;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font_size_title_big;
+    line-height: $line_height_title_big;
+  }
+}
+
 .page-main__text {
+  font-family: $font, $font_family_reserve;
   font-size: $font_size_base;
   line-height: $line_height_base;
+  color: $color_basic_black;
   text-decoration: none;
+  text-transform: uppercase;
+  margin-bottom: 39px;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font_size_middle;
+    line-height: $line_height_title_median;
+  }
 }

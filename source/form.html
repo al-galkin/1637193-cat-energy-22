@@ -22,17 +22,17 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="index.html" aria-label="Переход на главную страницу 'Кэт энерджи'">
+            <a class="site-list__link" href="index.html" aria-label="Переход на главную страницу 'Кэт энерджи'">
               Главная
             </a>
           </li>
           <li class="site-list__item">
-            <a href="catalog.html" aria-label="Переход на страницу каталога 'Кэт энерджи'">
+            <a class="site-list__link" href="catalog.html" aria-label="Переход на страницу каталога 'Кэт энерджи'">
               Каталог продукции
             </a>
           </li>
           <li class="site-list__item site-list__item--current">
-            <a aria-label="Переход на страницу подбора программы 'Кэт энерджи'">
+            <a class="site-list__link" aria-label="Переход на страницу подбора программы 'Кэт энерджи'">
               Подбор программы
             </a>
           </li>
@@ -45,7 +45,7 @@
 <main class="page-main">
   <div class="page-main__wrapper container">
     <h1 class="page-main__title">
-      Каталог продукции
+      Подбор продукции
     </h1>
     <p class="page-main__text">
       Заполните анкету, и мы подберем программу питания для вашего кота
@@ -57,8 +57,8 @@
       Заполните анкету
     </h2>
     <form class="form__fill" action="https://echo.htmlacademy.ru" method="post">
-      <fieldset class="form__section">
-        <ul class="form__list">
+      <fieldset class="form__section form__section--cat-data">
+        <ul class="form__list form__list--cat-data">
           <li class="form__item">
             <label class="form__label" for="cat-name">ИМЯ:*</label>
             <input class="form__input form__input--name" type="text" name="cat-name" id="cat-name" placeholder="Барсик" required>
@@ -76,21 +76,21 @@
         <ul class="form__list form__list--radio">
           <li class="form__item form__item--radio select">
             <label class="select__radio">
-                <input class="select__input visually-hidden" type="radio" name="reason" value="slim">
+                <input class="select__input select__input--radio" type="radio" name="reason" value="slim" checked>
                 <span class="select__radio"></span>
                 похудение
             </label>
           </li>
           <li class="form__item form__item--radio select">
             <label class="select__radio">
-                <input class="select__input visually-hidden" type="radio" name="reason" value="weight-gain">
+                <input class="select__input select__input--radio" type="radio" name="reason" value="weight-gain">
                 <span class="select__text"></span>
                 Набор массы
             </label>
           </li>
           <li class="form__item form__item--radio select">
             <label class="select__radio">
-                <input class="select__input visually-hidden" type="radio" name="reason" value="advice">
+                <input class="select__input select__input--radio" type="radio" name="reason" value="advice">
                 <span class="select__text"></span>
                 Не знаю (Нужен ваш совет)
             </label>
@@ -98,11 +98,11 @@
         </ul>
       </fieldset>
 
-      <fieldset class="form__section">
+      <fieldset class="form__section form__section--owner">
         <h2 class="form__title">
           Контактные данные (владельца кота)
         </h2>
-        <ul class="form__list">
+        <ul class="form__list form__list--owner">
           <li class="form__item">
             <label class="form__label" for="owner-email">E-mail:*</label>
             <input class="form__input form__input--email" type="email" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com" required>
@@ -114,15 +114,13 @@
         </ul>
       </fieldset>
 
-      <fieldset class="form__section">
+      <fieldset class="form__section form__section--textarea">
         <h2 class="form__title">
           Комментарий
         </h2>
         <div class="form__text">
           <label class="visually-hidden" for="comment-text">Оставьте свой комментарий по заказу</label>
-          <textarea class="form__textarea" name="comment_textarea" id="comment-text" cols="30" rows="5">
-            Расскажите обо всех повадках кота
-          </textarea>
+          <textarea class="form__textarea" name="comment_textarea" id="comment-text" cols="30" rows="5">Расскажите обо всех повадках кота</textarea>
         </div>
       </fieldset>
 
@@ -133,28 +131,28 @@
         <ul class="form__list form__list--checkbox">
           <li class="form__item form__item--checkbox select">
             <label class="select__checkbox">
-                <input class="select__input visually-hidden" type="checkbox" name="sugar" checked>
+                <input class="select__input select__input--checkbox" type="checkbox" name="sugar" checked>
                 <span class="select__text"></span>
                 сахарозаменитель
             </label>
           </li>
           <li class="form__item form__item--checkbox select">
             <label class="select__checkbox">
-                <input class="select__input visually-hidden" type="checkbox" name="water">
+                <input class="select__input select__input--checkbox" type="checkbox" name="water">
                 <span class="select__text"></span>
                 питьевая вода
             </label>
           </li>
           <li class="form__item form__item--checkbox select">
             <label class="select__checkbox">
-                <input class="select__input visually-hidden" type="checkbox" name="milk">
+                <input class="select__input select__input--checkbox" type="checkbox" name="milk">
                 <span class="select__text"></span>
                 молоко
             </label>
           </li>
           <li class="form__item form__item--checkbox select">
             <label class="select__checkbox">
-                <input class="select__input visually-hidden" type="checkbox" name="vitamins">
+                <input class="select__input select__input--checkbox" type="checkbox" name="vitamins">
                 <span class="select__text"></span>
                 витамины
             </label>
@@ -165,7 +163,7 @@
         <h2 class="visually-hidden">
           Отправить заполненную заявку
         </h2>
-        <button type="button" class="form__button" name="add-form__button" id="add-form__button">
+        <button type="button" class="form__button button" name="add-form__button" id="add-form__button">
           Отправить заявку
         </button>
         <p class="form__button-description">
@@ -175,11 +173,11 @@
     </form>
   </section>
 
-  <section class="contacts">
+  <section class="contacts contacts__noindex">
     <h2 class="visually-hidden">
       Контакты
     </h2>
-    <div class="contacts__wrapper contacts__wrapper--noindex container">
+    <div class="contacts__wrapper container">
       <div class="contacts__invite">
         <h3 class="contacts__title">
           приглашаем к сотрудничеству дилеров!

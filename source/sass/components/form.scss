@@ -1,20 +1,83 @@
+.form {
+  margin-bottom: 32px;
+}
+
+.form__section {
+  &--cat-data {
+    @media (min-width: $desktop-content-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      grid-column-gap: 80px;
+    }
+  }
+
+  &--owner,
+  &--textarea {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 72px;
+    }
+  }
+
+  &--additionally {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
 .form__list {
   @include reset_list();
+
+  &--cat-data,
+  &--radio {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 72px;
+    }
+  }
+
+  &--checkbox {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: $desktop-content-width) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &--owner {
+    @media (min-width: $desktop-content-width) {
+      display: grid;
+      grid-template-columns: 569px 572px;
+      align-items: center;
+      grid-column-gap: 78px;
+    }
+  }
 }
 
-.form__input {
-  font-size: $font_size_medium;
-  line-height: $line_height_base;
-  text-transform: uppercase;
-  color: $color_text-dark-grey;
+.form__item {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $desktop-content-width) {
+    width: 100%;
+  }
+}
+
+.form__title {
   font-family: $font, $font_family_reserve;
-  font-weight: 400;
-}
+  font-size: $font_size_title_small;
+  line-height: $line_height_title_intermediate;
+  color: $color_basic_black;
+  margin-bottom: 40px;
 
-.form__button-description {
-  font-size: $font_size_base;
-  line-height: 16px;
-  font-family: $font_family_second;
+  @media (min-width: $tablet-width) {
+    font-size: $font_size_title;
+    line-height: $line_height_title;
+  }
 }
 
 .form__label {
@@ -22,4 +85,72 @@
   line-height: $line_height_base;
   text-transform: uppercase;
   color: $color_text-dark-grey;
+  margin-right: 12px;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font_size_middle;
+    line-height: $line_height_title_median;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    margin-right: 20px;
+  }
+}
+
+.form__input, //todo вопрос: как поправить ширину инпутов, как по тз? сейчас поля узкие https://skr.sh/s7UMxBOm8qK
+.form__textarea {
+  font-family: $font, $font_family_reserve;
+  font-weight: 400;
+  font-size: $font_size_medium;
+  line-height: $line_height_base;
+  text-transform: uppercase;
+  color: $color_text-dark-grey;
+
+  height: 45px;
+  padding: 13px 15px;
+  border: 1px solid $color_border_grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font_size_middle;
+    line-height: $line_height_title_median;
+  }
+}
+
+.form__textarea {
+  width: 280px;
+  height: 150px;
+  padding: 9px 15px;
+  border: 1px solid $color_border_grey;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.form__send {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.form__button {
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 61px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    width: 568px;
+  }
+}
+
+.form__button-description {
+  font-family: $font_second, $font_family_reserve;
+  font-size: $font_size_base;
+  line-height: $line_height_middle;
+  color: $color_basic_black;
+  margin: 0;
 }

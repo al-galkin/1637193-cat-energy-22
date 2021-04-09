@@ -16,7 +16,7 @@
   font-size: $font_size_medium;
   line-height: $line_height_medium;
   text-transform: uppercase;
-  color: $color_basic-black;
+  color: $color_basic_black;
 
   width: 230px;
   display: flex;
@@ -58,11 +58,11 @@
 }
 
 .range__input {
-  background: $color_basic-white;
+  background: $color_basic_white;
   padding: 3px 6px 4px 6px;
   width: 84px;
   height: 14px;
-  border: 1px solid $color_frames-grey;
+  border: 1px solid $color_frames_grey;
   border-radius: 6px;
 
   @media (min-width: $tablet-width) {
