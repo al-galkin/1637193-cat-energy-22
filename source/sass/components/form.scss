@@ -136,10 +136,16 @@
 
 .form__button {
   margin-bottom: 21px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: $font_size_medium;
 
   @media (min-width: $tablet-width) {
     margin-right: 61px;
     margin-bottom: 0;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    font-size: $font_size_middle;
   }
 
   @media (min-width: $desktop-content-width) {
@@ -153,4 +159,8 @@
   line-height: $line_height_middle;
   color: $color_basic_black;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font_size_medium;
+  }
 }

@@ -1,3 +1,16 @@
+.catalog {
+  @media (min-width: $tablet-width) { //todo вопрос: не разобрался с сеткой в каталоге https://skr.sh/s7UoaXCZhR8 блок с кнопкой в файле show-more.scss
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 80px;
+  }
+}
+
 .catalog__list {
   @include reset_list();
 }

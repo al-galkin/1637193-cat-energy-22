@@ -1,24 +1,82 @@
-.add-goods__list {
-  @include reset_list();
+.add-goods__title {
+  font-family: $font, $font_family_reserve;
+  font-weight: 400;
+  font-size: $font_size_title_small;
+  line-height: $line_height_title_small;
+  color: $color_basic_black;
+  margin-top: 25px;
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font_size_title;
+    line-height: $line_height_title;
+    margin-top: 68px;
+    margin-bottom: 70px;
+  }
 }
 
-.add-goods__title {
-  font-size: $font_size_medium;
-  line-height: $line_height_medium;
+.add-goods__wrapper {
+  @media (min-width: $desktop-content-width) {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 80px;
+  }
+}
+
+.add-goods__list { //todo вопрос: выглядит микросетка не так, как надо https://skr.sh/s7UuaJW1OwB
+  @include reset_list();
+  margin-bottom: 40px;
+}
+
+.add-goods__item {
+  padding-top: 13px;
+  padding-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid $color_frames_grey;
+    padding: 20px 30px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+    padding: 20px 0;
+  }
+}
+
+.add-goods__button {
+  @media (min-width: $tablet-width) {
+    width: 632px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    width: 274px;
+    margin: 0;
+  }
 }
 
 .add-goods__caption {
+  font-family: $font, $font_family_reserve;
+  font-weight: 400;
   font-size: $font_size_medium;
-  line-height: 16px;
+  line-height: $line_height_middle;
   color: $color_title_dark-grey;
   text-transform: uppercase;
-  font-weight: 400;
+}
+
+.add-goods__params {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .add-goods__quantity,
 .add-goods__value {
-  font-family: $font_family_second;
+  font-family: $font_second, $font_family_reserve;
   font-size: $font_size_base;
   line-height: 14px;
   color: $color_text-dark-grey;
+  margin: 0;
 }

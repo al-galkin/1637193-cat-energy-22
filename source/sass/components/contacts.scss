@@ -29,12 +29,19 @@
   }
 }
 
+//todo вопрос: не разобрался с наездом адреса на карту https://skr.sh/s7UezrhYh5W
+
 .contacts__title {
   font-family: $font, $font_family_reserve;
   font-size: $font_size_medium;
   line-height: $line_height_base;
   text-transform: uppercase;
   color: $color_special_black;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font_size_middle;
+    line-height: 21px;
+  }
 }
 
 .contacts__address {
@@ -42,4 +49,8 @@
   font-size: $font_size_base;
   line-height: $line_height_medium;
   color: $color_text-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font_size_medium;
+  }
 }

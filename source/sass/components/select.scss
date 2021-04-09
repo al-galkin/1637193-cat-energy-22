@@ -10,6 +10,11 @@
   padding: 13px 15px;
   border: 1px solid $color_border_grey;
 
+  @media (min-width: $tablet-width) {
+    font-size: $font_size_middle;
+    line-height: $line_height_title_median;
+  }
+
   &--radio {
     display: none;
 

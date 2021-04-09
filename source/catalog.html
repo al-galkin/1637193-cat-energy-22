@@ -22,17 +22,17 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="index.html" aria-label="Переход на главную страницу 'Кэт энерджи'">
+            <a class="site-list__link" href="index.html" aria-label="Переход на главную страницу 'Кэт энерджи'">
               Главная
             </a>
           </li>
           <li class="site-list__item site-list__item--current">
-            <a aria-label="Переход на страницу каталога 'Кэт энерджи'">
+            <a class="site-list__link" aria-label="Переход на страницу каталога 'Кэт энерджи'">
               Каталог продукции
             </a>
           </li>
           <li class="site-list__item">
-            <a href="form.html" aria-label="Переход на страницу подбора программы 'Кэт энерджи'">
+            <a class="site-list__link" href="form.html" aria-label="Переход на страницу подбора программы 'Кэт энерджи'">
               Подбор программы
             </a>
           </li>
@@ -44,7 +44,7 @@
 
 <main class="page-main">
   <div class="page-main__wrapper container">
-    <h1 class="page-main__title">
+    <h1 class="page-main__title page-main__title--catalog">
       Каталог продукции
     </h1>
   </div>
@@ -389,14 +389,14 @@
       <span class="show-more__desc">
         На самом деле вкусов гораздо больше!
       </span>
-      <a class="show-more__link button" aria-label="Показать все элементы каталога 'Cat Energy'" href="blank.html">
+      <a class="button show-more__link" aria-label="Показать все элементы каталога 'Cat Energy'" href="blank.html">
         показать все
       </a>
     </div>
   </section>
 
   <section class="add-goods container">
-    <h2 class="add-goods__">
+    <h2 class="add-goods__title">
       Дополнительные товары
     </h2>
     <div class="add-goods__wrapper">
@@ -471,10 +471,6 @@
       </ul>
 
       <div class="add-goods__gift gift">
-          <span class="gift__image">
-            <img src="img/htmlacademy.svg" width="78" height="80"
-              alt="Чехол в подарок при заказе все товаров одновременно!">
-          </span>
         <p class="gift__text">
           Закажите все и получите чехол для кота в подарок!
         </p>
@@ -482,11 +478,11 @@
     </div>
   </section>
 
-  <section class="contacts">
+  <section class="contacts contacts__noindex">
     <h2 class="visually-hidden">
       Контакты
     </h2>
-    <div class="contacts__wrapper contacts__wrapper--noindex container">
+    <div class="contacts__wrapper container">
       <div class="contacts__invite">
         <h3 class="contacts__title">
           приглашаем к сотрудничеству дилеров!
