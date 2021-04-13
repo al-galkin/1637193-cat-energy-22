@@ -1,12 +1,22 @@
+.page,
+.page__body {
+  min-width: 320px;
+}
+
 .page {
   height: 100%;
 }
 
 .page__body {
-  margin: 0;
-  padding: 0;
+  @include reset_text();
   font-weight: 400;
-  font-family: $font, $font_family_second;
-  background-color: $color_basic-white;
+  font-family: $font, $font_family_reserve;
+  font-size: $font_size_base;
+  background-color: $color_basic_white;
+
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  min-width: 320px;
   min-height: 100%;
 }

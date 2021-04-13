@@ -1,22 +1,25 @@
 .button {
-  display: inline-block;
-  padding: 0 50px;
+  @include reset_button-style();
+  display: block;
+  padding: 14px 50px;
 
-  font-family: $font, $font_family_second;
-  font-size: $font_size_medium_mobile;
+  font-family: $font, $font_family_reserve;
+  font-size: $font_size_medium;
   font-weight: normal;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  vertical-align: middle;
-  line-height: $line_height_medium_mobile;
+  line-height: $line_height_medium;
 
-  border: none;
-  color: $color_basic-white;
+  color: $color_basic_white;
   background-color: $color_basic_green;
 
   &:hover,
   &:focus {
     background-color: $color_hover_green;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 }

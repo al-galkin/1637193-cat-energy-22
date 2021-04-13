@@ -2,37 +2,57 @@
 
 $color_basic_green: #68b738;
 $color_basic_grey: #f2f2f2;
-$color_background-grey: #e5e5e5;
+$color_background_grey: #e5e5e5;
+$color_border_grey: #e7e7e7;
 $color_hover_grey: #ebebeb;
-$color_background-grey: #eaeaea;
-$color_frames-grey: #cdcdcd;
+$color_background_grey: #eaeaea;
+$color_frames_grey: #cdcdcd;
+$color_range_grey: #dcdcdc;
 $color_icons-grey: #666666;
 $color_text-dark-grey: #444444;
 $color_title_dark-grey: #222222;
 $color_status_error: #ff8282;
 $color_hover_green: #5eaa2f;
-$color_basic-white: #ffffff;
-$color_basic-black: #000000;
-$color_special-black: #111111;
+$color_basic_white: #ffffff;
+$color_basic_black: #000000;
+$color_special_black: #111111;
+
+// Viewports
+
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+$desktop-content-width: 1260px;
 
 // font
 $font: "Oswald";
 $font_family: "Oswald", sans-serif;
 $font_second: "Arial";
 $font_family_second: "Arial", sans-serif;
+$font-reserve: "Tahoma";
+$font_family_reserve: "Tahoma", sans-serif;
 
 // font properties - general
 $font_weight_base: normal;
 $font_style_base: normal;
 
-// font properties - mobile //todo вопрос: оставить или убрать?
-$font_size_base_mobile: 14px;
-$font_size_small_mobile: 12px;
-$font_size_medium_mobile: 16px;
-$font_size_title_mobile: 36px;
-$font_size_title-h3_mobile: 24px;
-$line_height_base_mobile: 18px;
-$line_height_small_mobile: 12px;
-$line_height_medium_mobile: 20px;
-$line_height_title_mobile: 36px;
-$line_height_title-h3_mobile: 37px;
+//font size
+
+$font_size_small: 12px;
+$font_size_base: 14px;
+$font_size_medium: 16px;
+$font_size_middle: 20px;
+$font_size_title_small: 24px;
+$font_size_title: 36px;
+$font_size_title_big: 60px;
+
+$line_height_small: 12px;
+$line_height_middle: 16px;
+$line_height_base: 18px;
+$line_height_medium: 20px;
+$line_height_title_small: 24px;
+$line_height_title_intermediate: 26px;
+$line_height_title_median: 30px;
+$line_height_title: 36px;
+$line_height_title_middle: 40px;
+$line_height_title_big: 60px;

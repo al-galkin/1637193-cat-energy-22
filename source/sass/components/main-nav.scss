@@ -1,1 +1,22 @@
-//
+.main-nav {
+  background-color: $color_basic_white;
+
+  @media (min-width: $tablet-width) {
+    justify-self: end;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    background: transparent;
+    position: relative;
+    z-index: 100;
+  }
+}
+
+.main-nav__toggle {
+  @include reset_button-style;
+  background: $color_basic_white;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}

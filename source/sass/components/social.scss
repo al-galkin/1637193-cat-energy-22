@@ -1,1 +1,36 @@
-//
+.social__list {
+  @include reset_list;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 53px;
+  fill: $color_icons-grey;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+
+  &:hover {
+    fill: $color_basic_green;
+  }
+
+  &:active {
+    fill: $color_basic_green;
+    opacity: 0.3;
+  }
+}
+
+.social__item {
+  margin-right: 37px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color_icons-grey;
+}

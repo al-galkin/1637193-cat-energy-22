@@ -1,32 +1,104 @@
 .promo {
-  color: $color_basic-white;
+  color: $color_basic_white;
+  position: relative;
+  padding-top: 27px;
+  margin-bottom: 22px;
+  background: url("../img/mobile/index-can-mobile-1.png") 50% 72% no-repeat, linear-gradient(to bottom, $color_basic_green 0%, $color_basic_green 70%, $color_basic_white 70%); //todo сменить заглушку
+
+  min-height: 302px;
+  z-index: -1;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    background: url("../img/mobile/index-can-mobile-1.png") 48% 100% no-repeat;
+    background-size: 709px 609px;
+    padding-top: 54px;
+    padding-bottom: 532px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    margin-top: -110px;
+    margin-bottom: 82px;
+    background: url("../img/mobile/index-can-mobile-1.png") 560px 140px no-repeat, url("../img/htmlacademy.svg") 100% 0 no-repeat, linear-gradient(to right, $color_basic_white 50%, $color_basic_green 50%, $color_basic_green 100%) no-repeat;
+    height: 720px;
+  }
 }
 
-.promo__container {
-  width: 320px;
-  height: 302px;
-  background-image: url("../../img/htmlacademy.svg"); //todo сменить заглушку
-  background-color: rgba(104, 183, 56, 0.85);
-  background-blend-mode: overlay;
-  background-repeat: no-repeat;
-  background-size: cover;
+.promo__wrapper {
+  position: relative;
+  z-index: 1;
+  outline: 5px solid rgba(239, 29, 78, 0.7);
+  outline-offset: -5px;
+  height: auto; //todo вопрос: сместить кнопку вниз блока https://skr.sh/s7YCNG8cECB
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+    background-color: inherit;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: grid;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    width: $desktop-content-width;
+    padding: 0 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr;
+  }
 }
 
 .promo__title {
+  margin-bottom: 25px;
+  text-align: center;
   font-weight: 400;
-  font-size: $font_size_title_mobile;
-  line-height: $line_height_title_mobile;
+  font-size: $font_size_title;
+  line-height: $line_height_title;
+  color: $color_basic_white;
+
+  @media (min-width: $tablet-width) {
+    color: $color_basic_black;
+    font-size: $font_size_title_big;
+    line-height: $line_height_title_big;
+    margin-bottom: 41px;
+    text-align: left;
+    justify-self: left;
+    order: 1;
+    max-width: 414px;
+  }
 }
 
-.promo__text {
-  font-size: $font_size_base_mobile;
+.promo__slogan {
+  margin-bottom: 30px;
+  font-size: $font_size_base;
   line-height: 14px;
   text-transform: uppercase;
+  text-align: center;
+  color: $color_basic_white;
+
+  @media (min-width: $tablet-width) {
+    color: $color_basic_black;
+    font-size: $font_size_medium;
+    line-height: $line_height_medium;
+    order: 2;
+    justify-self: left;
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    grid-column: span 2;
+  }
 }
 
-.promo__link,
-.promo__link-item {
-  font-size: $font_size_base_mobile;
-  line-height: $line_height_base_mobile;
+.promo__link {
+  font-size: $font_size_base;
+  line-height: $line_height_base;
   text-decoration: none;
+  vertical-align: bottom; //todo вопрос: сместить кнопку вниз блока https://skr.sh/s7YCNG8cECB
+
+  @media (min-width: $tablet-width) {
+    order: 3;
+    justify-self: left;
+    font-size: $font_size_medium;
+    line-height: $line_height_medium;
+  }
 }

@@ -1,5 +1,108 @@
+.range {
+  @media (min-width: $tablet-width) {
+    min-height: 462px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+    margin-top: -196px;
+    max-width: 570px;
+  }
+}
+
+
 .range__text {
-  font-size: $font_size_medium_mobile;
-  line-height: $line_height_medium_mobile;
+  font-size: $font_size_medium;
+  line-height: $line_height_medium;
   text-transform: uppercase;
+  color: $color_basic_black;
+
+  width: 230px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    justify-self: center;
+    grid-column: span 2;
+    width: auto;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    width: 460px;
+    z-index: 1;
+  }
+}
+
+.range__slider { //todo вопрос: как поправить, чтобы блок с кнопкой не выходил за край? https://skr.sh/s7YAJkVaB1w
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    justify-self: center;
+    grid-column: span 2;
+    width: auto;
+    position: absolute;
+    bottom: 50px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    width: 460px;
+    z-index: 1;
+    position: absolute;
+    bottom: 72px;
+  }
+}
+
+.range__input {
+  background: $color_basic_white;
+  padding: 3px 6px 4px 6px;
+  width: 84px;
+  height: 14px;
+  border: 1px solid $color_frames_grey;
+  border-radius: 6px;
+
+  @media (min-width: $tablet-width) {
+    width: 428px;
+    height: 6px;
+    background: $color_range_grey;
+    border: 0;
+    border-radius: 6px;
+  }
+}
+
+.range__toggle {
+  width: 50%;
+  height: 6px;
+  background: $color_basic_green;
+  border-radius: 6px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    left: 47%;
+    top: -5px;
+    border-radius: 50%;
+    background-color: $color_basic_white;
+    border: 1px solid $color_frames_grey;
+    width: 34px;
+    height: 34px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background: $color_basic_green;
+      width: 8px;
+      height: 8px;
+      top: 12px;
+      left: 12px;
+      border-radius: 50%;
+    }
+  }
+
+  @media (min-width: $desktop-content-width) {
+    left: 51%;
+  }
 }

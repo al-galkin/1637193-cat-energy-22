@@ -1,3 +1,43 @@
 .case {
-  background-color: $color_background-grey;
+  position: relative;
+  padding-top: 27px;
+  padding-bottom: 25px;
+  background: $color_background_grey;
+
+  @media (min-width: $tablet-width) {
+    background: $color_basic_white;
+    padding-bottom: 0;
+
+    &::before {
+      height: 462px;
+      bottom: 0;
+    }
+  }
+}
+
+.case__title {
+  font-family: $font, $font_family_reserve;
+  font-style: $font_style_base;
+  font-weight: $font_weight_base;
+  margin-bottom: 33px;
+  font-size: $font_size_title;
+  line-height: $line_height_title_middle;
+  color: $color_basic_black;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font_size_title_big;
+    line-height: $line_height_title_big;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    margin-bottom: 70px;
+  }
+}
+
+.case__details {
+  @media (min-width: $desktop-content-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

@@ -1,5 +1,22 @@
-@mixin reset_list_style() {
+@mixin reset_list() {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+@mixin reset_text() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset_button-style() {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+@mixin reset_pseudo-element-style() {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
 }

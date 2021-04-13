@@ -1,3 +1,16 @@
 .container {
   padding: 0 20px;
+  outline: 5px solid rgba(239, 187, 29, 0.7);
+  outline-offset: -5px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    width: $desktop-content-width;
+    padding: 0 20px;
+    position: relative;
+  }
 }
