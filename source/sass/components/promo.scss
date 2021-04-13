@@ -39,7 +39,7 @@
   }
 
   &::after {
-    @media (min-width: $desktop-width) {
+    @media (min-width: $desktop-content-width) {
       @include reset_pseudo-element-style();
       top: 0;
       left: 0;

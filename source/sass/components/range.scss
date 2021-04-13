@@ -7,10 +7,10 @@
     display: flex;
     align-items: center;
     margin-top: -196px;
+    max-width: 570px;
   }
 }
 
-//todo вопрос: тут тоже что-то перемудрил, съехал текст "было стало". Хз, как пофиксить
 
 .range__text {
   font-size: $font_size_medium;
@@ -35,8 +35,8 @@
   }
 }
 
-.range__slider {
-  width: 230px;
+.range__slider { //todo вопрос: как поправить, чтобы блок с кнопкой не выходил за край? https://skr.sh/s7YAJkVaB1w
+  width: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -67,6 +67,10 @@
 
   @media (min-width: $tablet-width) {
     width: 428px;
+    height: 6px;
+    background: $color_range_grey;
+    border: 0;
+    border-radius: 6px;
   }
 }
 
@@ -75,4 +79,30 @@
   height: 6px;
   background: $color_basic_green;
   border-radius: 6px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    left: 47%;
+    top: -5px;
+    border-radius: 50%;
+    background-color: $color_basic_white;
+    border: 1px solid $color_frames_grey;
+    width: 34px;
+    height: 34px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background: $color_basic_green;
+      width: 8px;
+      height: 8px;
+      top: 12px;
+      left: 12px;
+      border-radius: 50%;
+    }
+  }
+
+  @media (min-width: $desktop-content-width) {
+    left: 51%;
+  }
 }

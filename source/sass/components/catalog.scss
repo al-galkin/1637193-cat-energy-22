@@ -1,16 +1,29 @@
 .catalog {
-  @media (min-width: $tablet-width) { //todo вопрос: не разобрался с сеткой в каталоге https://skr.sh/s7UoaXCZhR8 блок с кнопкой в файле show-more.scss
+  outline: 3px solid chocolate;
+  outline-offset: -3px;
+}
+
+.catalog__list {
+  @include reset_list();
+  outline: 3px solid fuchsia;
+  outline-offset: -3px;
+
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 60px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 140px;
   }
 
   @media (min-width: $desktop-content-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 80px;
+    grid-template-rows: 1fr 1fr;
   }
 }
 
-.catalog__list {
-  @include reset_list();
+.catalog__item {
+  outline: 3px solid deepskyblue;
+  outline-offset: -3px;
 }

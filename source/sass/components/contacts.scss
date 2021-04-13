@@ -22,14 +22,18 @@
     padding-top: 60px;
   }
 
-  @media (min-width: $desktop-content-width) {
-    position: relative;
+  @media (min-width: $desktop-content-width) { //todo вопрос: добить блок с картой - разобраться с контейнером https://skr.sh/s7YB4wNI9oU
+    max-width: 570px;
+    max-height: 201px;
+    position: absolute;
+    margin-top: 93px;
+    margin-left: 30px; //убрать
     padding-top: 0;
     padding-bottom: 0;
+    z-index: 2;
+    background: $color_basic_white;
   }
 }
-
-//todo вопрос: не разобрался с наездом адреса на карту https://skr.sh/s7UezrhYh5W
 
 .contacts__title {
   font-family: $font, $font_family_reserve;

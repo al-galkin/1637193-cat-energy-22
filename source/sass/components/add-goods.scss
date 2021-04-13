@@ -23,7 +23,7 @@
   }
 }
 
-.add-goods__list { //todo вопрос: выглядит микросетка не так, как надо https://skr.sh/s7UuaJW1OwB
+.add-goods__list { //todo вопрос: добить вопрос с расположением внутри блока
   @include reset_list();
   margin-bottom: 40px;
 }
@@ -39,7 +39,7 @@
 
   @media (min-width: $desktop-content-width) {
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
     height: 72px;
     padding: 20px 0;
   }

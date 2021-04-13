@@ -1,4 +1,26 @@
 .show-more {
+  position: relative;
+  padding-bottom: 30px;
+
+  &::before {
+    @include reset_pseudo-element-style;
+    z-index: 10;
+    background: $color_basic_grey;
+    width: 3000px;
+    height: 1px;
+    bottom: 0;
+    left: -800px;
+    right: -800px;
+  }
+
+  @media (min-width: $tablet-width) {
+    border: 2px solid $color_basic_grey;
+
+    &::before {
+      display: none;
+    }
+  }
+
   @media (min-width: $desktop-content-width) {
     display: flex;
     flex-direction: column;
@@ -16,6 +38,14 @@
   width: 168px;
   margin: 0 auto;
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    width: 249px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    width: 169px;
+  }
 
   &:hover {
     background: $color_hover_grey;

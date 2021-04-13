@@ -97,7 +97,7 @@
   }
 }
 
-.form__input, //todo вопрос: как поправить ширину инпутов, как по тз? сейчас поля узкие https://skr.sh/s7UMxBOm8qK
+.form__input,
 .form__textarea {
   font-family: $font, $font_family_reserve;
   font-weight: 400;
@@ -109,6 +109,8 @@
   height: 45px;
   padding: 13px 15px;
   border: 1px solid $color_border_grey;
+
+  flex-grow: 1;
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_middle;
@@ -162,5 +164,17 @@
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_medium;
+  }
+}
+
+.form__input--age,
+.form__input--age:hover,
+.form__input--age:focus {
+  appearance: none;
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
   }
 }

@@ -1,11 +1,4 @@
 .copyright__logo {
-  display: flex;
-  justify-content: center;
-
-  @media (min-width: $tablet-width) {
-    justify-self: start; //todo вопрос: как вернуть лого налево, начиная с таблет? https://skr.sh/s7U2qHd2vSO
-  }
-
   &:hover {
     opacity: 0.8;
   }
