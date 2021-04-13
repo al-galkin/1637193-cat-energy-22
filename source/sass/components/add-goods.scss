@@ -40,7 +40,7 @@
   @media (min-width: $desktop-content-width) {
     display: flex;
     //justify-content: space-between;
-    height: 72px;
+    min-height: 72px;
     padding: 20px 0;
   }
 }

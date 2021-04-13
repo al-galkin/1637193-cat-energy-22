@@ -3,7 +3,7 @@
   position: relative;
   padding-top: 27px;
   margin-bottom: 22px;
-  background: url("../img/mobile/index-can-mobile-1.png") 50% 72% no-repeat, url("../img/htmlacademy.svg") 50% 0 no-repeat, linear-gradient(to right, $color_basic_white 100%, $color_basic_green 50%); //todo сменить заглушку
+  background: url("../img/mobile/index-can-mobile-1.png") 50% 72% no-repeat, linear-gradient(to bottom, $color_basic_green 0%, $color_basic_green 70%, $color_basic_white 70%); //todo сменить заглушку
 
   min-height: 302px;
   z-index: -1;
@@ -19,34 +19,8 @@
   @media (min-width: $desktop-content-width) {
     margin-top: -110px;
     margin-bottom: 82px;
-    background: url("../img/mobile/index-can-mobile-1.png") 560px 140px no-repeat, url("../img/htmlacademy.svg") 100% 0 no-repeat, linear-gradient(to right, $color_basic_white 100%, $color_basic_green 50%) no-repeat;
+    background: url("../img/mobile/index-can-mobile-1.png") 560px 140px no-repeat, url("../img/htmlacademy.svg") 100% 0 no-repeat, linear-gradient(to right, $color_basic_white 50%, $color_basic_green 50%, $color_basic_green 100%) no-repeat;
     height: 720px;
-  }
-
-  //todo: вопрос нужна помощь по блоку. Отображается крайне криво :(  https://skr.sh/s7Uryf6MGZA банка уходит на задний план - будто перемудрил с градиентом. И не покащывается зеленый фон на пк
-
-  &::before {
-    @include reset_pseudo-element-style();
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 63%;
-    background: rgba(104, 183, 56, 0.85);
-
-    @media (min-width: $tablet-width) {
-      background: none;
-    }
-  }
-
-  &::after {
-    @media (min-width: $desktop-content-width) {
-      @include reset_pseudo-element-style();
-      top: 0;
-      left: 0;
-      width: 50vw;
-      //background-position: right; вопрос: надо ли?
-      background-color: $color_hover_green;
-    }
   }
 }
 
@@ -55,6 +29,7 @@
   z-index: 1;
   outline: 5px solid rgba(239, 29, 78, 0.7);
   outline-offset: -5px;
+  height: auto; //todo вопрос: сместить кнопку вниз блока https://skr.sh/s7YCNG8cECB
 
   @media (min-width: $tablet-width) {
     background-image: none;
@@ -118,6 +93,7 @@
   font-size: $font_size_base;
   line-height: $line_height_base;
   text-decoration: none;
+  vertical-align: bottom; //todo вопрос: сместить кнопку вниз блока https://skr.sh/s7YCNG8cECB
 
   @media (min-width: $tablet-width) {
     order: 3;

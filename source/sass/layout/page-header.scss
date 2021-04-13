@@ -16,6 +16,12 @@
   }
 }
 
+.page-header__index {
+  @media (min-width: $desktop-content-width) {
+    background: linear-gradient(to right, $color_basic_white 50%, $color_basic_green 50%, $color_basic_green 100%) no-repeat;
+  }
+}
+
 .page-header__container { //todo: вопрос по размещению блоков в хедере, не встает мобильная верстка. Подключать флекс только с таблета? https://skr.sh/s7U21aimMUw
   display: flex;
   justify-content: space-between;

@@ -166,15 +166,3 @@
     font-size: $font_size_medium;
   }
 }
-
-.form__input--age,
-.form__input--age:hover,
-.form__input--age:focus {
-  appearance: none;
-  -moz-appearance: textfield;
-
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-  }
-}
