@@ -1,22 +1,60 @@
-.main-nav {
-  background-color: $color_basic_white;
-
-  @media (min-width: $tablet-width) {
-    justify-self: end;
-  }
-
-  @media (min-width: $desktop-content-width) {
-    background: transparent;
-    position: relative;
-    z-index: 100;
-  }
+.main-nav__list {
+  @include reset_list();
+  position: absolute;
+  top: 54px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  display: none;
 }
 
-.main-nav__toggle {
-  @include reset_button-style;
-  background: $color_basic_white;
+.main-nav__button {
+  position: relative;
+  width: 24px;
+  height: 16px;
+  background-color: $color_basic_white;
+  border: none;
+  cursor: pointer;
+  outline-offset: 7px;
 
   @media (min-width: $tablet-width) {
     display: none;
   }
+}
+
+.main-nav--closed .main-nav__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: $color_basic_black;
+  box-shadow: 0 8px 0 0 $color_basic_black, 0 16px 0 0 $color_basic_black;
+}
+
+.main-nav--opened .main-nav__button::before,
+.main-nav--opened .main-nav__button::after,
+.main-nav--nojs .main-nav__button::before,
+.main-nav--nojs .main-nav__button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: $color_basic_black;
+}
+
+.main-nav--opened .main-nav__button::before,
+.main-nav--nojs .main-nav__button::before {
+  transform: rotate(45deg);
+}
+
+.main-nav--opened .main-nav__button::after,
+.main-nav--nojs .main-nav__button::after {
+  transform: rotate(-45deg);
+}
+
+.main-nav--opened .main-nav__list {
+  display: block;
 }

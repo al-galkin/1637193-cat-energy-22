@@ -1,9 +1,12 @@
 //Colors
 
 $color_basic_green: #68b738;
+$color_transparent_green: rgba($color_basic_green, 0.85);
 $color_basic_grey: #f2f2f2;
 $color_background_grey: #e5e5e5;
 $color_border_grey: #e7e7e7;
+$color_menu-border_grey: #e6e6e6;
+$color_border-link: #d9d9d9;
 $color_hover_grey: #ebebeb;
 $color_background_grey: #eaeaea;
 $color_frames_grey: #cdcdcd;
@@ -42,6 +45,7 @@ $font_size_small: 12px;
 $font_size_base: 14px;
 $font_size_medium: 16px;
 $font_size_middle: 20px;
+$font_size_menu: 18px;
 $font_size_title_small: 24px;
 $font_size_title: 36px;
 $font_size_title_big: 60px;
