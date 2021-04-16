@@ -18,11 +18,9 @@
     margin-bottom: 333px;
 
     &::before {
-      position: absolute;
-      content: "";
+      @include reset_pseudo-element-style;
       background: linear-gradient(to right, $color_transparent_green 0%, $color_transparent_green 100%) no-repeat, url("../img/desktop/index-background-desktop 1.png") 100% 0 no-repeat;
       background-size: cover;
-      background-repeat: no-repeat;
       width: 50%;
       height: 694px;
       right: 0;
@@ -149,6 +147,7 @@
   text-decoration: none;
   vertical-align: middle;
   margin: 0 20px;
+  margin-top: auto;
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_medium;

@@ -23,8 +23,7 @@
 }
 
 .main-nav--closed .main-nav__button::before {
-  content: "";
-  position: absolute;
+  @include reset_pseudo-element-style;
   top: 0;
   left: 0;
   width: 24px;
@@ -37,8 +36,7 @@
 .main-nav--opened .main-nav__button::after,
 .main-nav--nojs .main-nav__button::before,
 .main-nav--nojs .main-nav__button::after {
-  content: "";
-  position: absolute;
+  @include reset_pseudo-element-style;
   left: 0;
   width: 24px;
   height: 2px;
