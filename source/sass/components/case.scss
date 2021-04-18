@@ -1,17 +1,24 @@
 .case {
   position: relative;
   padding-top: 27px;
-  padding-bottom: 25px;
+  padding-bottom: 35px;
   background: $color_background_grey;
 
   @media (min-width: $tablet-width) {
-    background: $color_basic_white;
+    background: linear-gradient(to top, $color_background_grey 460px, $color_basic_white 460px) no-repeat;
+    background-size: 100% 100%, 100% 100%;
+    padding-top: 0;
     padding-bottom: 0;
+    border-top: 1px solid $color_menu-border_grey;
+  }
 
-    &::before {
-      height: 462px;
-      bottom: 0;
-    }
+  @media (min-width: $desktop-content-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background: linear-gradient(to top, $color_basic_grey 460px, $color_basic_white 460px) no-repeat, linear-gradient(to top, $color_background_grey 460px, $color_basic_white 460px) no-repeat;
+    background-size: 72.5% 100%, 100% 100%;
+    border-top: 0;
   }
 }
 
@@ -19,18 +26,21 @@
   font-family: $font, $font_family_reserve;
   font-style: $font_style_base;
   font-weight: $font_weight_base;
-  margin-bottom: 33px;
   font-size: $font_size_title;
   line-height: $line_height_title_middle;
   color: $color_basic_black;
+  margin-bottom: 35px;
+  margin-top: 0;
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_title_big;
     line-height: $line_height_title_big;
+    margin-top: 41px;
+    margin-bottom: 64px;
   }
 
   @media (min-width: $desktop-content-width) {
-    margin-bottom: 70px;
+    margin: 0;
   }
 }
 
@@ -39,5 +49,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: -120px;
   }
 }

@@ -123,36 +123,42 @@
       </h2>
       <div class="case__details">
         <div class="details">
-          <div class="details__wrapper">
-            <p class="details__text">
-              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат
-              без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-            </p>
-            <div class="details__result">
-              <ul class="details__list">
-                <li class="details__item">
-                  <p class="details__title">5 КГ</p>
-                  <span class="details__desc">снижение веса</span>
-                </li>
-                <li class="details__item">
-                  <p class="details__title">60 ДНЕЙ</p>
-                  <span class="details__desc">затрачено времени</span>
-                </li>
-              </ul>
-              <div class="details__expenses">
-                <span class="details__expenses-title">
-                  Затраты на питание:
-                </span>
-                <span class="details__expenses-text">
-                  15 000 РУБ.
-                </span>
-              </div>
+          <p class="details__text">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат
+            без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+          </p>
+          <div class="details__result">
+            <ul class="details__list">
+              <li class="details__item">
+                <p class="details__title">5 КГ</p>
+                <span class="details__desc">снижение веса</span>
+              </li>
+              <li class="details__item">
+                <p class="details__title">60 ДНЕЙ</p>
+                <span class="details__desc">затрачено времени</span>
+              </li>
+            </ul>
+            <div class="details__expenses">
+              <span class="details__expenses-title">
+                Затраты на питание:
+              </span>
+              <span class="details__expenses-text">
+                15 000 РУБ.
+              </span>
             </div>
           </div>
         </div>
-        <div class="case__example range">
-          <img src="img/mobile/before-mobile_1.png" alt="Бегунок с демонстрацией до\после">
-          <div class="range__slider">
+        <div class="range">
+          <div class="range__wrapper">
+            <div class="range__picture">
+              <picture>
+                <source media="(min-width:1260px)"
+                  srcset="img/desktop/image_cat_desktop.png 1x, img/desktop/image_cat_desktop_@2x.png 2x">
+                <source media="(min-width:768px)"
+                  srcset="img/tablet/image_cat_tablet.png 1x, img/tablet/image_cat_tablet@2x.png 2x">
+                <img class="range_image" src="img/mobile/before-mobile_1.png" srcset="img/mobile/before-mobile_1.png 1x, img/mobile/before-mobile@2x.png 2x" alt="Кот с демонстрацией до\после">
+              </picture>
+            </div>
             <div class="range__control">
               <span class="range__text">
                 Было
@@ -207,7 +213,7 @@
     <div class="page-footer__wrapper">
       <div class="page-footer__copyright copyright">
         <a class="copyright__logo" href="index.html">
-          <img class="copyright__image" src="img/mobile/footer-logo-2.png" width="128" height="24" alt="Логотип CAT ENERGY">
+          <img class="copyright__image" src="img/footer-logo 2.svg" width="128" height="24" alt="Логотип CAT ENERGY">
         </a>
       </div>
       <section class="social">
