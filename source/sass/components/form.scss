@@ -197,11 +197,13 @@
 }
 
 .form__button {
+  width: 100%;
   margin: auto;
   margin-bottom: 21px;
   font-size: $font_size_medium;
 
   @media (min-width: $tablet-width) {
+    width: 282px;
     margin-left: 0;
     margin-right: 61px;
     margin-bottom: 0;
@@ -218,11 +220,13 @@
   font-size: $font_size_base;
   line-height: $line_height_middle;
   color: $color_basic_black;
+  min-width: 157px;
   margin: 0;
   text-align: center;
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_medium;
+    min-width: 182px;
     text-align: left;
   }
 }
