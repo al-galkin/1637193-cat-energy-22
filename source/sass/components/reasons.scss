@@ -145,17 +145,27 @@
   display: inline-block;
   width: 130px;
 
-  &:active {
-    color: rgba($color_basic_black, 0.3);
-  }
-
   &::before {
     @include reset_pseudo-element-style;
-    right: 0;
+    right: 14px;
     top: 3px;
-    width: 27px;
-    height: 10px;
+    width: 32px;
+    height: 12px;
     background-image: url("../img/icon_arrow.svg");
+  }
+
+  &:hover {
+    &::before {
+      background-image: url("../img/icon_arrow_hover.svg");
+    }
+  }
+
+  &:active {
+    color: rgba($color_basic_black, 0.3);
+
+    &::before {
+      background-image: url("../img/icon_arrow_active.svg");
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -163,7 +173,7 @@
     line-height: 30px;
 
     &::before {
-      right: -14px;
+      right: -25px;
       top: 9px;
     }
   }
