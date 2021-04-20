@@ -92,6 +92,7 @@
   border-radius: 6px;
 
   @media (min-width: $tablet-width) {
+    position: relative;
     width: 428px;
     height: 6px;
     background: $color_range_grey;
@@ -109,7 +110,7 @@
   @media (min-width: $tablet-width) {
     position: absolute;
     left: 47%;
-    top: -5px;
+    top: -10px;
     border-radius: 50%;
     background-color: $color_basic_white;
     border: 1px solid $color_frames_grey;
