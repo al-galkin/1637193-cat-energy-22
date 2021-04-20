@@ -1,29 +1,14 @@
 .site-list {
-  @include reset_list();
-  display: none;
-
   @media (min-width: $tablet-width) {
     display: flex;
+    min-width: 440px;
+    position: static;
+    text-align: start;
+    justify-content: space-between;
   }
-}
 
-.site-list__item {
-  @media (min-width: $tablet-width) {
-    margin-right: 33px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-}
-
-.site-list__item--current {
-  &::after {
-    display: block;
-    content: "";
-    height: 2px;
-    //width: 0%;
-    background-color: $color_basic_green;
+  @media (min-width: $desktop-content-width) {
+    width: 478px;
   }
 }
 
@@ -36,13 +21,16 @@
   color: $color_basic_black;
 
   @media (min-width: $tablet-width) {
-    font-size: 18px;
+    font-weight: 400;
+    font-size: $font_size_menu;
     line-height: $line_height_title_small;
   }
 
   @media (min-width: $desktop-content-width) {
     font-size: $font_size_middle;
     line-height: $line_height_title_median;
+    color: $color_special_black;
+    z-index: 5;
   }
 
   &:hover {
@@ -54,8 +42,58 @@
   }
 }
 
+.site-list__item {
+  min-width: 181px;
+  position: relative;
+  left: 0;
+  border-bottom: 1px solid $color_menu-border_grey;
+  padding: 22px 0 18px 0;
+
+  border-top: 1px solid $color_menu-border_grey;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+    text-align: right;
+    border-top: none;
+    border-bottom: none;
+    padding: 0;
+    margin-right: 33px;
+
+    :last-child {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: $desktop-content-width) {
+    margin-right: 0;
+
+    &:first-child {
+      min-width: 70px;
+    }
+  }
+}
+
+.site-list__link--current {
+  cursor: default;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: 2px solid $color_basic_green;
+    padding-bottom: 6px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    border-bottom: 2px solid $color_basic_white;
+  }
+}
+
 .site-list__link--index {
   @media (min-width: $desktop-content-width) {
     color: $color_basic_white;
+  }
+}
+
+.site-list__link--index:not .site-list__link--current {
+  @media (min-width: $desktop-content-width) {
+    border-bottom: 2px solid $color_basic_green;
   }
 }

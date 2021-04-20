@@ -1,24 +1,10 @@
-.show-more {
+.show-more { //todo: не встает блок по всей высоте https://skr.sh/s7e9cysN8X1
   position: relative;
   padding-bottom: 30px;
-
-  &::before {
-    @include reset_pseudo-element-style;
-    z-index: 10;
-    background: $color_basic_grey;
-    width: 3000px;
-    height: 1px;
-    bottom: 0;
-    left: -800px;
-    right: -800px;
-  }
+  //max-height: 208px;
 
   @media (min-width: $tablet-width) {
     border: 2px solid $color_basic_grey;
-
-    &::before {
-      display: none;
-    }
   }
 
   @media (min-width: $desktop-content-width) {
@@ -27,7 +13,7 @@
     align-items: center;
     justify-content: space-around;
     border: 2px solid $color_basic_grey;
-    height: 361px;
+    //height: 361px;
   }
 }
 
@@ -35,24 +21,25 @@
   background-color: $color_basic_grey;
   color: $color_text-dark-grey;
   text-decoration: none;
-  width: 168px;
+  width: 100%;
   margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
     width: 249px;
   }
 
   @media (min-width: $desktop-content-width) {
-    width: 169px;
+    width: 171px;
   }
 
   &:hover {
-    background: $color_hover_grey;
+    background-color: $color_hover_grey;
   }
 
   &:active {
-    color: rgba(68, 68, 68, 0.3);
+    background-color: $color_hover_grey;
+    color: rgba($color_text-dark-grey, 0.3);
   }
 }
 
@@ -63,16 +50,71 @@
   font-weight: 400;
   color: $color_special_black;
   text-transform: uppercase;
+  text-align: center;
   position: relative;
   padding-top: 78px;
   margin-bottom: 8px;
+
+  &::before { //todo вопрос: пляшет "плюс", особенно на мобилке https://skr.sh/s7eP3xRgE5d
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    border-bottom: 2px solid $color_plus_grey;
+    left: 45%;
+    top: 40px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    border-left: 2px solid $color_plus_grey;
+    left: 50%;
+    top: 25px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 140px;
+    max-width: 140px;
+    margin: 0 auto 23px auto;
+
+    &::before {
+      width: 60px;
+      height: 2px;
+      border-bottom: 2px solid $color_plus_grey;
+      left: 38px;
+      top: 80px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 60px;
+      border-left: 2px solid $color_plus_grey;
+      left: 66px;
+      top: 50px;
+    }
+  }
 }
+
 
 .show-more__desc {
   font-family: $font_second, $font_family_reserve;
   font-size: $font_size_medium;
   line-height: $line_height_medium;
   color: $color_text-dark-grey;
-  margin-top: 0;
-  margin-bottom: 21px;
+  display: block;
+  text-align: center;
+  margin: 0 0 21px 0;
+  align-self: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font_size_medium;
+    line-height: $line_height_base;
+    width: 167px;
+    margin: 0 auto 84px auto;
+  }
 }

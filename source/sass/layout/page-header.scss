@@ -1,48 +1,61 @@
 .page-header {
-  padding-top: 11px;
-  padding-bottom: 17px;
+  position: relative;
+  margin-top: 11px;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 63px;
-    padding-top: 24px;
-    padding-bottom: 0;
+    margin-top: 24px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: $desktop-content-width) {
-    margin-bottom: 73px;
-    padding-top: 53px;
+    margin-top: 53px;
+    margin-bottom: 29px;
+    z-index: 1;
   }
 }
 
-.page-header__index {
-  @media (min-width: $desktop-content-width) {
-    background: linear-gradient(to right, $color_basic_white 50%, $color_basic_green 50%, $color_basic_green 100%) no-repeat;
-  }
-}
-
-.page-header__container { //todo: вопрос по размещению блоков в хедере, не встает мобильная верстка. Подключать флекс только с таблета? https://skr.sh/s7U21aimMUw
+.page-header__container {
+  min-width: 280px;
+  margin: 0 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
+    min-width: 708px;
+    margin: 0 30px;
+    align-items: center;
   }
 
   @media (min-width: $desktop-content-width) {
-    padding-top: 50px;
+    width: 1220px;
+    margin: 0 auto;
   }
+}
+
+.page-header__index:not {
+  border-bottom: 1px solid $color_border-link;
+  padding-bottom: 7px;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    padding-bottom: 0;
+  }
+}
+
+.page-header--closed {
+  margin-bottom: 12px;
+}
+
+.page-header--opened,
+.page-header--nojs {
+  margin-bottom: 207px;
+  border-bottom: none;
 }
 
 .page-header__logo {
-  flex-grow: 3;
   display: flex;
+  min-width: 191px;
+  justify-content: space-between;
   align-items: center;
 
   &:hover {
@@ -51,5 +64,38 @@
 
   &:active {
     opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 174px;
+    margin-right: 95px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    width: 182px;
+  }
+}
+
+.page-header__icon {
+  width: 34px;
+  height: 38px;
+  background-image: url("../img/mobile/logo-mobile.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    width: 61px;
+    height: 50px;
+    background-image: url("../img/tablet/tablet-logo.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    width: 70px;
+    height: 59px;
+    background-image: url("../img/desktop/descktop-logo.svg");
+    margin-bottom: 0;
   }
 }

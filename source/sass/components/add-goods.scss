@@ -6,54 +6,115 @@
   color: $color_basic_black;
   margin-top: 25px;
   margin-bottom: 36px;
+  padding: 0 21px 0 0;
+  border-bottom: 2px solid $color_basic_green;
+  transform: translateY(-13px);
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_title;
     line-height: $line_height_title;
     margin-top: 68px;
     margin-bottom: 70px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    padding: 0 39px 0 39px;
+    margin: 75px 0 79px -39px;
+  }
+}
+
+.add-goods__title-background {
+  background: $color_basic_white;
+  display: inline-block;
+  max-width: 270px;
+  padding: 0 20px;
+  transform: translate(-20px, 11px);
+
+  @media (min-width: $tablet-width) {
+    max-width: 100%;
+    padding: 0 42px 0 39px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    max-width: 100%;
+    padding: 0 40px;
+    transform: translate(-40px, 10px);
   }
 }
 
 .add-goods__wrapper {
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    min-width: 708px;
+  }
+
   @media (min-width: $desktop-content-width) {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-column-gap: 80px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 86px;
   }
 }
 
-.add-goods__list { //todo вопрос: добить вопрос с расположением внутри блока
+.add-goods__list {
   @include reset_list();
-  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .add-goods__item {
   padding-top: 13px;
   padding-bottom: 19px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 98px;
+  border-bottom: 1px solid $color_frames_grey;
+
+  &:first-child {
+    border-top: 1px solid $color_frames_grey;
+  }
 
   @media (min-width: $tablet-width) {
-    border: 1px solid $color_frames_grey;
-    padding: 20px 30px;
+    min-height: auto;
+    border-bottom: 1px solid $color_frames_grey;
+    border-left: 1px solid $color_frames_grey;
+    border-right: 1px solid $color_frames_grey;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 25px 37px 25px 37px;
   }
 
   @media (min-width: $desktop-content-width) {
-    display: flex;
-    //justify-content: space-between;
-    min-height: 72px;
-    padding: 20px 0;
+    border-left: none;
+    border-right: none;
+    padding: 15px 0 16px 0;
+    align-items: center;
   }
 }
 
 .add-goods__button {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   @media (min-width: $tablet-width) {
-    width: 632px;
-    margin: 0 auto;
+    height: 38px;
+    width: 100%;
+    margin-top: 10px;
   }
 
   @media (min-width: $desktop-content-width) {
-    width: 274px;
-    margin: 0;
+    align-items: center;
+    width: 244px;
+    height: 40px;
+    margin: 0 0 0 38px;
   }
 }
 
@@ -64,12 +125,38 @@
   line-height: $line_height_middle;
   color: $color_title_dark-grey;
   text-transform: uppercase;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font_size_middle;
+    line-height: $line_height_medium;
+    width: 315px;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    height: 20px;
+    width: 325px;
+  }
 }
 
 .add-goods__params {
   display: flex;
-  align-items: center;
-  margin-bottom: 15px;
+  justify-content: space-between;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 315px;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    height: 20px;
+    width: 288px;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .add-goods__quantity,
@@ -78,5 +165,15 @@
   font-size: $font_size_base;
   line-height: 14px;
   color: $color_text-dark-grey;
-  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font_size_medium;
+    line-height: $line_height_medium;
+  }
+}
+
+.add-goods__value {
+  @media (min-width: $tablet-width) {
+    margin-left: 46px;
+  }
 }

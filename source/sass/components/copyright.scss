@@ -1,3 +1,9 @@
+.copyright {
+  @media (max-width: $mobile-width-only) {
+    text-align: center;
+  }
+}
+
 .copyright__logo {
   &:hover {
     opacity: 0.8;

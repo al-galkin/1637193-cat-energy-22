@@ -1,7 +1,13 @@
 .details {
-  //@media (min-width: $desktop-content-width) {
-  //  width: 440px;
-  //}
+  @media (min-width: $tablet-width) {
+    margin-bottom: 58px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    padding-top: 65px;
+    width: 445px;
+    margin-right: 125px;
+  }
 }
 
 .details__result {
@@ -14,13 +20,21 @@
   @media (min-width: $desktop-content-width) {
     flex-direction: column;
     align-items: flex-start;
-    width: 440px;
   }
 }
 
 .details__list {
   @include reset_list();
   display: flex;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 160px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    margin-bottom: 35px;
+  }
 }
 
 .details__item {
@@ -29,8 +43,12 @@
   flex-direction: column;
   align-items: center;
 
-  :first-child {
-    margin-outside: 95px;
+  &:first-child {
+    margin-right: 32px;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 43px;
+    }
   }
 }
 
@@ -39,10 +57,18 @@
   font-size: $font_size_base;
   line-height: $line_height_base;
   color: $color_text-dark-grey;
-  margin-bottom: 25px;
+  margin-bottom: 2px;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font_size_medium;
+    line-height: $line_height_title_small;
+    padding-right: 10px;
+    margin-bottom: 30px;
+  }
 
   @media (min-width: $desktop-content-width) {
-    width: 440px;
+    margin-bottom: 50px;
+    margin-top: 191px;
   }
 }
 
@@ -52,11 +78,26 @@
   line-height: $line_height_title_small;
   text-transform: uppercase;
   color: $color_basic_black;
-  margin-bottom: 10px;
+  border: 1px solid $color_frames_grey;
+  border-radius: 3px;
+  width: 124px;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 16px;
+  margin-bottom: 7px;
+  margin-right: 0;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 37px;
+    width: 162px;
+    padding-bottom: 20px;
+    padding-top: 14px;
+    margin-top: 23px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    margin-top: 16px;
   }
 }
 
@@ -68,7 +109,19 @@
   text-transform: lowercase;
   text-align: center;
   display: inline-block;
-  max-width: 85px;
+  max-width: 78px;
+  background-color: $color_background_grey;
+  margin-top: -14px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 130px;
+    background-color: $color_basic_white;
+    font-size: $font_size_base;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    background-color: $color_basic_grey;
+  }
 }
 
 .details__expenses {
@@ -76,11 +129,27 @@
   font-size: $font_size_base;
   line-height: $line_height_medium;
   text-transform: uppercase;
+  text-align: center;
   color: $color_basic_black;
-  margin-top: 11px;
+  margin-top: 18px;
   margin-bottom: 42px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 15px;
+    width: 185px;
+    font-size: $font_size_middle;
+    line-height: $line_height_title_intermediate;
+    text-align: right;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    width: 350px;
+    text-align: left;
+  }
+}
+
+.details__expenses-title {
+  @media (min-width: $desktop-content-width) {
+    padding-right: 60px;
   }
 }

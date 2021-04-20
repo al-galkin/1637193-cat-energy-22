@@ -5,10 +5,18 @@
   align-items: center;
   margin-top: 60px;
   margin-bottom: 53px;
-  fill: $color_icons-grey;
+  fill: $color_icons-grey; //todo: вопрос - не работает заливка svg-иконок. Что поправить? https://skr.sh/s7drH1Hl7Vu
 
   @media (min-width: $tablet-width) {
     margin: 0;
+  }
+}
+
+.social__item {
+  margin-right: 37px;
+
+  &:last-child {
+    margin-right: 0;
   }
 
   &:hover {
@@ -18,14 +26,6 @@
   &:active {
     fill: $color_basic_green;
     opacity: 0.3;
-  }
-}
-
-.social__item {
-  margin-right: 37px;
-
-  &:last-child {
-    margin-right: 0;
   }
 }
 

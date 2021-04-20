@@ -1,4 +1,6 @@
 .range {
+  margin: 0 auto;
+
   @media (min-width: $tablet-width) {
     min-height: 462px;
   }
@@ -6,39 +8,61 @@
   @media (min-width: $desktop-width) {
     display: flex;
     align-items: center;
-    margin-top: -196px;
-    max-width: 570px;
   }
 }
 
+.range__wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 708px;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    position: relative;
+    grid-template-rows: 1fr;
+    grid-template-columns: 690px;
+  }
+}
+
+.range__picture {
+  margin-bottom: 27px;
+  min-height: 232px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-bottom: 29px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.range_image {
+  min-height: 232px;
+}
 
 .range__text {
   font-size: $font_size_medium;
   line-height: $line_height_medium;
   text-transform: uppercase;
   color: $color_basic_black;
+  cursor: pointer;
 
-  width: 230px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-  @media (min-width: $tablet-width) {
-    justify-self: center;
-    grid-column: span 2;
-    width: auto;
+  &:first-child {
+    padding-right: 16px;
   }
 
-  @media (min-width: $desktop-content-width) {
-    width: 460px;
-    z-index: 1;
+  &:last-child {
+    padding-left: 16px;
   }
 }
 
-.range__slider { //todo вопрос: как поправить, чтобы блок с кнопкой не выходил за край? https://skr.sh/s7YAJkVaB1w
-  width: auto;
+.range__control {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 
   @media (min-width: $tablet-width) {
@@ -46,14 +70,16 @@
     grid-column: span 2;
     width: auto;
     position: absolute;
-    bottom: 50px;
+    left: 25%;
+    bottom: 67px;
   }
 
   @media (min-width: $desktop-content-width) {
-    width: 460px;
+    width: auto;
     z-index: 1;
     position: absolute;
-    bottom: 72px;
+    left: 10%;
+    bottom: 69px;
   }
 }
 
@@ -66,6 +92,7 @@
   border-radius: 6px;
 
   @media (min-width: $tablet-width) {
+    position: relative;
     width: 428px;
     height: 6px;
     background: $color_range_grey;
@@ -75,7 +102,7 @@
 }
 
 .range__toggle {
-  width: 50%;
+  width: 35px;
   height: 6px;
   background: $color_basic_green;
   border-radius: 6px;
@@ -83,7 +110,7 @@
   @media (min-width: $tablet-width) {
     position: absolute;
     left: 47%;
-    top: -5px;
+    top: -10px;
     border-radius: 50%;
     background-color: $color_basic_white;
     border: 1px solid $color_frames_grey;

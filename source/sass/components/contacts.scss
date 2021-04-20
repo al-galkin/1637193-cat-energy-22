@@ -1,8 +1,11 @@
 .contacts {
-  padding: 28px 0;
-
-  @media (min-width: $tablet-width) {
-    padding: 0;
+  @media (min-width: $desktop-content-width) {
+    position: relative;
+    width: 1220px;
+    height: 201px;
+    z-index: 1;
+    margin: -201px auto 0 auto;
+    top: 296px;
   }
 }
 
@@ -10,28 +13,31 @@
   background: $color_basic_grey;
 
   @media (min-width: $desktop-content-width) {
-    background: $color_basic_white;
+    background: inherit;
   }
 }
 
 .contacts__wrapper {
-  padding: 28px 0;
+  min-width: 280px;
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 60px;
-    padding-top: 60px;
+    margin: 0 72px;
+    min-height: 201px;
   }
 
   @media (min-width: $desktop-content-width) {
-    max-width: 570px;
-    max-height: 201px;
-    position: absolute;
-    margin-top: 93px;
-    padding-top: 0;
-    padding-bottom: 0;
-    z-index: 2;
-    background: $color_basic_white;
+    width: 570px;
+    background-color: $color_basic_white;
+    margin: 0;
   }
+}
+
+.contacts__title,
+.contacts__address {
+  width: 140px;
 }
 
 .contacts__title {
@@ -40,20 +46,47 @@
   line-height: $line_height_base;
   text-transform: uppercase;
   color: $color_special_black;
+  margin: 27px 0 22px 0;
+  min-height: 58px;
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_middle;
-    line-height: 21px;
+    line-height: $line_height_title_small;
+    width: 171px;
+    margin-top: 65px;
+    margin-bottom: 22px;
+    height: 84px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    margin-left: 75px;
   }
 }
 
 .contacts__address {
   font-family: $font_second, $font_family_reserve;
   font-size: $font_size_base;
+  font-style: normal;
   line-height: $line_height_medium;
   color: $color_text-dark-grey;
+  text-align: left;
+  margin: 24px 0 23px 0;
+  min-height: 60px;
 
   @media (min-width: $tablet-width) {
+    width: 159px;
+    height: 81px;
     font-size: $font_size_medium;
+    text-align: right;
+    margin-top: 63px;
   }
+
+  @media (min-width: $desktop-content-width) {
+    text-align: left;
+    margin-right: 89px;
+  }
+}
+
+.contacts__street {
+  margin: 0;
 }

@@ -1,5 +1,15 @@
 .form {
   margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__section,
+.form__send {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
 }
 
 .form__section {
@@ -7,7 +17,7 @@
     @media (min-width: $desktop-content-width) {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      align-items: center;
+      align-items: start;
       grid-column-gap: 80px;
     }
   }
@@ -31,15 +41,40 @@
 
   &--cat-data,
   &--radio {
+    height: 200px;
+    position: relative;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 30px;
+
     @media (min-width: $tablet-width) {
       margin-bottom: 72px;
     }
   }
 
-  &--checkbox {
+  &--cat-data {
+    @media (min-width: $desktop-content-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  &--radio {
+    border-top: 1px solid $color_border_grey;
+    border-bottom: 1px solid $color_border_grey;
+
+    @media (min-width: $tablet-width) {
+      border: 1px solid $color_border_grey;
+      padding: 30px 30px 15px 27px;
+    }
+  }
+
+  &--checkbox,
+  &--additionally {
     @media (min-width: $tablet-width) {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: wrap; //todo: вопрос - не встает верстка 2мя столбцами https://skr.sh/s7dCNWbknaa как поправить?
+      //flex-direction: row;
+      //justify-content: space-between;
     }
 
     @media (min-width: $desktop-content-width) {
@@ -62,6 +97,14 @@
   display: flex;
   align-items: center;
 
+  &--radio {
+    @media (max-width: $mobile-width-only) {
+      &:first-child {
+        margin-top: 50px;
+      }
+    }
+  }
+
   @media (min-width: $desktop-content-width) {
     width: 100%;
   }
@@ -72,11 +115,44 @@
   font-size: $font_size_title_small;
   line-height: $line_height_title_intermediate;
   color: $color_basic_black;
+  //padding-left: calc((100% - 280px) / 2);
   margin-bottom: 40px;
+  margin-top: 26px;
+  border-bottom: 2px solid $color_basic_green;
+  transform: translateY(-13px);
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_title;
     line-height: $line_height_title;
+    text-align: left;
+    padding-left: 70px;
+    //padding-left: calc((100% - 630px) / 2);
+    margin-top: 0;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    padding-left: 110px;
+    //padding-left: calc((100% - 1220px) / 2);
+  }
+}
+
+.form__title-background {
+  background: $color_basic_white;
+  display: inline-block;
+  max-width: 240px;
+  padding: 0 20px;
+  transform: translate(-20px, 11px);
+
+  @media (min-width: $tablet-width) {
+    max-width: 100%;
+    padding: 0 42px 0 39px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    max-width: 100%;
+    padding: 0 40px;
+    transform: translate(-40px, 10px);
   }
 }
 
@@ -119,14 +195,11 @@
 }
 
 .form__textarea {
-  width: 280px;
+  width: 100%;
   height: 150px;
   padding: 9px 15px;
   border: 1px solid $color_border_grey;
-
-  @media (min-width: $tablet-width) {
-    width: 100%;
-  }
+  resize: none;
 }
 
 .form__send {
@@ -137,16 +210,16 @@
 }
 
 .form__button {
+  width: 100%;
+  margin: auto;
   margin-bottom: 21px;
-  padding-top: 7px;
-  padding-bottom: 7px;
   font-size: $font_size_medium;
 
   @media (min-width: $tablet-width) {
+    width: 282px;
+    margin-left: 0;
     margin-right: 61px;
     margin-bottom: 0;
-    padding-top: 13px;
-    padding-bottom: 13px;
     font-size: $font_size_middle;
   }
 
@@ -160,9 +233,13 @@
   font-size: $font_size_base;
   line-height: $line_height_middle;
   color: $color_basic_black;
+  min-width: 157px;
   margin: 0;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_medium;
+    min-width: 182px;
+    text-align: left;
   }
 }
