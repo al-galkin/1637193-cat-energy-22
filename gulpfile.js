@@ -7,7 +7,6 @@ const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
-const uglify = require("gulp-uglify");
 const terser = require('gulp-terser');
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
@@ -22,10 +21,12 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
+    .pipe(gulp.dest("build/css"))
     .pipe(postcss([
       autoprefixer(),
-      csso()
+      csso({ restructure: false })
     ]))
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
@@ -36,8 +37,8 @@ exports.styles = styles;
 // HTML
 
 const html = () => {
-  return gulp.src("source/**/*.html")
-    .pipe(htmlmin({collapseWhitespace: true}))
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 }
 
@@ -114,7 +115,6 @@ const copy = (done) => {
 
 exports.copy = copy;
 
-
 // Clean
 
 const clean = () => {
@@ -123,19 +123,12 @@ const clean = () => {
 
 exports.clean = clean;
 
-// Reload
-
-const reload = (done) => {
-  sync.reload();
-  done();
-}
-
 // Server
 
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -145,6 +138,13 @@ const server = (done) => {
 }
 
 exports.server = server;
+
+// Reload
+
+const reload = done => {
+  sync.reload();
+  done();
+}
 
 // Watcher
 
@@ -158,28 +158,30 @@ const watcher = () => {
 
 const build = gulp.series(
   clean,
-  copy,
-  optimize_images,
   gulp.parallel(
     styles,
     html,
     scripts,
     sprite,
+    copy,
+    optimize_images,
     create_webp
-  ),
+  )
 );
 
 exports.build = build;
 
+// Default
+
 exports.default = gulp.series(
   clean,
-  copy,
-  copy_images,
   gulp.parallel(
     styles,
     html,
     scripts,
     sprite,
+    copy,
+    copy_images,
     create_webp
   ),
   gulp.series(
