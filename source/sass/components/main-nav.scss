@@ -6,6 +6,10 @@
   text-align: center;
   width: 100%;
   display: none;
+
+  @media (min-width: $tablet-width) {
+    top: 0;
+  }
 }
 
 .main-nav__button {

@@ -43,7 +43,6 @@
 }
 
 .site-list__item {
-  min-width: 181px;
   position: relative;
   left: 0;
   border-bottom: 1px solid $color_menu-border_grey;
@@ -59,7 +58,7 @@
     padding: 0;
     margin-right: 33px;
 
-    :last-child {
+    &:last-child {
       margin-right: 0;
     }
   }
