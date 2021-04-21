@@ -1,7 +1,7 @@
-.show-more { //todo: не встает блок по всей высоте https://skr.sh/s7e9cysN8X1
+.show-more {
   position: relative;
   padding-bottom: 30px;
-  //max-height: 208px;
+  height: 100%;
 
   @media (min-width: $tablet-width) {
     border: 2px solid $color_basic_grey;
@@ -13,7 +13,6 @@
     align-items: center;
     justify-content: space-around;
     border: 2px solid $color_basic_grey;
-    //height: 361px;
   }
 }
 
@@ -55,14 +54,15 @@
   padding-top: 78px;
   margin-bottom: 8px;
 
-  &::before { //todo вопрос: пляшет "плюс", особенно на мобилке https://skr.sh/s7eP3xRgE5d
+  &::before {
     content: "";
     position: absolute;
     width: 30px;
     height: 2px;
     border-bottom: 2px solid $color_plus_grey;
-    left: 45%;
+    left: 50%;
     top: 40px;
+    margin-left: -15px;
   }
 
   &::after {
@@ -86,6 +86,7 @@
       border-bottom: 2px solid $color_plus_grey;
       left: 38px;
       top: 80px;
+      margin-left: 0;
     }
 
     &::after {
@@ -115,6 +116,6 @@
     font-size: $font_size_medium;
     line-height: $line_height_base;
     width: 167px;
-    margin: 0 auto 84px auto;
+    margin: 0 auto 134px auto;
   }
 }

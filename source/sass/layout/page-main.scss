@@ -1,3 +1,9 @@
+.page-main__wrapper--catalog {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 165px;
+  }
+}
+
 .page-main__title {
   font-family: $font, $font_family_reserve;
   font-size: $font_size_title;
@@ -9,10 +15,6 @@
   @media (min-width: $tablet-width) {
     font-size: $font_size_title_big;
     line-height: $line_height_title_big;
-  }
-
-  &--catalog {
-    margin-bottom: 71px;
   }
 }
 

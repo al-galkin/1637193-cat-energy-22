@@ -22,3 +22,9 @@
     grid-template-rows: 1fr 1fr;
   }
 }
+
+.catalog__item {
+  @media (min-width: $desktop-content-width) {
+    max-height: 430px;
+  }
+}
