@@ -13,3 +13,4 @@ source/css/*.map
 source/**/*.css
 source/**/*.map
 Thumbs.db
+build/
