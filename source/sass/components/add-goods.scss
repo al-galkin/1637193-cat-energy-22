@@ -6,20 +6,21 @@
   color: $color_basic_black;
   margin-top: 25px;
   margin-bottom: 36px;
-  padding: 0 21px 0 0;
+  padding: 0 21px 0 20px;
   border-bottom: 2px solid $color_basic_green;
   transform: translateY(-13px);
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_title;
     line-height: $line_height_title;
+    padding-left: 67px;
     margin-top: 68px;
     margin-bottom: 70px;
     text-align: left;
   }
 
   @media (min-width: $desktop-content-width) {
-    padding: 0 39px 0 39px;
+    padding: 0 39px 0 110px;
     margin: 75px 0 79px -39px;
   }
 }

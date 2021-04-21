@@ -72,9 +72,7 @@
   &--additionally {
     @media (min-width: $tablet-width) {
       display: flex;
-      flex-wrap: wrap; //todo: вопрос - не встает верстка 2мя столбцами https://skr.sh/s7dCNWbknaa как поправить?
-      //flex-direction: row;
-      //justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     @media (min-width: $desktop-content-width) {
@@ -105,8 +103,15 @@
     }
   }
 
-  @media (min-width: $desktop-content-width) {
-    width: 100%;
+  &--checkbox {
+    @media (min-width: $tablet-width) {
+      flex-wrap: wrap;
+      width: 50%;
+    }
+
+    @media (min-width: $desktop-content-width) {
+      width: 100%;
+    }
   }
 }
 
@@ -115,7 +120,7 @@
   font-size: $font_size_title_small;
   line-height: $line_height_title_intermediate;
   color: $color_basic_black;
-  //padding-left: calc((100% - 280px) / 2);
+  padding-left: 20px;
   margin-bottom: 40px;
   margin-top: 26px;
   border-bottom: 2px solid $color_basic_green;
@@ -125,15 +130,13 @@
     font-size: $font_size_title;
     line-height: $line_height_title;
     text-align: left;
-    padding-left: 70px;
-    //padding-left: calc((100% - 630px) / 2);
+    padding-left: 69px;
     margin-top: 0;
     margin-bottom: 70px;
   }
 
   @media (min-width: $desktop-content-width) {
     padding-left: 110px;
-    //padding-left: calc((100% - 1220px) / 2);
   }
 }
 
