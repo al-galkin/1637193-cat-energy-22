@@ -63,6 +63,26 @@
       opacity: 1;
       transform: scale(1);
     }
+
+    &:checked + span::before,
+    &:not(:checked) + span:hover::before {
+      border: 1px solid $color_frames_grey2;
+    }
+
+    &:disabled + span::before {
+      opacity: 0.3;
+      border: 1px solid $color_frames_grey;
+    }
+
+    &:disabled + span:hover {
+      opacity: 0.3;
+      color: $color_frames_grey;
+    }
+
+    &:disabled + span {
+      opacity: 0.3;
+      color: $color_frames_grey;
+    }
   }
 
   &--checkbox {
@@ -107,6 +127,31 @@
     &:checked + span::after {
       opacity: 1;
       transform: scale(1);
+    }
+
+    &:checked + span:hover::before,
+    &:not(:checked) + span:hover::before {
+      border: 1px solid $color_frames_grey2;
+    }
+
+    &:disabled + span::before {
+      opacity: 0.3;
+      border: 1px solid $color_frames_grey;
+    }
+
+    &:disabled + span:hover::before {
+      opacity: 0.3;
+      border: 1px solid $color_frames_grey;
+    }
+
+    &:disabled + span:hover {
+      opacity: 0.3;
+      color: $color_frames_grey;
+    }
+
+    &:disabled + span {
+      opacity: 0.3;
+      color: $color_frames_grey;
     }
   }
 

@@ -95,6 +95,11 @@
   display: flex;
   align-items: center;
 
+  &--email,
+  &--phone {
+    position: relative;
+  }
+
   &--radio {
     @media (max-width: $mobile-width-only) {
       &:first-child {
@@ -203,6 +208,46 @@
   @media (min-width: $tablet-width) {
     font-size: $font_size_middle;
     line-height: $line_height_title_median;
+  }
+
+  &:focus-visible {
+    border: none;
+    outline: none;
+  }
+
+  &:focus {
+    border: 1px solid $color_text-dark-grey;
+  }
+
+  &:focus + .form__icon {
+    fill: $color_basic_green;
+  }
+}
+
+.form__icon {
+  position: absolute;
+  right: 15px;
+
+  &--email {
+    top: 16px;
+  }
+
+  &--phone {
+    top: 82px;
+    right: 28px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--phone {
+      right: 78px;
+    }
+  }
+
+  @media (min-width: $desktop-content-width) {
+    &--phone {
+      top: 12px;
+      right: 15px;
+    }
   }
 }
 
