@@ -100,11 +100,12 @@ exports.sprite = sprite;
 
 // Copy (fonts, .ico, .svg)
 
-const copy = (done) => {
+const copy_files = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
-    "source/*.ico",
-    "source/img/**/*.{svg}",
+    "source/**/*.ico",
+    "source/*.json",
+    "source/**/*.svg",
     "!source/img/icons/*.svg",
   ], {
     base: "source"
@@ -113,7 +114,7 @@ const copy = (done) => {
   done();
 }
 
-exports.copy = copy;
+exports.copy_files = copy_files;
 
 // Clean
 
@@ -163,7 +164,7 @@ const build = gulp.series(
     html,
     scripts,
     sprite,
-    copy,
+    copy_files,
     optimize_images,
     create_webp
   )
@@ -180,7 +181,7 @@ exports.default = gulp.series(
     html,
     scripts,
     sprite,
-    copy,
+    copy_files,
     copy_images,
     create_webp
   ),
