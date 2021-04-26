@@ -20,6 +20,16 @@
   text-decoration: none;
   color: $color_basic_black;
 
+  &--nocurrent {
+    &:hover {
+      color: rgba($color_basic_black, 0.6);
+    }
+
+    &:active {
+      color: rgba($color_basic_black, 0.3);
+    }
+  }
+
   @media (min-width: $tablet-width) {
     font-weight: 400;
     font-size: $font_size_menu;
@@ -31,14 +41,6 @@
     line-height: $line_height_title_median;
     color: $color_special_black;
     z-index: 5;
-  }
-
-  &:hover {
-    color: rgba($color_basic_black, 0.6);
-  }
-
-  &:active {
-    color: rgba($color_basic_black, 0.3);
   }
 }
 
