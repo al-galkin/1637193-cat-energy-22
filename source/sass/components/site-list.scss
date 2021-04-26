@@ -79,20 +79,19 @@
     border-bottom: 2px solid $color_basic_green;
     padding-bottom: 6px;
   }
+}
+
+.site-list__link--current-index {
+  cursor: default;
 
   @media (min-width: $desktop-content-width) {
     border-bottom: 2px solid $color_basic_white;
+    padding-bottom: 6px;
   }
 }
 
 .site-list__link--index {
   @media (min-width: $desktop-content-width) {
     color: $color_basic_white;
-  }
-}
-
-.site-list__link--index:not .site-list__link--current {
-  @media (min-width: $desktop-content-width) {
-    border-bottom: 2px solid $color_basic_green;
   }
 }

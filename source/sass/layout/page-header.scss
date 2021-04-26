@@ -79,23 +79,16 @@
 .page-header__icon {
   width: 34px;
   height: 38px;
-  background-image: url("../img/mobile/logo-mobile.svg");
-  background-position: center;
-  background-repeat: no-repeat;
   margin-bottom: 5px;
 
   @media (min-width: $tablet-width) {
     width: 61px;
     height: 50px;
-    background-image: url("../img/tablet/tablet-logo.svg");
-    background-position: center;
-    background-repeat: no-repeat;
   }
 
   @media (min-width: $desktop-content-width) {
     width: 70px;
     height: 59px;
-    background-image: url("../img/desktop/descktop-logo.svg");
     margin-bottom: 0;
   }
 }
