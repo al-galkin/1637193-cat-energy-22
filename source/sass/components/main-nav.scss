@@ -27,36 +27,57 @@
 }
 
 .main-nav--closed .main-nav__button::before {
-  @include reset_pseudo-element-style;
-  top: 0;
-  left: 0;
-  width: 24px;
-  height: 2px;
-  background-color: $color_basic_black;
-  box-shadow: 0 8px 0 0 $color_basic_black, 0 16px 0 0 $color_basic_black;
+  @media (max-width: $mobile-width-only) {
+    @include reset_pseudo-element-style;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: $color_basic_black;
+    box-shadow: 0 8px 0 0 $color_basic_black, 0 16px 0 0 $color_basic_black;
+  }
 }
 
 .main-nav--opened .main-nav__button::before,
-.main-nav--opened .main-nav__button::after,
+.main-nav--opened .main-nav__button::after {
+  @media (max-width: $mobile-width-only) {
+    @include reset_pseudo-element-style;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: $color_basic_black;
+  }
+}
+
+.main-nav--nojs .main-nav__button {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__list,
+.main-nav--opened .main-nav__list {
+  @media (max-width: $mobile-width-only) {
+    display: block;
+  }
+}
+
 .main-nav--nojs .main-nav__button::before,
 .main-nav--nojs .main-nav__button::after {
-  @include reset_pseudo-element-style;
-  left: 0;
-  width: 24px;
-  height: 2px;
-  background-color: $color_basic_black;
+  @media (max-width: $mobile-width-only) {
+    background-color: $color_basic_white;
+    box-shadow: 0 8px 0 0 $color_basic_white, 0 16px 0 0 $color_basic_white;
+  }
 }
 
-.main-nav--opened .main-nav__button::before,
-.main-nav--nojs .main-nav__button::before {
-  transform: rotate(45deg);
+.main-nav--opened .main-nav__button::before {
+  @media (max-width: $mobile-width-only) {
+    transform: rotate(45deg);
+  }
 }
 
-.main-nav--opened .main-nav__button::after,
-.main-nav--nojs .main-nav__button::after {
-  transform: rotate(-45deg);
-}
-
-.main-nav--opened .main-nav__list {
-  display: block;
+.main-nav--opened .main-nav__button::after {
+  @media (max-width: $mobile-width-only) {
+    transform: rotate(-45deg);
+  }
 }
