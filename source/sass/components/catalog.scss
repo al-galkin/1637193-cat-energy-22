@@ -1,12 +1,5 @@
-.catalog {
-  outline: 3px solid chocolate;
-  outline-offset: -3px;
-}
-
 .catalog__list {
   @include reset_list();
-  outline: 3px solid fuchsia;
-  outline-offset: -3px;
 
   @media (min-width: $tablet-width) {
     display: grid;
