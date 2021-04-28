@@ -222,7 +222,53 @@
   &:focus + .form__icon {
     fill: $color_basic_green;
   }
+
+  &:invalid,
+  &--invalid {
+    border: 1px solid $color_status_error;
+
+    & + .form__icon {
+      fill: $color_status_error;
+    }
+  }
 }
+
+//.form__input {
+//  &--email {
+//    margin-left: 11px;
+//    padding-right: 40px;
+//    padding-left: 14px;
+//
+//    @media (min-width: $tablet-width) {
+//      margin-right: -2px;
+//      margin-left: 19px;
+//      padding-right: 50px;
+//      padding-left: 20px;
+//    }
+//
+//    @media (min-width: $desktop-content-width) {
+//      margin-left: 22px;
+//      padding-left: 17px;
+//    }
+//  }
+//
+//  &--phone {
+//  margin-left: 9px;
+//  padding-right: 40px;
+//  padding-left: 15px;
+//
+//  @media (min-width: $tablet-width) {
+//    margin-right: -2px;
+//    margin-left: 16px;
+//    padding-right: 50px;
+//    padding-left: 19px;
+//  }
+//
+//  @media (min-width: $desktop-content-width) {
+//    margin-left: 18px;
+//    padding-left: 17px;
+//  }
+//}
 
 .form__icon {
   position: absolute;

@@ -9,6 +9,9 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body class="page__body">
+<svg style="display: none;">
+  <include src="/img/sprite.svg"></include>
+</svg>
 <header class="page-header page-header__index page-header--closed page-header--nojs">
   <div class="page-header__container">
     <a class="page-header__logo page-header__logo--noindex" href="index.html">
@@ -78,25 +81,16 @@
 
           <ul class="form__list form__list--radio">
             <li class="form__item form__item--radio select">
-              <label class="select__radio">
-                  <input class="select__input select__input--radio" type="radio" name="reason" value="slim" checked>
-                  <span class="select__radio"></span>
-                  похудение
-              </label>
+              <input class="select__input select__input--radio" type="radio" name="reason" value="slim" id="slim" checked>
+              <label class="select__radio" for="slim">похудение</label>
             </li>
             <li class="form__item form__item--radio select">
-              <label class="select__radio">
-                  <input class="select__input select__input--radio" type="radio" name="reason" value="weight-gain">
-                  <span class="select__text"></span>
-                  Набор массы
-              </label>
+              <input class="select__input select__input--radio" type="radio" name="reason" value="weight-gain" id="weight-gain">
+              <label class="select__radio" for="weight-gain">Набор массы</label>
             </li>
             <li class="form__item form__item--radio select">
-              <label class="select__radio">
-                  <input class="select__input select__input--radio" type="radio" name="reason" value="advice">
-                  <span class="select__text"></span>
-                  Не знаю (Нужен ваш совет)
-              </label>
+              <input class="select__input select__input--radio" type="radio" name="reason" value="advice" id="advice">
+              <label class="select__radio" for="advice">Не знаю (Нужен ваш совет)</label>
             </li>
           </ul>
         </fieldset>
@@ -117,15 +111,15 @@
             <li class="form__item form__item--email">
               <label class="form__label" for="owner-email">E-mail:*</label>
               <input class="form__input form__input--email" type="email" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com" required>
-              <svg class="form__icon form__icon--email" width="20" height="15">
-                <use xlink:href="img/icon_email"></use>
+              <svg class="form__icon form__icon--email" width="20" height="15" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#icon-email"></use>
               </svg>
             </li>
             <li class="form__item form__item--phone">
               <label class="form__label" for="owner-phone">Телефон:*</label>
               <input class="form__input form__input--phone" type="tel" name="owner-phone" id="owner-phone" placeholder="8 (960) 900-60-90" required>
-              <svg class="form__icon form__icon--phone" width="20" height="21">
-                <use xlink:href="img/icon_phone"></use>
+              <svg class="form__icon form__icon--phone" width="20" height="21" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#phone"></use>
               </svg>
             </li>
           </ul>
@@ -163,32 +157,20 @@
         <div class="container">
           <ul class="form__list form__list--checkbox form__list--additionally">
             <li class="form__item form__item--checkbox select">
-              <label class="select__checkbox">
-                  <input class="select__input select__input--checkbox" type="checkbox" name="sugar" checked>
-                  <span class="select__text"></span>
-                  сахарозаменитель
-              </label>
+              <input class="select__input select__input--checkbox" type="checkbox" name="sugar" id="sugar" checked>
+              <label class="select__checkbox" for="sugar">сахарозаменитель</label>
             </li>
             <li class="form__item form__item--checkbox select">
-              <label class="select__checkbox">
-                  <input class="select__input select__input--checkbox" type="checkbox" name="water">
-                  <span class="select__text"></span>
-                  питьевая вода
-              </label>
+              <input class="select__input select__input--checkbox" type="checkbox" name="water" id="water">
+              <label class="select__checkbox" for="water">питьевая вода</label>
             </li>
             <li class="form__item form__item--checkbox select">
-              <label class="select__checkbox">
-                  <input class="select__input select__input--checkbox" type="checkbox" name="milk">
-                  <span class="select__text"></span>
-                  молоко
-              </label>
+              <input class="select__input select__input--checkbox" type="checkbox" name="milk" id="milk">
+              <label class="select__checkbox" for="milk">молоко</label>
             </li>
             <li class="form__item form__item--checkbox select">
-              <label class="select__checkbox">
-                  <input class="select__input select__input--checkbox" type="checkbox" name="vitamins">
-                  <span class="select__text"></span>
-                  витамины
-              </label>
+              <input class="select__input select__input--checkbox" type="checkbox" name="vitamins" id="vitamins">
+              <label class="select__checkbox" for="vitamins">витамины</label>
             </li>
           </ul>
         </div>
