@@ -35,7 +35,7 @@
   @media (min-width: $desktop-content-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    column-gap: 78px;
+    column-gap: 67px; //пробовать переделать на 78px
   }
 }
 
