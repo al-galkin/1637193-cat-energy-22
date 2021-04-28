@@ -47,10 +47,9 @@
 .site-list__item {
   position: relative;
   left: 0;
+  border-top: 1px solid $color_menu-border_grey;
   border-bottom: 1px solid $color_menu-border_grey;
   padding: 22px 0 18px 0;
-
-  border-top: 1px solid $color_menu-border_grey;
 
   @media (min-width: $tablet-width) {
     position: static;
