@@ -157,7 +157,11 @@
           <div class="range__wrapper">
             <div class="range__picture">
               <picture>
-                <source media="(min-width:1260px)" srcset="img/desktop/image_cat_desktop.png 1x, img/desktop/image_cat_desktop_@2x.png 2x">
+                <source type="image/webp" media="(min-width:1440px)" srcset="img/desktop/image_cat_desktop.webp 1x, img/desktop/image_cat_desktop_@2x.webp 2x">
+                <source type="image/webp" media="(min-width:768px)" srcset="img/tablet/image_cat_tablet.webp 1x, img/tablet/image_cat_tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/tablet/image_cat_tablet.webp 1x, img/tablet/image_cat_tablet@2x.webp 2x">
+
+                <source media="(min-width:1440px)" srcset="img/desktop/image_cat_desktop.png 1x, img/desktop/image_cat_desktop_@2x.png 2x">
                 <source media="(min-width:768px)" srcset="img/tablet/image_cat_tablet.png 1x, img/tablet/image_cat_tablet@2x.png 2x">
                 <img class="range_image" src="img/mobile/before-mobile_1.png" srcset="img/mobile/before-mobile_1.png 1x, img/mobile/before-mobile@2x.png 2x" alt="Кот с демонстрацией до\после">
               </picture>

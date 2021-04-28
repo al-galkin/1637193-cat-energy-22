@@ -19,7 +19,7 @@
 
     &::before {
       @include reset_pseudo-element-style;
-      background: linear-gradient(to right, $color_transparent_green 0%, $color_transparent_green 100%) no-repeat, url("../img/desktop/index-background-desktop 1.png") 100% 0 no-repeat;
+      background: linear-gradient(to right, $color_transparent_green 0%, $color_transparent_green 100%) no-repeat, url("../img/desktop/index-background-desktop-1.png") 100% 0 no-repeat;
       background-size: cover;
       width: 50%;
       height: 694px;
@@ -27,7 +27,7 @@
       top: 0;
 
       @media (min-resolution: 2dppx) {
-        background: linear-gradient(to right, $color_transparent_green 0%, $color_transparent_green 100%) no-repeat, url("../img/desktop/index-background-desktop 1 @2x.png") 100% 0 no-repeat;
+        background: linear-gradient(to right, $color_transparent_green 0%, $color_transparent_green 100%) no-repeat, url("../img/desktop/index-background-desktop-1-@2x.png") 100% 0 no-repeat;
       }
     }
   }
@@ -35,14 +35,14 @@
 
 .promo__wrapper {
   position: relative;
-  background: linear-gradient(to bottom, $color_transparent_green 0%, $color_transparent_green 100%), url("../img/mobile/index-background-desktop 2.png") center/cover no-repeat;
+  background: linear-gradient(to bottom, $color_transparent_green 0%, $color_transparent_green 100%), url("../img/mobile/index-background-desktop-2.png") center/cover no-repeat;
   min-height: 302px;
   margin-bottom: 136px;
   display: flex;
   flex-direction: column;
 
   @media (min-resolution: 2dppx) {
-    background: linear-gradient(to bottom, $color_transparent_green 0%, $color_transparent_green 100%), url("../img/mobile/index-background-desktop 2 @2x.png") center/cover no-repeat;
+    background: linear-gradient(to bottom, $color_transparent_green 0%, $color_transparent_green 100%), url("../img/mobile/index-background-desktop-2-@2x.png") center/cover no-repeat;
   }
 
   &::after {
@@ -60,7 +60,7 @@
     left: 0;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/mobile/index-can-mobile 1 @2x.png");
+      background-image: url("../img/mobile/index-can-mobile-1-@2x.png");
     }
   }
 
@@ -74,11 +74,11 @@
     &::after {
       height: 639px;
       background-size: 709px 609px;
-      background-image: url("../img/tablet/index-can-tablet 1.png");
+      background-image: url("../img/tablet/index-can-tablet-1.png");
       background-position: 50% 30px;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/tablet/index-can-tablet 1 @2x.png");
+        background-image: url("../img/tablet/index-can-tablet-1-@2x.png");
       }
     }
   }
@@ -96,7 +96,7 @@
       background-position: 320px 0;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/desktop/index-can @2x.png");
+        background-image: url("../img/desktop/index-can-@2x.png");
       }
     }
   }
