@@ -217,20 +217,38 @@
     outline: none;
   }
 
-  &:focus {
-    border: 1px solid $color_text-dark-grey;
+  & + .form__icon--phone {
+    fill: $color_basic_black;
   }
 
-  &:focus + .form__icon {
-    fill: $color_basic_green;
+  & + .form__icon--email {
+    fill: $color-basic_white;
+    stroke: $color_title_dark-grey;
+    stroke-width: 1.3px;
+  }
+
+  &:focus {
+    border: 1px solid $color_text-dark-grey;
+
+    & + .form__icon--phone {
+      fill: $color_basic_green;
+    }
+
+    & + .form__icon--email {
+      stroke: $color_basic_green;
+    }
   }
 
   &:invalid,
   &--invalid {
     border: 1px solid $color_status_error;
 
-    & + .form__icon {
+    & + .form__icon--phone {
       fill: $color_status_error;
+    }
+
+    & + .form__icon--email {
+      stroke: $color_status_error;
     }
   }
 }
