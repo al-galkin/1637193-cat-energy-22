@@ -105,7 +105,10 @@
   width: 35px;
   height: 6px;
   background: $color_basic_green;
+  border: none;
   border-radius: 6px;
+  position: relative;
+  top: -12px;
 
   @media (min-width: $tablet-width) {
     position: absolute;
