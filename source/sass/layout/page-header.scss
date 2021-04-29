@@ -17,7 +17,11 @@
     margin-bottom: 12px;
   }
 
-  &--opened,
+  &--opened {
+    height: auto;
+    min-height: 65px;
+  }
+
   &--nojs {
     margin-bottom: 207px;
     border-bottom: none;
