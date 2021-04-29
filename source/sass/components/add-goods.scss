@@ -114,13 +114,14 @@
 }
 
 .add-goods__button {
-  height: 40px;
+  height: auto;
+  min-height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    height: 38px;
+    min-height: 38px;
     width: 100%;
     margin-top: 10px;
   }
@@ -128,7 +129,7 @@
   @media (min-width: $desktop-content-width) {
     align-items: center;
     width: 244px;
-    height: 40px;
+    min-height: 40px;
     margin: 0 0 0 38px;
   }
 }
