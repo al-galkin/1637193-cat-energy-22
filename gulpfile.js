@@ -90,7 +90,7 @@ exports.create_webp = create_webp;
 // Sprites
 
 const sprite = () => {
-  return gulp.src("source/img/icons/*.svg") //todo добавить иконки для спрайта в отдельную папку icons
+  return gulp.src("source/img/sprite_icons/*.svg")
     .pipe(svgstore({inLineSvg: true}))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"))
@@ -106,7 +106,7 @@ const copy_files = (done) => {
     "source/**/*.ico",
     "source/*.json",
     "source/**/*.svg",
-    "!source/img/icons/*.svg",
+    "!source/img/sprite_icons/*.svg",
   ], {
     base: "source"
   })

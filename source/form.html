@@ -9,9 +9,6 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body class="page__body">
-<svg style="display: none;">
-  <include src="/img/sprite.svg"></include>
-</svg>
 <header class="page-header page-header__index page-header--closed page-header--nojs">
   <div class="page-header__container">
     <a class="page-header__logo page-header__logo--noindex" href="index.html">
@@ -20,7 +17,9 @@
         <source media="(min-width:768px)" srcset="img/tablet/tablet-logo.svg">
         <img src="img/mobile/logo-mobile.svg" width="61" height="50" alt="Иконка сайта Кэт Энерджи">
       </picture>
-      <img src="img/mobile/logo-label-mobile.svg" width="101" height="18" alt="Логотип компании Cat Energy">
+      <svg class="page-header__label-icon" width="101" height="18" aria-label="Логотип компании Cat Energy">
+        <use xlink:href="img/sprite.svg#logo-label-mobile"></use>
+      </svg>
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__button" type="button" aria-label="Открыть меню">
@@ -112,14 +111,14 @@
               <label class="form__label" for="owner-email">E-mail:*</label>
               <input class="form__input form__input--email" type="email" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com" required>
               <svg class="form__icon form__icon--email" width="20" height="15" aria-hidden="true" focusable="false">
-                <use xlink:href="img/sprite.svg#icon-email"></use>
+                <use xlink:href="img/sprite.svg#icon_email"></use>
               </svg>
             </li>
             <li class="form__item form__item--phone">
               <label class="form__label" for="owner-phone">Телефон:*</label>
               <input class="form__input form__input--phone" type="tel" name="owner-phone" id="owner-phone" placeholder="8 (960) 900-60-90" required>
               <svg class="form__icon form__icon--phone" width="20" height="21" aria-hidden="true" focusable="false">
-                <use xlink:href="img/sprite.svg#phone"></use>
+                <use xlink:href="img/sprite.svg#icon_phone"></use>
               </svg>
             </li>
           </ul>
@@ -224,7 +223,9 @@
     <div class="page-footer__wrapper">
       <div class="page-footer__copyright copyright">
         <a class="copyright__logo" href="index.html">
-          <img class="copyright__image" src="img/footer-logo.svg" width="128" height="24" alt="Логотип CAT ENERGY">
+          <svg class="copyright__image" width="128" height="24" aria-label="Логотип CAT ENERGY">
+            <use xlink:href="img/sprite.svg#footer-logo"></use>
+          </svg>
         </a>
       </div>
       <section class="social">
@@ -235,20 +236,25 @@
           <li class="social__item">
             <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Вконтакте">
               <span class="visually-hidden">Вконтакте</span>
-              <img src="img/icon_vkontakte.svg" width="29" height="17" alt="Вконтакте">
+              <svg class="social__icon" width="29" height="17" aria-label="Вконтакте">
+                <use xlink:href="img/sprite.svg#icon_vkontakte"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Instagram">
               <span class="visually-hidden">Instagram</span>
-              <img src="img/icon_instagram.svg" width="23" height="23" alt="Instagram">
-
+              <svg class="social__icon" width="23" height="23" aria-label="Instagram">
+                <use xlink:href="img/sprite.svg#icon_instagram"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Facebook">
               <span class="visually-hidden">Facebook</span>
-              <img src="img/icon_facebook.svg" width="23" height="27" alt="Facebook">
+              <svg class="social__icon" width="23" height="27" aria-label="Facebook">
+                <use xlink:href="img/sprite.svg#icon_facebook"></use>
+              </svg>
             </a>
           </li>
         </ul>
@@ -257,7 +263,9 @@
         <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive"
           aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
           <p class="developer__text">HTML Academy</p>
-          <img class="developer__logo" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+          <svg class="developer__logo" width="27" height="34" aria-label="Логотип HTML Academy">
+            <use xlink:href="img/sprite.svg#htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </div>
