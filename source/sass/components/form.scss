@@ -30,6 +30,8 @@
   }
 
   &--additionally {
+    margin-bottom: 34px;
+
     @media (min-width: $tablet-width) {
       margin-bottom: 40px;
     }
@@ -233,68 +235,9 @@
   }
 }
 
-//.form__input {
-//  &--email {
-//    margin-left: 11px;
-//    padding-right: 40px;
-//    padding-left: 14px;
-//
-//    @media (min-width: $tablet-width) {
-//      margin-right: -2px;
-//      margin-left: 19px;
-//      padding-right: 50px;
-//      padding-left: 20px;
-//    }
-//
-//    @media (min-width: $desktop-content-width) {
-//      margin-left: 22px;
-//      padding-left: 17px;
-//    }
-//  }
-//
-//  &--phone {
-//  margin-left: 9px;
-//  padding-right: 40px;
-//  padding-left: 15px;
-//
-//  @media (min-width: $tablet-width) {
-//    margin-right: -2px;
-//    margin-left: 16px;
-//    padding-right: 50px;
-//    padding-left: 19px;
-//  }
-//
-//  @media (min-width: $desktop-content-width) {
-//    margin-left: 18px;
-//    padding-left: 17px;
-//  }
-//}
-
 .form__icon {
   position: absolute;
   right: 15px;
-
-  &--email {
-    top: 16px;
-  }
-
-  &--phone {
-    top: 82px;
-    right: 28px;
-  }
-
-  @media (min-width: $tablet-width) {
-    &--phone {
-      right: 78px;
-    }
-  }
-
-  @media (min-width: $desktop-content-width) {
-    &--phone {
-      top: 12px;
-      right: 15px;
-    }
-  }
 }
 
 .form__textarea {
