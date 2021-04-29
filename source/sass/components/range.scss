@@ -105,11 +105,15 @@
   width: 35px;
   height: 6px;
   background: $color_basic_green;
+  border: none;
   border-radius: 6px;
+  position: relative;
+  top: -12px;
 
   @media (min-width: $tablet-width) {
     position: absolute;
     left: 47%;
+    //    left: calc(100% - 17px);
     top: -10px;
     border-radius: 50%;
     background-color: $color_basic_white;
@@ -131,5 +135,6 @@
 
   @media (min-width: $desktop-content-width) {
     left: 51%;
+    //left: calc(100% - 18px);
   }
 }

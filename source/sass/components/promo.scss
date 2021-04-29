@@ -19,7 +19,7 @@
 
     &::before {
       @include reset_pseudo-element-style;
-      background: linear-gradient(to right, $color_transparent_green 0%, $color_transparent_green 100%) no-repeat, url("../img/desktop/index-background-desktop 1.png") 100% 0 no-repeat;
+      background: linear-gradient(to right, $color_transparent_green 0%, $color_transparent_green 100%) no-repeat, url("../img/desktop/index-background-desktop-1.png") 100% 0 no-repeat;
       background-size: cover;
       width: 50%;
       height: 694px;
@@ -27,7 +27,7 @@
       top: 0;
 
       @media (min-resolution: 2dppx) {
-        background: linear-gradient(to right, $color_transparent_green 0%, $color_transparent_green 100%) no-repeat, url("../img/desktop/index-background-desktop 1 @2x.png") 100% 0 no-repeat;
+        background: linear-gradient(to right, $color_transparent_green 0%, $color_transparent_green 100%) no-repeat, url("../img/desktop/index-background-desktop-1-@2x.png") 100% 0 no-repeat;
       }
     }
   }
@@ -35,16 +35,19 @@
 
 .promo__wrapper {
   position: relative;
-  background: linear-gradient(to bottom, $color_transparent_green 0%, $color_transparent_green 100%), url("../img/mobile/index-background-desktop 2.png") center/cover no-repeat;
-  height: 302px;
+  background: linear-gradient(to bottom, $color_transparent_green 0%, $color_transparent_green 100%), url("../img/mobile/index-background-desktop-2.png") center/cover no-repeat;
+  min-height: 302px;
   margin-bottom: 136px;
+  display: flex;
+  flex-direction: column;
 
   @media (min-resolution: 2dppx) {
-    background: linear-gradient(to bottom, $color_transparent_green 0%, $color_transparent_green 100%), url("../img/mobile/index-background-desktop 2 @2x.png") center/cover no-repeat;
+    background: linear-gradient(to bottom, $color_transparent_green 0%, $color_transparent_green 100%), url("../img/mobile/index-background-desktop-2-@2x.png") center/cover no-repeat;
   }
 
   &::after {
     content: "";
+    position: absolute;
     width: 100%;
     height: 300px;
     display: block;
@@ -53,11 +56,11 @@
     background-size: 280px 270px;
     background-position: 50% 30px;
     z-index: 1;
-    top: 50px;
-    left: 50px;
+    top: 130px;
+    left: 0;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/mobile/index-can-mobile 1 @2x.png");
+      background-image: url("../img/mobile/index-can-mobile-1-@2x.png");
     }
   }
 
@@ -65,17 +68,17 @@
     background-image: none;
     z-index: -1;
     margin-bottom: 0;
-    min-height: 180px;
+    min-height: 750px;
     height: auto;
 
     &::after {
       height: 639px;
       background-size: 709px 609px;
-      background-image: url("../img/tablet/index-can-tablet 1.png");
-      background-position: 33px 21px;
+      background-image: url("../img/tablet/index-can-tablet-1.png");
+      background-position: 50% 30px;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/tablet/index-can-tablet 1 @2x.png");
+        background-image: url("../img/tablet/index-can-tablet-1-@2x.png");
       }
     }
   }
@@ -83,6 +86,7 @@
   @media (min-width: $desktop-content-width) {
     margin-top: -52px;
     z-index: 0;
+    min-height: auto;
 
     &::after {
       position: absolute;
@@ -92,7 +96,7 @@
       background-position: 320px 0;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/desktop/index-can @2x.png");
+        background-image: url("../img/desktop/index-can-@2x.png");
       }
     }
   }
@@ -101,6 +105,7 @@
 .promo__title {
   color: $color_basic_white;
   font-size: $font_size_title;
+  font-weight: 400;
   line-height: $line_height_title;
   padding-top: 27px;
   padding-bottom: 25px;
@@ -122,7 +127,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    font-size: $font_size_medium;
+    font-size: $font_size_middle;
     line-height: $line_height_medium;
   }
 }
@@ -153,8 +158,12 @@
     line-height: $line_height_medium;
     width: 244px;
     position: relative;
-    top: 52px;
+    top: -515px;
     z-index: 10;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    top: 48px;
   }
 }
 

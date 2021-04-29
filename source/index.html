@@ -4,15 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link href="./css/style.css" rel="stylesheet">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="./img/favicon16.svg">
+  <link rel="manifest" href="manifest.json">
 </head>
 <body class="page__body">
 <header class="page-header page-header__index page-header--closed page-header--nojs">
   <div class="page-header__container">
     <a class="page-header__logo">
-      <span class="page-header__icon" aria-label="Иконка сайта Кэт Энерджи"></span>
-      <img src="img/mobile/logo-label-mobile.svg" width="101" height="18" alt="Логотип компании Cat Energy">
+      <picture class="page-header__icon">
+        <source media="(min-width:1260px)" srcset="img/desktop/descktop-logo.svg">
+        <source media="(min-width:768px)" srcset="img/tablet/tablet-logo.svg">
+        <img src="img/mobile/logo-mobile.svg" width="61" height="50" alt="Иконка сайта Кэт Энерджи">
+      </picture>
+      <svg class="page-header__label-icon" width="101" height="18" aria-label="Логотип компании Cat Energy">
+        <use xlink:href="img/sprite.svg#logo-label-mobile"></use>
+      </svg>
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__button" type="button" aria-label="Открыть меню">
@@ -20,17 +29,17 @@
       </button>
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
-          <a class="site-list__link site-list__link--index site-list__link--current" aria-label="Переход на главную страницу 'Кэт энерджи'">
+          <a class="site-list__link site-list__link--index site-list__link--current site-list__link--current-index" aria-label="Переход на главную страницу 'Кэт энерджи'">
             Главная
           </a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link site-list__link--index" href="catalog.html" aria-label="Переход на страницу каталога 'Кэт энерджи'">
+          <a class="site-list__link site-list__link--nocurrent site-list__link--index" href="catalog.html" aria-label="Переход на страницу каталога 'Кэт энерджи'">
             Каталог продукции
           </a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link site-list__link--index" href="form.html" aria-label="Переход на страницу подбора программы 'Кэт энерджи'">
+          <a class="site-list__link site-list__link--nocurrent site-list__link--index" href="form.html" aria-label="Переход на страницу подбора программы 'Кэт энерджи'">
             Подбор программы
           </a>
         </li>
@@ -50,11 +59,10 @@
       <p class="promo__slogan">
         Занялся собой? Займись котом!
       </p>
-      <a class="button promo__link" href="form.html"
-        aria-label="Переход на страницу подбора программы">
-        Подобрать программу
-      </a>
     </div>
+    <a class="button promo__link" href="form.html" aria-label="Переход на страницу подбора программы">
+      Подобрать программу
+    </a>
   </section>
 
   <section class="reasons container">
@@ -153,7 +161,11 @@
           <div class="range__wrapper">
             <div class="range__picture">
               <picture>
-                <source media="(min-width:1260px)" srcset="img/desktop/image_cat_desktop.png 1x, img/desktop/image_cat_desktop_@2x.png 2x">
+                <source type="image/webp" media="(min-width:1440px)" srcset="img/desktop/image_cat_desktop.webp 1x, img/desktop/image_cat_desktop_@2x.webp 2x">
+                <source type="image/webp" media="(min-width:768px)" srcset="img/tablet/image_cat_tablet.webp 1x, img/tablet/image_cat_tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/tablet/image_cat_tablet.webp 1x, img/tablet/image_cat_tablet@2x.webp 2x">
+
+                <source media="(min-width:1440px)" srcset="img/desktop/image_cat_desktop.png 1x, img/desktop/image_cat_desktop_@2x.png 2x">
                 <source media="(min-width:768px)" srcset="img/tablet/image_cat_tablet.png 1x, img/tablet/image_cat_tablet@2x.png 2x">
                 <img class="range_image" src="img/mobile/before-mobile_1.png" srcset="img/mobile/before-mobile_1.png 1x, img/mobile/before-mobile@2x.png 2x" alt="Кот с демонстрацией до\после">
               </picture>
@@ -163,7 +175,7 @@
                 Было
               </span>
               <div class="range__input">
-                <div class="range__toggle" aria-label="Ползунок-переключатель состояния кота"></div>
+                <button class="range__toggle" type="button" aria-label="Ползунок-переключатель состояния кота"></button>
               </div>
               <span class="range__text">
                 Стало
@@ -208,7 +220,9 @@
     <div class="page-footer__wrapper">
       <div class="page-footer__copyright copyright">
         <a class="copyright__logo" href="index.html">
-          <img class="copyright__image" src="img/footer-logo.svg" width="128" height="24" alt="Логотип CAT ENERGY">
+          <svg class="copyright__image" width="128" height="24" aria-label="Логотип CAT ENERGY">
+            <use xlink:href="img/sprite.svg#footer-logo"></use>
+          </svg>
         </a>
       </div>
       <section class="social">
@@ -219,20 +233,25 @@
           <li class="social__item">
             <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Вконтакте">
               <span class="visually-hidden">Вконтакте</span>
-              <img src="img/icon_vkontakte.svg" width="29" height="17" alt="Вконтакте">
+              <svg class="social__icon" width="29" height="17" aria-label="Вконтакте">
+                <use xlink:href="img/sprite.svg#icon_vkontakte"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Instagram">
               <span class="visually-hidden">Instagram</span>
-              <img src="img/icon_instagram.svg" width="23" height="23" alt="Instagram">
-
+              <svg class="social__icon" width="23" height="23" aria-label="Instagram">
+                <use xlink:href="img/sprite.svg#icon_instagram"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Facebook">
               <span class="visually-hidden">Facebook</span>
-              <img src="img/icon_facebook.svg" width="23" height="27" alt="Facebook">
+              <svg class="social__icon" width="23" height="27" aria-label="Facebook">
+                <use xlink:href="img/sprite.svg#icon_facebook"></use>
+              </svg>
             </a>
           </li>
         </ul>
@@ -241,13 +260,15 @@
         <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive"
           aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
           <p class="developer__text">HTML Academy</p>
-          <img class="developer__logo" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+          <svg class="developer__logo" width="27" height="34" aria-label="Логотип HTML Academy">
+            <use xlink:href="img/sprite.svg#htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </div>
   </div>
 </footer>
 
-<script src="./js/menu-button.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>

@@ -4,15 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Каталог продукции | "Кэт энерджи"</title>
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link href="./css/style.css" rel="stylesheet">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="./img/favicon16.svg">
+  <link rel="manifest" href="manifest.json">
 </head>
 <body class="page__body">
 <header class="page-header page-header__index page-header--closed page-header--nojs">
   <div class="page-header__container">
-    <a class="page-header__logo" href="index.html">
-      <span class="page-header__icon" aria-label="Иконка сайта Кэт Энерджи"></span>
-      <img src="img/mobile/logo-label-mobile.svg" width="101" height="18" alt="Логотип компании Cat Energy">
+    <a class="page-header__logo  page-header__logo--noindex" href="index.html">
+      <picture class="page-header__icon">
+        <source media="(min-width:1260px)" srcset="img/desktop/descktop-logo.svg">
+        <source media="(min-width:768px)" srcset="img/tablet/tablet-logo.svg">
+        <img src="img/mobile/logo-mobile.svg" width="61" height="50" alt="Иконка сайта Кэт Энерджи">
+      </picture>
+      <svg class="page-header__label-icon" width="101" height="18" aria-label="Логотип компании Cat Energy">
+        <use xlink:href="img/sprite.svg#logo-label-mobile"></use>
+      </svg>
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__button" type="button" aria-label="Открыть меню">
@@ -20,7 +29,7 @@
       </button>
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
-          <a class="site-list__link" href="index.html" aria-label="Переход на главную страницу 'Кэт энерджи'">
+          <a class="site-list__link site-list__link--nocurrent" href="index.html" aria-label="Переход на главную страницу 'Кэт энерджи'">
             Главная
           </a>
         </li>
@@ -30,7 +39,7 @@
           </a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link" href="form.html" aria-label="Переход на страницу подбора программы 'Кэт энерджи'">
+          <a class="site-list__link site-list__link--nocurrent" href="form.html" aria-label="Переход на страницу подбора программы 'Кэт энерджи'">
             Подбор программы
           </a>
         </li>
@@ -40,7 +49,7 @@
 </header>
 
 <main class="page-main">
-  <div class="page-main__wrapper container">
+  <div class="page-main__wrapper page-main__wrapper--catalog container">
     <h1 class="page-main__title page-main__title--catalog">
       Каталог продукции
     </h1>
@@ -56,13 +65,17 @@
           <div class="product__wrapper">
             <a class="product__image-wrapper" href="blank.html">
               <picture>
+                <source type="image/webp" media="(min-width:1440px)" srcset="img/desktop/catalog/catalog-1-desktop-1.webp 1x, img/desktop/catalog/catalog-1-desktop-1-@2x.webp 2x">
+                <source type="image/webp" media="(min-width:768px)" srcset="img/tablet/catalog/catalog-1-desktop-1.webp 1x, img/tablet/catalog/catalog-1-desktop-1-@2x.webp 2x">
+                <source type="image/webp" srcset="img/mobile/catalog/catalog-1-desktop-1.webp 1x, img/mobile/catalog/catalog-1-desktop-1-@2x.webp 2x">
+
                 <source media="(min-width:1440px)" srcset="img/desktop/catalog/catalog-1-desktop-1.png 1x, img/desktop/catalog/catalog-1-desktop-1-@2x.png 2x">
                 <source media="(min-width:768px)" srcset="img/tablet/catalog/catalog-1-desktop-1.png 1x, img/tablet/catalog/catalog-1-desktop-1-@2x.png 2x">
                 <img src="img/mobile/catalog/catalog-1-desktop-1.png" alt="Cat PRO Energy со вкусом курицы объемом 500 грамм" class="product__image" srcset="img/mobile/catalog/catalog-1-desktop-1.png 1x, img/mobile/catalog/catalog-1-desktop-1-@2x.png 2x">
               </picture>
             </a>
             <div class="product__description">
-              <a class="product__title-link" href="#">
+              <a class="product__title-link" href="blank.html">
                 <h3 class="product__title">
                   Cat Energy PRO 500 г
                 </h3>
@@ -95,7 +108,7 @@
               </ul>
             </div>
           </div>
-          <a class="button product__button" aria-label="Добавить в корзину 'Cat PRO Energy со вкусом курицы объемом 500 грамм'" href="#">
+          <a class="button product__button" aria-label="Добавить в корзину 'Cat PRO Energy со вкусом курицы объемом 500 грамм'" href="blank.html">
             заказать
           </a>
         </article>
@@ -106,13 +119,17 @@
           <div class="product__wrapper">
             <a class="product__image-wrapper product__image-wrapper--big" href="blank.html">
               <picture>
+                <source type="image/webp" media="(min-width:1440px)" srcset="img/desktop/catalog/catalog-2-desktop-1.webp 1x, img/desktop/catalog/catalog-2-desktop-1-@2x.webp 2x">
+                <source type="image/webp" media="(min-width:768px)" srcset="img/tablet/catalog/catalog-2-desktop-1.webp 1x, img/tablet/catalog/catalog-2-desktop-1-@2x.webp 2x">
+                <source type="image/webp" srcset="img/mobile/catalog/catalog-2-desktop-1.webp 1x, img/mobile/catalog/catalog-2-desktop-1-@2x.webp 2x">
+
                 <source media="(min-width:1440px)" srcset="img/desktop/catalog/catalog-2-desktop-1.png 1x, img/desktop/catalog/catalog-2-desktop-1-@2x.png 2x">
                 <source media="(min-width:768px)" srcset="img/tablet/catalog/catalog-2-desktop-1.png 1x, img/tablet/catalog/catalog-2-desktop-1-@2x.png 2x">
                 <img src="img/mobile/catalog/catalog-2-desktop-1.png" alt="Cat PRO Energy со вкусом курицы объемом 1000 грамм" class="product__image product__image--big" srcset="img/mobile/catalog/catalog-2-desktop-1.png 1x, img/mobile/catalog/catalog-2-desktop-1-@2x.png 2x">
               </picture>
             </a>
             <div class="product__description">
-              <a class="product__title-link" href="#">
+              <a class="product__title-link" href="blank.html">
                 <h3 class="product__title">
                   Cat Energy PRO 1000 г
                 </h3>
@@ -145,7 +162,7 @@
               </ul>
             </div>
           </div>
-          <a class="button product__button" aria-label="Добавить в корзину 'Cat PRO Energy со вкусом курицы объемом 1000 грамм'" href="#">
+          <a class="button product__button" aria-label="Добавить в корзину 'Cat PRO Energy со вкусом курицы объемом 1000 грамм'" href="blank.html">
             заказать
           </a>
         </article>
@@ -156,13 +173,17 @@
           <div class="product__wrapper">
             <a class="product__image-wrapper" href="blank.html">
               <picture>
+                <source type="image/webp" media="(min-width:1440px)" srcset="img/desktop/catalog/catalog-3-desktop.webp 1x, img/desktop/catalog/catalog-3-desktop-@2x.webp 2x">
+                <source type="image/webp" media="(min-width:768px)" srcset="img/tablet/catalog/catalog-3-desktop.webp 1x, img/tablet/catalog/catalog-3-desktop-@2x.webp 2x">
+                <source type="image/webp" srcset="img/mobile/catalog/catalog-3-desktop.webp 1x, img/mobile/catalog/catalog-3-desktop-@2x.webp 2x">
+
                 <source media="(min-width:1440px)" srcset="img/desktop/catalog/catalog-3-desktop.png 1x, img/desktop/catalog/catalog-3-desktop-@2x.png 2x">
                 <source media="(min-width:768px)" srcset="img/tablet/catalog/catalog-3-desktop.png 1x, img/tablet/catalog/catalog-3-desktop-@2x.png 2x">
                 <img src="img/mobile/catalog/catalog-3-desktop.png" alt="Cat PRO Energy со вкусом рыбы объемом 500 грамм" class="product__image" srcset="img/mobile/catalog/catalog-3-desktop.png 1x, img/mobile/catalog/catalog-3-desktop-@2x.png 2x">
               </picture>
             </a>
             <div class="product__description">
-              <a class="product__title-link" href="#">
+              <a class="product__title-link" href="blank.html">
                 <h3 class="product__title">
                   Cat Energy PRO 500 г
                 </h3>
@@ -195,7 +216,7 @@
               </ul>
             </div>
           </div>
-          <a class="button product__button" aria-label="Добавить в корзину 'Cat PRO Energy со вкусом рыбы объемом 500 грамм'" href="#">
+          <a class="button product__button" aria-label="Добавить в корзину 'Cat PRO Energy со вкусом рыбы объемом 500 грамм'" href="blank.html">
             заказать
           </a>
         </article>
@@ -206,13 +227,17 @@
           <div class="product__wrapper">
             <a class="product__image-wrapper product__image-wrapper--big" href="blank.html">
               <picture>
+                <source type="image/webp" media="(min-width:1440px)" srcset="img/desktop/catalog/catalog-4-desktop-1.webp 1x, img/desktop/catalog/catalog-4-desktop-@2x.webp 2x">
+                <source type="image/webp" media="(min-width:768px)" srcset="img/tablet/catalog/catalog-4-desktop-1.webp 1x, img/tablet/catalog/catalog-4-desktop-1-@2x.webp 2x">
+                <source type="image/webp" srcset="img/mobile/catalog/catalog-4-desktop-1.webp 1x, img/mobile/catalog/catalog-4-desktop-1-@2x.webp 2x">
+
                 <source media="(min-width:1440px)" srcset="img/desktop/catalog/catalog-4-desktop-1.png 1x, img/desktop/catalog/catalog-4-desktop-@2x.png 2x">
                 <source media="(min-width:768px)" srcset="img/tablet/catalog/catalog-4-desktop-1.png 1x, img/tablet/catalog/catalog-4-desktop-1-@2x.png 2x">
                 <img src="img/mobile/catalog/catalog-4-desktop-1.png" alt="Cat PRO Energy со вкусом рыбы объемом 1000 грамм" class="product__image product__image--big" srcset="img/mobile/catalog/catalog-4-desktop-1.png 1x, img/mobile/catalog/catalog-4-desktop-1-@2x.png 2x">
               </picture>
             </a>
             <div class="product__description">
-              <a class="product__title-link" href="#">
+              <a class="product__title-link" href="blank.html">
                 <h3 class="product__title">
                   Cat Energy PRO 1000 г
                 </h3>
@@ -245,7 +270,7 @@
               </ul>
             </div>
           </div>
-          <a class="button product__button" aria-label="Добавить в корзину 'Cat PRO Energy со вкусом рыбы объемом 1000 грамм'" href="#">
+          <a class="button product__button" aria-label="Добавить в корзину 'Cat PRO Energy со вкусом рыбы объемом 1000 грамм'" href="blank.html">
             заказать
           </a>
         </article>
@@ -256,13 +281,17 @@
           <div class="product__wrapper">
             <a class="product__image-wrapper" href="blank.html">
               <picture>
+                <source type="image/webp" media="(min-width:1440px)" srcset="img/desktop/catalog/catalog-5-desktop.webp 1x, img/desktop/catalog/catalog-5-desktop-@2x.webp 2x">
+                <source type="image/webp" media="(min-width:768px)" srcset="img/tablet/catalog/catalog-5-desktop.webp 1x, img/tablet/catalog/catalog-5-desktop-@2x.webp 2x">
+                <source type="image/webp" srcset="img/mobile/catalog/catalog-5-desktop.webp 1x, img/mobile/catalog/catalog-5-desktop-@2x.webp 2x">
+
                 <source media="(min-width:1440px)" srcset="img/desktop/catalog/catalog-5-desktop.png 1x, img/desktop/catalog/catalog-5-desktop-@2x.png 2x">
                 <source media="(min-width:768px)" srcset="img/tablet/catalog/catalog-5-desktop.png 1x, img/tablet/catalog/catalog-5-desktop-@2x.png 2x">
                 <img src="img/mobile/catalog/catalog-5-desktop.png" alt="Cat Energy SLIM со вкусом гречки объемом 500 грамм" class="product__image" srcset="img/mobile/catalog/catalog-5-desktop.png 1x, img/mobile/catalog/catalog-5-desktop-@2x.png 2x">
               </picture>
             </a>
             <div class="product__description">
-              <a class="product__title-link" href="#">
+              <a class="product__title-link" href="blank.html">
                 <h3 class="product__title">
                   Cat Energy slim 500 г
                 </h3>
@@ -295,7 +324,7 @@
               </ul>
             </div>
           </div>
-          <a class="button product__button" aria-label="Добавить в корзину 'Cat Energy SLIM со вкусом гречки объемом 500 грамм'" href="#">
+          <a class="button product__button" aria-label="Добавить в корзину 'Cat Energy SLIM со вкусом гречки объемом 500 грамм'" href="blank.html">
             заказать
           </a>
         </article>
@@ -306,13 +335,17 @@
           <div class="product__wrapper">
             <a class="product__image-wrapper product__image-wrapper--big" href="blank.html">
               <picture>
+                <source type="image/webp" media="(min-width:1440px)" srcset="img/desktop/catalog/catalog-6-desktop.webp 1x, img/desktop/catalog/catalog-6-desktop-@2x.webp 2x">
+                <source type="image/webp" media="(min-width:768px)" srcset="img/tablet/catalog/catalog-6-desktop.webp 1x, img/tablet/catalog/catalog-6-desktop-@2x.webp 2x">
+                <source type="image/webp" srcset="img/mobile/catalog/catalog-6-desktop.webp 1x, img/mobile/catalog/catalog-6-desktop-@2x.webp 2x">
+
                 <source media="(min-width:1440px)" srcset="img/desktop/catalog/catalog-6-desktop.png 1x, img/desktop/catalog/catalog-6-desktop-@2x.png 2x">
                 <source media="(min-width:768px)" srcset="img/tablet/catalog/catalog-6-desktop.png 1x, img/tablet/catalog/catalog-6-desktop-@2x.png 2x">
                 <img src="img/mobile/catalog/catalog-6-desktop.png" alt="Cat Energy SLIM со вкусом гречки объемом 1000 грамм" class="product__image product__image--big" srcset="img/mobile/catalog/catalog-6-desktop.png 1x, img/mobile/catalog/catalog-6-desktop-@2x.png 2x">
               </picture>
             </a>
             <div class="product__description">
-              <a class="product__title-link" href="#">
+              <a class="product__title-link" href="blank.html">
                 <h3 class="product__title">
                   Cat Energy slim 1000 г
                 </h3>
@@ -345,7 +378,7 @@
               </ul>
             </div>
           </div>
-          <a class="button product__button" aria-label="Добавить в корзину 'Cat Energy SLIM со вкусом гречки объемом 1000 грамм'" href="#">
+          <a class="button product__button" aria-label="Добавить в корзину 'Cat Energy SLIM со вкусом гречки объемом 1000 грамм'" href="blank.html">
             заказать
           </a>
         </article>
@@ -356,13 +389,17 @@
           <div class="product__wrapper">
             <a class="product__image-wrapper" href="blank.html">
               <picture>
+                <source type="image/webp" media="(min-width:1440px)" srcset="img/desktop/catalog/catalog-7-desktop.webp 1x, img/desktop/catalog/catalog-7-desktop-@2x.webp 2x">
+                <source type="image/webp" media="(min-width:768px)" srcset="img/tablet/catalog/catalog-7-desktop.webp 1x, img/tablet/catalog/catalog-7-desktop-@2x.webp 2x">
+                <source type="image/webp" srcset="img/mobile/catalog/catalog-7-desktop.webp 1x, img/mobile/catalog/catalog-7-desktop-@2x.webp 2x">
+
                 <source media="(min-width:1440px)" srcset="img/desktop/catalog/catalog-7-desktop.png 1x, img/desktop/catalog/catalog-7-desktop-@2x.png 2x">
                 <source media="(min-width:768px)" srcset="img/tablet/catalog/catalog-7-desktop.png 1x, img/tablet/catalog/catalog-7-desktop-@2x.png 2x">
                 <img src="img/mobile/catalog/catalog-7-desktop.png" alt="Cat Energy SLIM со вкусом риса объемом 500 грамм" class="product__image" srcset="img/mobile/catalog/catalog-7-desktop.png 1x, img/mobile/catalog/catalog-7-desktop-@2x.png 2x">
               </picture>
             </a>
             <div class="product__description">
-              <a class="product__title-link" href="#">
+              <a class="product__title-link" href="blank.html">
                 <h3 class="product__title">
                   Cat Energy slim 500 г
                 </h3>
@@ -395,7 +432,7 @@
               </ul>
             </div>
           </div>
-          <a class="button product__button" aria-label="Добавить в корзину 'Cat Energy SLIM со вкусом риса объемом 500 грамм'" href="#">
+          <a class="button product__button" aria-label="Добавить в корзину 'Cat Energy SLIM со вкусом риса объемом 500 грамм'" href="blank.html">
             заказать
           </a>
         </article>
@@ -416,87 +453,93 @@
     </ul>
   </section>
 
-  <section class="add-goods container">
-    <h2 class="add-goods__title">
-      <span class="add-goods__title-background">
-        Дополнительные товары
-      </span>
-    </h2>
-    <div class="add-goods__wrapper">
-      <ul class="add-goods__list">
-        <li class="add-goods__item">
-          <h3 class="add-goods__caption">
-            Сахарозаменитель
-          </h3>
-          <div class="add-goods__params">
-            <p class="add-goods__quantity">
-              1 упаковка (100 г)
-            </p>
-            <p class="add-goods__value">
-              200 Р.
-            </p>
-          </div>
-          <a class="button add-goods__button" aria-label="Добавить сахарозаменитель в заказ" href="#">
-            заказать
-          </a>
-        </li>
+  <section class="add-goods">
+    <div class="add-goods__title-wrapper">
+      <div class="container">
+        <h2 class="add-goods__title">
+          <span class="add-goods__title-background">
+            Дополнительные товары
+          </span>
+        </h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="add-goods__wrapper">
+        <ul class="add-goods__list">
+          <li class="add-goods__item">
+            <h3 class="add-goods__caption">
+              Сахарозаменитель
+            </h3>
+            <div class="add-goods__params">
+              <p class="add-goods__quantity">
+                1 упаковка (100 г)
+              </p>
+              <p class="add-goods__value">
+                200 Р.
+              </p>
+            </div>
+            <a class="button add-goods__button" aria-label="Добавить сахарозаменитель в заказ" href="#">
+              заказать
+            </a>
+          </li>
 
-        <li class="add-goods__item">
-          <h3 class="add-goods__caption">
-            питьевая вода
-          </h3>
-          <div class="add-goods__params">
-            <p class="add-goods__quantity">
-              5 литров
-            </p>
-            <p class="add-goods__value">
-              50 Р.
-            </p>
-          </div>
-          <a class="button add-goods__button" aria-label="Добавить питьевую воду в заказ" href="#">
-            заказать
-          </a>
-        </li>
+          <li class="add-goods__item">
+            <h3 class="add-goods__caption">
+              питьевая вода
+            </h3>
+            <div class="add-goods__params">
+              <p class="add-goods__quantity">
+                5 литров
+              </p>
+              <p class="add-goods__value">
+                50 Р.
+              </p>
+            </div>
+            <a class="button add-goods__button" aria-label="Добавить питьевую воду в заказ" href="#">
+              заказать
+            </a>
+          </li>
 
-        <li class="add-goods__item">
-          <h3 class="add-goods__caption">
-            молоко
-          </h3>
-          <div class="add-goods__params">
-            <p class="add-goods__quantity">
-              1 литр
-            </p>
-            <p class="add-goods__value">
-              100 Р.
-            </p>
-          </div>
-          <a class="button add-goods__button" aria-label="Добавить молоко в заказ" href="#">
-            заказать
-          </a>
-        </li>
+          <li class="add-goods__item">
+            <h3 class="add-goods__caption">
+              молоко
+            </h3>
+            <div class="add-goods__params">
+              <p class="add-goods__quantity">
+                1 литр
+              </p>
+              <p class="add-goods__value">
+                100 Р.
+              </p>
+            </div>
+            <a class="button add-goods__button" aria-label="Добавить молоко в заказ" href="#">
+              заказать
+            </a>
+          </li>
 
-        <li class="add-goods__item">
-          <h3 class="add-goods__caption">
-            витамины
-          </h3>
-          <div class="add-goods__params">
-            <p class="add-goods__quantity">
-              1 упаковка (30 г)
-            </p>
-            <p class="add-goods__value">
-              300 Р.
-            </p>
-          </div>
-          <a class="button add-goods__button" aria-label="Добавить витамины в заказ" href="#">
-            заказать
-          </a>
-        </li>
-      </ul>
+          <li class="add-goods__item">
+            <h3 class="add-goods__caption">
+              витамины
+            </h3>
+            <div class="add-goods__params">
+              <p class="add-goods__quantity">
+                1 упаковка (30 г)
+              </p>
+              <p class="add-goods__value">
+                300 Р.
+              </p>
+            </div>
+            <a class="button add-goods__button" aria-label="Добавить витамины в заказ" href="blank.html">
+              заказать
+            </a>
+          </li>
+        </ul>
 
-      <div class="add-goods__gift gift">
-        <p class="gift__text">
-          Закажите все и получите чехол для кота в подарок!
-        </p>
+        <div class="add-goods__gift gift">
+          <p class="gift__text">
+            Закажите все и получите чехол для кота в подарок!
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -534,7 +577,9 @@
     <div class="page-footer__wrapper">
       <div class="page-footer__copyright copyright">
         <a class="copyright__logo" href="index.html">
-          <img class="copyright__image" src="img/footer-logo.svg" width="128" height="24" alt="Логотип CAT ENERGY">
+          <svg class="copyright__image" width="128" height="24" aria-label="Логотип CAT ENERGY">
+            <use xlink:href="img/sprite.svg#footer-logo"></use>
+          </svg>
         </a>
       </div>
       <section class="social">
@@ -545,20 +590,25 @@
           <li class="social__item">
             <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Вконтакте">
               <span class="visually-hidden">Вконтакте</span>
-              <img src="img/icon_vkontakte.svg" width="29" height="17" alt="Вконтакте">
+              <svg class="social__icon" width="29" height="17" aria-label="Вконтакте">
+                <use xlink:href="img/sprite.svg#icon_vkontakte"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Instagram">
               <span class="visually-hidden">Instagram</span>
-              <img src="img/icon_instagram.svg" width="23" height="23" alt="Instagram">
-
+              <svg class="social__icon" width="23" height="23" aria-label="Instagram">
+                <use xlink:href="img/sprite.svg#icon_instagram"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Facebook">
               <span class="visually-hidden">Facebook</span>
-              <img src="img/icon_facebook.svg" width="23" height="27" alt="Facebook">
+              <svg class="social__icon" width="23" height="27" aria-label="Facebook">
+                <use xlink:href="img/sprite.svg#icon_facebook"></use>
+              </svg>
             </a>
           </li>
         </ul>
@@ -567,13 +617,15 @@
         <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive"
           aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
           <p class="developer__text">HTML Academy</p>
-          <img class="developer__logo" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+          <svg class="developer__logo" width="27" height="34" aria-label="Логотип HTML Academy">
+            <use xlink:href="img/sprite.svg#htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </div>
   </div>
 </footer>
 
-<script src="./js/menu-button.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>

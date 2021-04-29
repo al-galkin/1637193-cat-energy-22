@@ -30,6 +30,8 @@
   }
 
   &--additionally {
+    margin-bottom: 34px;
+
     @media (min-width: $tablet-width) {
       margin-bottom: 40px;
     }
@@ -72,9 +74,7 @@
   &--additionally {
     @media (min-width: $tablet-width) {
       display: flex;
-      flex-wrap: wrap; //todo: вопрос - не встает верстка 2мя столбцами https://skr.sh/s7dCNWbknaa как поправить?
-      //flex-direction: row;
-      //justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     @media (min-width: $desktop-content-width) {
@@ -97,6 +97,11 @@
   display: flex;
   align-items: center;
 
+  &--email,
+  &--phone {
+    position: relative;
+  }
+
   &--radio {
     @media (max-width: $mobile-width-only) {
       &:first-child {
@@ -105,35 +110,50 @@
     }
   }
 
-  @media (min-width: $desktop-content-width) {
-    width: 100%;
+  &--checkbox {
+    @media (min-width: $tablet-width) {
+      flex-wrap: wrap;
+      width: 50%;
+    }
+
+    @media (min-width: $desktop-content-width) {
+      width: 100%;
+    }
+  }
+}
+
+.form__title-wrapper {
+  border-bottom: 2px solid $color_basic_green;
+  margin-top: 26px;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    margin-bottom: 70px;
   }
 }
 
 .form__title {
   font-family: $font, $font_family_reserve;
   font-size: $font_size_title_small;
+  font-weight: 400;
   line-height: $line_height_title_intermediate;
   color: $color_basic_black;
-  //padding-left: calc((100% - 280px) / 2);
-  margin-bottom: 40px;
-  margin-top: 26px;
-  border-bottom: 2px solid $color_basic_green;
-  transform: translateY(-13px);
+  position: relative;
+  z-index: 10;
+  left: -20px;
+  margin: 0;
+  transform: translateY(10px);
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_title;
     line-height: $line_height_title;
     text-align: left;
-    padding-left: 70px;
-    //padding-left: calc((100% - 630px) / 2);
-    margin-top: 0;
-    margin-bottom: 70px;
+    left: -40px;
   }
 
   @media (min-width: $desktop-content-width) {
-    padding-left: 110px;
-    //padding-left: calc((100% - 1220px) / 2);
+    left: 0;
   }
 }
 
@@ -142,7 +162,6 @@
   display: inline-block;
   max-width: 240px;
   padding: 0 20px;
-  transform: translate(-20px, 11px);
 
   @media (min-width: $tablet-width) {
     max-width: 100%;
@@ -192,6 +211,33 @@
     font-size: $font_size_middle;
     line-height: $line_height_title_median;
   }
+
+  &:focus-visible {
+    border: none;
+    outline: none;
+  }
+
+  &:focus {
+    border: 1px solid $color_text-dark-grey;
+  }
+
+  &:focus + .form__icon {
+    fill: $color_basic_green;
+  }
+
+  &:invalid,
+  &--invalid {
+    border: 1px solid $color_status_error;
+
+    & + .form__icon {
+      fill: $color_status_error;
+    }
+  }
+}
+
+.form__icon {
+  position: absolute;
+  right: 15px;
 }
 
 .form__textarea {

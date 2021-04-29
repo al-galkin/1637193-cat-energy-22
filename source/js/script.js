@@ -2,7 +2,7 @@ let navMain = document.querySelector('.main-nav');
 let navButtonToggle = document.querySelector('.main-nav__button');
 let pageHeader = document.querySelector('.page-header');
 
-// если выключен javascript
+// проверка на выключенный javascript
 navMain.classList.remove('main-nav--nojs');
 pageHeader.classList.remove('page-header--nojs');
 

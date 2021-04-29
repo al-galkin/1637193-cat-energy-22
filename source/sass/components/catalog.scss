@@ -1,12 +1,5 @@
-.catalog {
-  outline: 3px solid chocolate;
-  outline-offset: -3px;
-}
-
 .catalog__list {
   @include reset_list();
-  outline: 3px solid fuchsia;
-  outline-offset: -3px;
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -20,5 +13,11 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 80px;
     grid-template-rows: 1fr 1fr;
+  }
+}
+
+.catalog__item {
+  @media (min-width: $desktop-content-width) {
+    max-height: 430px;
   }
 }

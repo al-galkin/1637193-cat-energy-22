@@ -147,8 +147,8 @@
 
   &::before {
     @include reset_pseudo-element-style;
-    right: 14px;
-    top: 3px;
+    right: -5px;
+    top: 2px;
     width: 32px;
     height: 12px;
     background-image: url("../img/icon_arrow.svg");
