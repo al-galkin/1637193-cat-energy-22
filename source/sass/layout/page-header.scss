@@ -2,6 +2,18 @@
   position: relative;
   margin-top: 11px;
 
+  @media (max-width: $mobile-width-only) {
+    &--closed,
+    &--opened {
+      margin-bottom: 12px;
+    }
+
+    &--nojs {
+      margin-bottom: 207px;
+      border-bottom: none;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     margin-top: 27px;
     margin-bottom: 30px;
@@ -11,20 +23,6 @@
     margin-top: 55px;
     margin-bottom: 29px;
     z-index: 1;
-  }
-
-  &--closed {
-    margin-bottom: 12px;
-  }
-
-  &--opened {
-    height: auto;
-    min-height: 65px;
-  }
-
-  &--nojs {
-    margin-bottom: 207px;
-    border-bottom: none;
   }
 }
 

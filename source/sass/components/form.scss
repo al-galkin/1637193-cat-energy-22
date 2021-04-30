@@ -239,7 +239,6 @@
     }
   }
 
-  &:invalid,
   &--invalid {
     border: 1px solid $color_status_error;
 
