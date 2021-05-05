@@ -43,11 +43,11 @@
 
   &--cat-data,
   &--radio {
-    height: 200px;
+    //height: 200px;
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     margin-top: 0;
-    margin-bottom: 30px;
+    //margin-bottom: 30px;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 72px;
@@ -79,6 +79,7 @@
 
     @media (min-width: $desktop-content-width) {
       flex-wrap: nowrap;
+      flex: 1 1 25%;
     }
   }
 

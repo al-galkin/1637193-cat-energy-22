@@ -1,6 +1,8 @@
 .select {
-  &:last-child {
-    margin-bottom: 5px;
+  @media (max-width: $mobile-width-only) {
+    &:last-child {
+      margin-bottom: 5px;
+    }
   }
 }
 
