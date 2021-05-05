@@ -5,13 +5,13 @@
 
   @media (min-width: $tablet-width) {
     border: 2px solid $color_basic_grey;
-  }
-
-  @media (min-width: $desktop-content-width) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-content-width) {
     border: 2px solid $color_basic_grey;
   }
 }
@@ -22,6 +22,7 @@
   text-decoration: none;
   width: 100%;
   margin: 0 auto;
+  margin-top: auto;
   margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {

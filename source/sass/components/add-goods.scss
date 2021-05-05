@@ -24,7 +24,7 @@
   z-index: 10;
   left: -40px;
   margin: 0;
-  transform: translateY(10px);
+  margin-bottom: -10px;
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_title;
@@ -43,8 +43,8 @@
 .add-goods__title-background {
   background: $color_basic_white;
   display: inline-block;
-  max-width: 270px;
-  padding: 0 20px 0 0;
+  max-width: 290px;
+  padding: 0 20px 0 40px;
 
   @media (min-width: $tablet-width) {
     max-width: 100%;
@@ -54,7 +54,7 @@
   @media (min-width: $desktop-content-width) {
     max-width: 100%;
     padding: 0 40px;
-    transform: translate(-40px);
+    margin-bottom: -40px;
   }
 }
 
