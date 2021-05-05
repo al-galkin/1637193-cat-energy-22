@@ -3,16 +3,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
-  margin-bottom: 53px;
+  margin-top: 50px;
+  margin-bottom: 43px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    flex-wrap: wrap;
   }
 }
 
 .social__item {
-  margin-right: 37px;
+  margin: 10px 37px 10px 0;
 
   &:last-child {
     margin-right: 0;

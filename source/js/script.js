@@ -85,7 +85,7 @@ if (availableScreenWidth > 768) { // на таблет и пк - бегунок 
     document.removeEventListener('mousemove', listener);
   });
 } else { //только на мобильном - простой слайдер по клику
-  beforeToggle.addEventListener('click', () => {
+  beforeToggle.addEventListener('touchend', () => {
     slimCat.classList.remove('range__slimcat--show');
     slimCat.classList.add('range__slimcat--noshow');
     fatCat.classList.remove('range__fatcat--noshow');
@@ -93,7 +93,7 @@ if (availableScreenWidth > 768) { // на таблет и пк - бегунок 
     circleEl.classList.remove('range__toggle--after');
   });
 
-  afterToggle.addEventListener('click', () => {
+  afterToggle.addEventListener('touchend', () => {
     slimCat.classList.remove('range__slimcat--noshow');
     slimCat.classList.add('range__slimcat--show');
     fatCat.classList.remove('range__fatcat--show');

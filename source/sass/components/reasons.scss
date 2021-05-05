@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
+    row-gap: 50px;
     min-height: 374px;
   }
 }
@@ -19,6 +20,28 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  @media (min-width: $tablet-width) {
+    padding: 57px 62px 57px 52px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    //max-width: none;
+    //margin-bottom: 0;
+    height: 100%;
+    padding: 47px 51px 59px 52px;
+  }
+}
+
+.reasons__title {
+  font-weight: 400;
+  font-size: $font_size_title_small;
+  line-height: $line_height_title;
+  color: $color_special_black;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 29px;
+  padding-left: 70px;
 
   &::before {
     @include reset_pseudo-element-style;
@@ -38,7 +61,9 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 57px 62px 57px 52px;
+    font-size: $font_size_title;
+    margin-bottom: 24px;
+    padding-left: 0;
 
     &::before {
       background-image: url("../img/tablet/cat_slim.svg");
@@ -62,10 +87,8 @@
   }
 
   @media (min-width: $desktop-content-width) {
-    //max-width: none;
-    //margin-bottom: 0;
-    height: 100%;
-    padding: 47px 51px 59px 52px;
+    text-align: center;
+    padding-left: 100px;
 
     &::before {
       background-image: url("../img/desktop/cat_slim.svg");
@@ -88,32 +111,22 @@
   }
 }
 
-.reasons__title {
-  font-weight: 400;
-  font-size: $font_size_title_small;
-  line-height: $line_height_title;
-  color: $color_special_black;
-  text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 29px;
-  padding-left: 70px;
-
-  @media (min-width: $tablet-width) {
-    font-size: $font_size_title;
-    margin-bottom: 24px;
-    padding-left: 0;
-  }
-
-  @media (min-width: $desktop-content-width) {
-    text-align: center;
-    margin-bottom: 73px;
-    padding-left: 70px;
-  }
-}
-
 .reasons__item--weight-gain .reasons__title {
   @media (max-width: $mobile-width-only) {
     padding-left: 90px;
+  }
+}
+
+.reasons__description {
+  margin-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 220px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    margin-top: 73px;
+    margin-right: 0;
   }
 }
 
@@ -122,16 +135,10 @@
   font-size: $font_size_base;
   line-height: $line_height_base;
   color: $color_text-dark-grey;
-  margin-bottom: 42px;
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_medium;
     line-height: $line_height_title_small;
-    padding-right: 219px;
-  }
-
-  @media (min-width: $desktop-content-width) {
-    padding-right: 0;
   }
 }
 
