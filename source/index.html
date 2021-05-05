@@ -80,8 +80,7 @@
         </p>
       </div>
       <div class="reasons__link">
-        <a class="reasons__link-item" href="catalog.html#slim"
-          aria-label="Переход на страницу каталога на товары серии Cat Energy Slim">
+        <a class="reasons__link-item" href="catalog.html#slim" aria-label="Переход на страницу каталога на товары серии Cat Energy Slim">
           каталог slim
         </a>
       </div>
@@ -97,8 +96,7 @@
         </p>
       </div>
       <div class="reasons__link">
-        <a class="reasons__link-item" href="catalog.html#pro"
-          aria-label="Переход на страницу каталога на товары серии Cat Energy Pro">
+        <a class="reasons__link-item" href="catalog.html#pro" aria-label="Переход на страницу каталога на товары серии Cat Energy Pro">
           каталог pro
         </a>
       </div>
@@ -160,30 +158,36 @@
         <div class="range">
           <div class="range__wrapper">
             <div class="range__picture">
-              <picture>
-                <source type="image/webp" media="(min-width:1440px)" srcset="img/desktop/image_cat_desktop.webp 1x, img/desktop/image_cat_desktop_@2x.webp 2x">
-                <source type="image/webp" media="(min-width:768px)" srcset="img/tablet/image_cat_tablet.webp 1x, img/tablet/image_cat_tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/tablet/image_cat_tablet.webp 1x, img/tablet/image_cat_tablet@2x.webp 2x">
-
-                <source media="(min-width:1440px)" srcset="img/desktop/image_cat_desktop.png 1x, img/desktop/image_cat_desktop_@2x.png 2x">
-                <source media="(min-width:768px)" srcset="img/tablet/image_cat_tablet.png 1x, img/tablet/image_cat_tablet@2x.png 2x">
-                <img class="range__image" src="img/mobile/before-mobile_1.png" srcset="img/mobile/before-mobile_1.png 1x, img/mobile/before-mobile@2x.png 2x" alt="Кот с демонстрацией до\после">
-              </picture>
+              <div class="range__placeholder">
+                <div class="range__fatcat range__fatcat--show" id="fatcat"></div>
+                <div class="range__slimcat range__slimcat--noshow" id="slimcat"></div>
+                <img src="img/cat-placeholder.png" alt="Фон-заглушка для котов">
+              </div>
             </div>
+            <!--<picture>-->
+            <!--  <source type="image/webp" media="(min-width:1440px)" srcset="img/desktop/image_cat_desktop.webp 1x, img/desktop/image_cat_desktop_@2x.webp 2x">-->
+            <!--  <source type="image/webp" media="(min-width:768px)" srcset="img/tablet/image_cat_tablet.webp 1x, img/tablet/image_cat_tablet@2x.webp 2x">-->
+            <!--  <source type="image/webp" srcset="img/tablet/image_cat_tablet.webp 1x, img/tablet/image_cat_tablet@2x.webp 2x">-->
+
+            <!--  <source media="(min-width:1440px)" srcset="img/desktop/image_cat_desktop.png 1x, img/desktop/image_cat_desktop_@2x.png 2x">-->
+            <!--  <source media="(min-width:768px)" srcset="img/tablet/image_cat_tablet.png 1x, img/tablet/image_cat_tablet@2x.png 2x">-->
+            <!--  <img class="range__image" src="img/mobile/before-mobile_1.png" srcset="img/mobile/before-mobile_1.png 1x, img/mobile/before-mobile@2x.png 2x" alt="Кот с демонстрацией до\после">-->
+            <!--</picture>-->
             <div class="range__control">
-              <button class="range__text">
+              <button class="range__text" id="before">
                 Было
               </button>
-              <div class="range__input">
-                <button class="range__toggle" type="button" aria-label="Ползунок-переключатель состояния кота"></button>
+              <div class="range__input" id="circle_parent">
+                <button class="range__toggle" type="button" aria-label="Ползунок-переключатель состояния кота" id="circle"></button>
               </div>
-              <button class="range__text">
+              <button class="range__text" id="after">
                 Стало
               </button>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -193,7 +197,7 @@
     </h2>
     <div class="contacts__wrapper">
       <p class="contacts__title">
-          приглашаем к сотрудничеству дилеров!
+        приглашаем к сотрудничеству дилеров!
       </p>
       <address class="contacts__address">
         <p class="contacts__street">
@@ -257,8 +261,7 @@
         </ul>
       </section>
       <div class="page-footer__developer developer">
-        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive"
-          aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
+        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
           <p class="developer__text">HTML Academy</p>
           <svg class="developer__logo" width="27" height="34" aria-label="Логотип HTML Academy">
             <use xlink:href="img/sprite.svg#htmlacademy"></use>
