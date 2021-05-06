@@ -78,7 +78,6 @@
     }
 
     @media (min-width: $desktop-content-width) {
-      flex-wrap: nowrap;
       flex: 1 1 25%;
     }
   }
@@ -118,7 +117,7 @@
     }
 
     @media (min-width: $desktop-content-width) {
-      width: 100%;
+      width: 25%;
     }
   }
 }
