@@ -1,7 +1,7 @@
 .button {
   @include reset_button-style();
   display: block;
-  padding: 14px 40px;
+  padding: 10px 40px;
 
   font-family: $font, $font_family_reserve;
   font-size: $font_size_medium;
@@ -13,6 +13,10 @@
 
   color: $color_basic_white;
   background-color: $color_basic_green;
+
+  &--index {
+    padding: 14px 40px;
+  }
 
   &:hover,
   &:focus {

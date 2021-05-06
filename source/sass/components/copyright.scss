@@ -1,6 +1,8 @@
 .copyright {
   @media (max-width: $mobile-width-only) {
     text-align: center;
+    border-bottom: 1px solid $color_border-link;
+    padding-bottom: 28px;
   }
 }
 
