@@ -2,6 +2,36 @@
   position: relative;
   margin-top: 11px;
 
+  &--index {
+    padding-bottom: 9px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 0;
+    }
+  }
+
+  &--noindex {
+    border-bottom: 1px solid $color_border-link;
+    padding-bottom: 11px;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+      padding-bottom: 0;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    &--closed,
+    &--opened {
+      margin-bottom: 3px;
+    }
+
+    &--nojs {
+      margin-bottom: 207px;
+      border-bottom: none;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     margin-top: 27px;
     margin-bottom: 30px;
@@ -11,20 +41,6 @@
     margin-top: 55px;
     margin-bottom: 29px;
     z-index: 1;
-  }
-
-  &--closed {
-    margin-bottom: 12px;
-  }
-
-  &--opened {
-    height: auto;
-    min-height: 65px;
-  }
-
-  &--nojs {
-    margin-bottom: 207px;
-    border-bottom: none;
   }
 }
 
@@ -43,16 +59,6 @@
   @media (min-width: $desktop-content-width) {
     width: 1220px;
     margin: 0 auto;
-  }
-}
-
-.page-header__index:not {
-  border-bottom: 1px solid $color_border-link;
-  padding-bottom: 7px;
-
-  @media (min-width: $tablet-width) {
-    border: none;
-    padding-bottom: 0;
   }
 }
 
@@ -100,6 +106,9 @@
 }
 
 .page-header__label-icon {
+  position: relative;
+  top: 1px;
+
   @media (min-width: $desktop-content-width) {
     width: 118px;
     height: 21px;

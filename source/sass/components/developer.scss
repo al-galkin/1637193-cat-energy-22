@@ -7,9 +7,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 20px;
 
   @media (min-width: $tablet-width) {
     justify-content: flex-end;
+    margin: 0;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    & + .developer__logo {
+      fill: $color_basic_green;
+    }
   }
 }
 
@@ -20,15 +30,14 @@
   margin: 0;
   font-size: $font_size_medium;
   line-height: $line_height_base;
-  color: $color_text-dark-grey;
 
   @media (min-width: $tablet-width) {
     margin-right: 22px;
     margin-bottom: 0;
   }
 
-  &:active {
-    opacity: 0.3;
+  &:hover + .developer__logo {
+    fill: $color_basic_green;
   }
 }
 
@@ -37,10 +46,5 @@
 
   &:hover {
     fill: $color_basic_green;
-  }
-
-  &:active {
-    fill: $color_basic_green;
-    opacity: 0.3;
   }
 }

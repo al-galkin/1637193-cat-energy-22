@@ -3,34 +3,91 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
-  margin-bottom: 53px;
-  fill: $color_icons-grey; //todo: вопрос - не работает заливка svg-иконок. Что поправить? https://skr.sh/s7drH1Hl7Vu
+  margin-top: 7px;
+  //margin-bottom: 25px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid $color_border-link;
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    flex-wrap: wrap;
   }
 }
 
 .social__item {
-  margin-right: 37px;
+  margin: 10px 37px 10px 0;
 
   &:last-child {
     margin-right: 0;
   }
-
-  &:hover {
-    fill: $color_basic_green;
-  }
-
-  &:active {
-    fill: $color_basic_green;
-    opacity: 0.3;
-  }
 }
 
 .social__link {
+  display: block;
   text-transform: uppercase;
   text-decoration: none;
   color: $color_icons-grey;
+
+  &--vkontakte,
+  &--instagram {
+    fill: $color_icons-grey;
+
+    &:hover {
+      fill: $color_basic_green;
+    }
+
+    &:active {
+      fill: $color_basic_green;
+      opacity: 0.3;
+    }
+  }
+
+  &--facebook {
+    fill: transparent;
+    stroke: $color_icons-grey;
+    stroke-width: 1.1px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    &:hover {
+      stroke: $color_basic_green;
+    }
+
+    &:active {
+      stroke: $color_basic_green;
+      stroke-opacity: 0.3;
+    }
+  }
+}
+
+.social__icon {
+  &--vkontakte {
+    width: 22px;
+    height: 13px;
+
+    @media (min-width: $tablet-width) {
+      width: 29px;
+      height: 17px;
+    }
+  }
+
+  &--instagram {
+    width: 16px;
+    height: 16px;
+
+    @media (min-width: $tablet-width) {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &--facebook {
+    width: 10px;
+    height: 18px;
+
+    @media (min-width: $tablet-width) {
+      width: 13px;
+      height: 27px;
+    }
+  }
 }

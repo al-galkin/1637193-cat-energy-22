@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body class="page__body">
-<header class="page-header page-header__index page-header--closed page-header--nojs">
+<header class="page-header page-header--index page-header--closed page-header--nojs">
   <div class="page-header__container">
     <a class="page-header__logo">
       <picture class="page-header__icon">
@@ -70,7 +70,7 @@
       Причины обратиться к нам
     </h2>
     <div class="reasons__item reasons__item--weight-loss">
-      <h3 class="reasons__title">
+      <h3 class="reasons__title reasons__title--weight-loss">
         Похудение
       </h3>
       <div class="reasons__description">
@@ -80,14 +80,13 @@
         </p>
       </div>
       <div class="reasons__link">
-        <a class="reasons__link-item" href="catalog.html#slim"
-          aria-label="Переход на страницу каталога на товары серии Cat Energy Slim">
+        <a class="reasons__link-item" href="catalog.html#slim" aria-label="Переход на страницу каталога на товары серии Cat Energy Slim">
           каталог slim
         </a>
       </div>
     </div>
     <div class="reasons__item reasons__item--weight-gain">
-      <h3 class="reasons__title">
+      <h3 class="reasons__title reasons__title--weight-gain">
         Набор массы
       </h3>
       <div class="reasons__description">
@@ -97,8 +96,7 @@
         </p>
       </div>
       <div class="reasons__link">
-        <a class="reasons__link-item" href="catalog.html#pro"
-          aria-label="Переход на страницу каталога на товары серии Cat Energy Pro">
+        <a class="reasons__link-item" href="catalog.html#pro" aria-label="Переход на страницу каталога на товары серии Cat Energy Pro">
           каталог pro
         </a>
       </div>
@@ -111,16 +109,24 @@
     </h2>
     <ul class="benefits__list">
       <li class="benefits__item benefits__item--leaf">
-        Функциональное питание содержит только полезные питательные вещества.
+        <p class="benefits__text">
+          Функциональное питание содержит только полезные питательные вещества.
+        </p>
       </li>
       <li class="benefits__item benefits__item--tub">
-        Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+        <p class="benefits__text">
+          Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+        </p>
       </li>
       <li class="benefits__item benefits__item--eat">
-        Замените один-два приема обычной еды на наше функциональное питание.
+        <p class="benefits__text">
+          Замените один-два приема обычной еды на наше функциональное питание.
+        </p>
       </li>
       <li class="benefits__item benefits__item--time">
-        Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+        <p class="benefits__text">
+          Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+        </p>
       </li>
     </ul>
   </section>
@@ -160,30 +166,36 @@
         <div class="range">
           <div class="range__wrapper">
             <div class="range__picture">
-              <picture>
-                <source type="image/webp" media="(min-width:1440px)" srcset="img/desktop/image_cat_desktop.webp 1x, img/desktop/image_cat_desktop_@2x.webp 2x">
-                <source type="image/webp" media="(min-width:768px)" srcset="img/tablet/image_cat_tablet.webp 1x, img/tablet/image_cat_tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/tablet/image_cat_tablet.webp 1x, img/tablet/image_cat_tablet@2x.webp 2x">
-
-                <source media="(min-width:1440px)" srcset="img/desktop/image_cat_desktop.png 1x, img/desktop/image_cat_desktop_@2x.png 2x">
-                <source media="(min-width:768px)" srcset="img/tablet/image_cat_tablet.png 1x, img/tablet/image_cat_tablet@2x.png 2x">
-                <img class="range_image" src="img/mobile/before-mobile_1.png" srcset="img/mobile/before-mobile_1.png 1x, img/mobile/before-mobile@2x.png 2x" alt="Кот с демонстрацией до\после">
-              </picture>
-            </div>
-            <div class="range__control">
-              <span class="range__text">
-                Было
-              </span>
-              <div class="range__input">
-                <button class="range__toggle" type="button" aria-label="Ползунок-переключатель состояния кота"></button>
+              <div class="range__placeholder">
+                <div class="range__fatcat range__fatcat--show" id="fatcat"></div>
+                <div class="range__slimcat range__slimcat--noshow" id="slimcat"></div>
+                <img src="img/cat-placeholder.png" alt="Фон-заглушка для котов">
               </div>
-              <span class="range__text">
+            </div>
+            <!--<picture>-->
+            <!--  <source type="image/webp" media="(min-width:1440px)" srcset="img/desktop/image_cat_desktop.webp 1x, img/desktop/image_cat_desktop_@2x.webp 2x">-->
+            <!--  <source type="image/webp" media="(min-width:768px)" srcset="img/tablet/image_cat_tablet.webp 1x, img/tablet/image_cat_tablet@2x.webp 2x">-->
+            <!--  <source type="image/webp" srcset="img/tablet/image_cat_tablet.webp 1x, img/tablet/image_cat_tablet@2x.webp 2x">-->
+
+            <!--  <source media="(min-width:1440px)" srcset="img/desktop/image_cat_desktop.png 1x, img/desktop/image_cat_desktop_@2x.png 2x">-->
+            <!--  <source media="(min-width:768px)" srcset="img/tablet/image_cat_tablet.png 1x, img/tablet/image_cat_tablet@2x.png 2x">-->
+            <!--  <img class="range__image" src="img/mobile/before-mobile_1.png" srcset="img/mobile/before-mobile_1.png 1x, img/mobile/before-mobile@2x.png 2x" alt="Кот с демонстрацией до\после">-->
+            <!--</picture>-->
+            <div class="range__control">
+              <button class="range__text" id="before">
+                Было
+              </button>
+              <div class="range__input" id="circle_parent">
+                <button class="range__toggle" type="button" aria-label="Ползунок-переключатель состояния кота" id="circle"></button>
+              </div>
+              <button class="range__text" id="after">
                 Стало
-              </span>
+              </button>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -193,7 +205,7 @@
     </h2>
     <div class="contacts__wrapper">
       <p class="contacts__title">
-          приглашаем к сотрудничеству дилеров!
+        приглашаем к сотрудничеству дилеров!
       </p>
       <address class="contacts__address">
         <p class="contacts__street">
@@ -231,7 +243,7 @@
         </h2>
         <ul class="page-footer__social social__list">
           <li class="social__item">
-            <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Вконтакте">
+            <a class="social__link social__link--vkontakte" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Вконтакте">
               <span class="visually-hidden">Вконтакте</span>
               <svg class="social__icon" width="29" height="17" aria-label="Вконтакте">
                 <use xlink:href="img/sprite.svg#icon_vkontakte"></use>
@@ -239,7 +251,7 @@
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Instagram">
+            <a class="social__link social__link--instagram" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Instagram">
               <span class="visually-hidden">Instagram</span>
               <svg class="social__icon" width="23" height="23" aria-label="Instagram">
                 <use xlink:href="img/sprite.svg#icon_instagram"></use>
@@ -247,7 +259,7 @@
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Facebook">
+            <a class="social__link social__link--facebook" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Facebook">
               <span class="visually-hidden">Facebook</span>
               <svg class="social__icon" width="23" height="27" aria-label="Facebook">
                 <use xlink:href="img/sprite.svg#icon_facebook"></use>
@@ -257,8 +269,7 @@
         </ul>
       </section>
       <div class="page-footer__developer developer">
-        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive"
-          aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
+        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
           <p class="developer__text">HTML Academy</p>
           <svg class="developer__logo" width="27" height="34" aria-label="Логотип HTML Academy">
             <use xlink:href="img/sprite.svg#htmlacademy"></use>

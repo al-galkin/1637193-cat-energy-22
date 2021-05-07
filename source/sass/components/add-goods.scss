@@ -1,7 +1,7 @@
 .add-goods__title-wrapper {
   border-bottom: 2px solid $color_basic_green;
   margin-top: 25px;
-  margin-bottom: 36px;
+  margin-bottom: 41px;
 
   @media (min-width: $tablet-width) {
     margin-top: 68px;
@@ -19,12 +19,12 @@
   font-size: $font_size_title_small;
   line-height: $line_height_title_small;
   color: $color_basic_black;
-  padding: 0 21px 0 0;
+  //padding: 0 21px 0 0;
   position: relative;
   z-index: 10;
-  left: -40px;
+  left: -21px;
   margin: 0;
-  transform: translateY(10px);
+  margin-bottom: -8px;
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_title;
@@ -43,8 +43,8 @@
 .add-goods__title-background {
   background: $color_basic_white;
   display: inline-block;
-  max-width: 270px;
-  padding: 0 20px 0 0;
+  max-width: 290px;
+  padding: 0 20px;
 
   @media (min-width: $tablet-width) {
     max-width: 100%;
@@ -54,7 +54,7 @@
   @media (min-width: $desktop-content-width) {
     max-width: 100%;
     padding: 0 40px;
-    transform: translate(-40px);
+    margin-bottom: -40px;
   }
 }
 
@@ -81,8 +81,8 @@
 }
 
 .add-goods__item {
-  padding-top: 13px;
-  padding-bottom: 19px;
+  padding-top: 14px;
+  padding-bottom: 17px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -120,6 +120,11 @@
   justify-content: center;
   align-items: center;
 
+  &--water {
+    padding: 9px 40px 8px 40px;
+    min-height: 39px;
+  }
+
   @media (min-width: $tablet-width) {
     min-height: 38px;
     width: 100%;
@@ -142,6 +147,7 @@
   color: $color_title_dark-grey;
   text-transform: uppercase;
   margin: 0;
+  padding-left: 1px;
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_middle;

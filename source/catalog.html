@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body class="page__body">
-<header class="page-header page-header__index page-header--closed page-header--nojs">
+<header class="page-header page-header--noindex page-header--closed page-header--nojs">
   <div class="page-header__container">
     <a class="page-header__logo  page-header__logo--noindex" href="index.html">
       <picture class="page-header__icon">
@@ -49,13 +49,13 @@
 </header>
 
 <main class="page-main">
-  <div class="page-main__wrapper page-main__wrapper--catalog container">
+  <div class="page-main__wrapper page-main__wrapper--catalog">
     <h1 class="page-main__title page-main__title--catalog">
       Каталог продукции
     </h1>
   </div>
 
-  <section class="catalog container">
+  <section class="catalog">
     <h2 class="visually-hidden">
       Каталог 'Кэт энерджи'
     </h2>
@@ -115,7 +115,7 @@
       </li>
 
       <li class="catalog__item">
-        <article class="product">
+        <article class="product product--big">
           <div class="product__wrapper">
             <a class="product__image-wrapper product__image-wrapper--big" href="blank.html">
               <picture>
@@ -169,9 +169,9 @@
       </li>
 
       <li class="catalog__item">
-        <article class="product">
+        <article class="product product--small">
           <div class="product__wrapper">
-            <a class="product__image-wrapper" href="blank.html">
+            <a class="product__image-wrapper product__image-wrapper--small" href="blank.html">
               <picture>
                 <source type="image/webp" media="(min-width:1440px)" srcset="img/desktop/catalog/catalog-3-desktop.webp 1x, img/desktop/catalog/catalog-3-desktop-@2x.webp 2x">
                 <source type="image/webp" media="(min-width:768px)" srcset="img/tablet/catalog/catalog-3-desktop.webp 1x, img/tablet/catalog/catalog-3-desktop-@2x.webp 2x">
@@ -223,7 +223,7 @@
       </li>
 
       <li class="catalog__item">
-        <article class="product">
+        <article class="product product--big">
           <div class="product__wrapper">
             <a class="product__image-wrapper product__image-wrapper--big" href="blank.html">
               <picture>
@@ -277,9 +277,9 @@
       </li>
 
       <li class="catalog__item">
-        <article class="product" id="slim">
+        <article class="product product--small" id="slim">
           <div class="product__wrapper">
-            <a class="product__image-wrapper" href="blank.html">
+            <a class="product__image-wrapper product__image-wrapper--small" href="blank.html">
               <picture>
                 <source type="image/webp" media="(min-width:1440px)" srcset="img/desktop/catalog/catalog-5-desktop.webp 1x, img/desktop/catalog/catalog-5-desktop-@2x.webp 2x">
                 <source type="image/webp" media="(min-width:768px)" srcset="img/tablet/catalog/catalog-5-desktop.webp 1x, img/tablet/catalog/catalog-5-desktop-@2x.webp 2x">
@@ -331,7 +331,7 @@
       </li>
 
       <li class="catalog__item">
-        <article class="product">
+        <article class="product product--big">
           <div class="product__wrapper">
             <a class="product__image-wrapper product__image-wrapper--big" href="blank.html">
               <picture>
@@ -385,9 +385,9 @@
       </li>
 
       <li class="catalog__item">
-        <article class="product">
+        <article class="product product--small">
           <div class="product__wrapper">
-            <a class="product__image-wrapper" href="blank.html">
+            <a class="product__image-wrapper product__image-wrapper--small" href="blank.html">
               <picture>
                 <source type="image/webp" media="(min-width:1440px)" srcset="img/desktop/catalog/catalog-7-desktop.webp 1x, img/desktop/catalog/catalog-7-desktop-@2x.webp 2x">
                 <source type="image/webp" media="(min-width:768px)" srcset="img/tablet/catalog/catalog-7-desktop.webp 1x, img/tablet/catalog/catalog-7-desktop-@2x.webp 2x">
@@ -495,7 +495,7 @@
                 50 Р.
               </p>
             </div>
-            <a class="button add-goods__button" aria-label="Добавить питьевую воду в заказ" href="#">
+            <a class="button add-goods__button add-goods__button--water" aria-label="Добавить питьевую воду в заказ" href="#">
               заказать
             </a>
           </li>
@@ -537,20 +537,20 @@
 
         <div class="add-goods__gift gift">
           <p class="gift__text">
-            Закажите все и получите чехол для кота в подарок!
+            Закажите все <br> и получите чехол для кота в подарок!
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="contacts contacts__noindex">
+  <section class="contacts contacts--noindex">
     <h2 class="visually-hidden">
       Контакты
     </h2>
     <div class="contacts__wrapper">
       <p class="contacts__title">
-          приглашаем к сотрудничеству дилеров!
+          приглашаем <br> к сотрудничеству дилеров!
       </p>
       <address class="contacts__address">
         <p class="contacts__street">
@@ -588,25 +588,25 @@
         </h2>
         <ul class="page-footer__social social__list">
           <li class="social__item">
-            <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Вконтакте">
+            <a class="social__link social__link--vkontakte" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Вконтакте">
               <span class="visually-hidden">Вконтакте</span>
-              <svg class="social__icon" width="29" height="17" aria-label="Вконтакте">
+              <svg class="social__icon social__icon--vkontakte" width="29" height="17" aria-label="Вконтакте">
                 <use xlink:href="img/sprite.svg#icon_vkontakte"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Instagram">
+            <a class="social__link social__link--instagram" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Instagram">
               <span class="visually-hidden">Instagram</span>
-              <svg class="social__icon" width="23" height="23" aria-label="Instagram">
+              <svg class="social__icon social__icon--instagram" width="23" height="23" aria-label="Instagram">
                 <use xlink:href="img/sprite.svg#icon_instagram"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Facebook">
+            <a class="social__link social__link--facebook" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Facebook">
               <span class="visually-hidden">Facebook</span>
-              <svg class="social__icon" width="23" height="27" aria-label="Facebook">
+              <svg class="social__icon social__icon--facebook" width="23" height="27" aria-label="Facebook">
                 <use xlink:href="img/sprite.svg#icon_facebook"></use>
               </svg>
             </a>

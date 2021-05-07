@@ -1,5 +1,22 @@
+.catalog {
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    width: 1260px;
+    padding: 0 20px;
+    position: relative;
+  }
+}
+
 .catalog__list {
   @include reset_list();
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 12px;
+  }
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -17,7 +34,12 @@
 }
 
 .catalog__item {
-  @media (min-width: $desktop-content-width) {
-    max-height: 430px;
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 24px;
+    border-bottom: 1px solid $color_hover_grey;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
 }
