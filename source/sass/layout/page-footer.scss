@@ -1,6 +1,10 @@
 .page-footer {
   padding: 40px 0 32px 0;
   background-color: $color_basic_grey;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 46px;
+  }
 }
 
 .page-footer__wrapper {

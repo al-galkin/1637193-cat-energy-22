@@ -1,15 +1,27 @@
-.add-goods__title-wrapper {
-  border-bottom: 2px solid $color_basic_green;
+.add-goods {
   margin-top: 25px;
-  margin-bottom: 41px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 68px;
-    margin-bottom: 70px;
+    margin-top: 66px;
   }
 
   @media (min-width: $desktop-content-width) {
-    margin: 75px 0 79px -39px;
+    margin-top: 75px;
+  }
+}
+
+.add-goods__title-wrapper {
+  border-bottom: 2px solid $color_basic_green;
+  //margin-top: 25px;
+  margin-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    //margin-top: 68px;
+    margin-bottom: 92px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    margin: 0 0 79px -39px;
   }
 }
 
@@ -29,9 +41,10 @@
   @media (min-width: $tablet-width) {
     font-size: $font_size_title;
     line-height: $line_height_title;
-    padding-left: 67px;
+    padding-left: 60px;
     text-align: left;
     left: -60px;
+    margin-bottom: -14px;
   }
 
   @media (min-width: $desktop-content-width) {
@@ -48,7 +61,7 @@
 
   @media (min-width: $tablet-width) {
     max-width: 100%;
-    padding: 0 42px 0 39px;
+    padding: 0 36px 0 37px;
   }
 
   @media (min-width: $desktop-content-width) {
@@ -101,8 +114,8 @@
 
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 25px 37px 25px 37px;
+    align-items: baseline;
+    padding: 11px 37px 27px 37px;
   }
 
   @media (min-width: $desktop-content-width) {
@@ -128,7 +141,8 @@
   @media (min-width: $tablet-width) {
     min-height: 38px;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 5px;
+    padding: 10px 38px 10px 36px;
   }
 
   @media (min-width: $desktop-content-width) {
@@ -171,6 +185,7 @@
   @media (min-width: $tablet-width) {
     width: 315px;
     justify-content: flex-end;
+    margin-top: 3px;
   }
 
   @media (min-width: $desktop-content-width) {
@@ -196,6 +211,11 @@
 
 .add-goods__value {
   @media (min-width: $tablet-width) {
-    margin-left: 46px;
+    margin-left: 49px;
+    margin-right: 3px;
+
+    &--water {
+      margin-left: 58px;
+    }
   }
 }

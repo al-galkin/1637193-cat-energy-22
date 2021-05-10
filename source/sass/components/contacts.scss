@@ -58,9 +58,9 @@
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_middle;
-    line-height: $line_height_title_small;
+    line-height: $line_height_title_intermediate;
     width: 171px;
-    margin-top: 65px;
+    margin-top: 64px;
     margin-bottom: 22px;
     height: 84px;
   }
@@ -86,6 +86,9 @@
     font-size: $font_size_medium;
     text-align: right;
     margin-top: 63px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop-content-width) {
