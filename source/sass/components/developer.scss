@@ -7,7 +7,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 18px;
+  height: 42px;
 
   @media (min-width: $tablet-width) {
     justify-content: flex-end;
@@ -43,6 +44,8 @@
 
 .developer__logo {
   fill: $color_icons-grey;
+  width: 42px;
+  margin-right: -6px;
 
   &:hover {
     fill: $color_basic_green;

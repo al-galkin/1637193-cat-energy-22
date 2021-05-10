@@ -1,5 +1,5 @@
 .contacts {
-  padding-bottom: 23px;
+  padding-bottom: 25px;
 
   &--noindex {
     background: $color_basic_grey;
@@ -54,7 +54,7 @@
   //line-height: $line_height_base;
   text-transform: uppercase;
   color: $color_special_black;
-  margin: 30px 0 0 -1px;
+  margin: 29px 0 0 -1px;
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_middle;
@@ -77,7 +77,7 @@
   line-height: $line_height_medium;
   color: $color_text-dark-grey;
   text-align: left;
-  margin: 30px 0 0 2px;
+  margin: 29px 0 0 2px;
   min-height: 60px;
 
   @media (min-width: $tablet-width) {
