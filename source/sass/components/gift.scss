@@ -29,8 +29,8 @@
     min-height: 289px;
     margin: 0;
     background-image: url("../img/icon_gift.svg"), url("../img/desktop/gift-photo-desktop.png");
-    background-size: 80px 83px, cover;
-    background-position: center 56px, center;
+    background-size: 82px 81px, cover;
+    background-position: center 57px, center;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/icon_gift.svg"), url("../img/desktop/gift-photo-desktop@2x.png");
@@ -54,6 +54,6 @@
 
   @media (min-width: $desktop-content-width) {
     text-align: center;
-    margin: 186px auto 0 auto;
+    margin: 188px auto 0 auto;
   }
 }

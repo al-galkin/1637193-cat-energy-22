@@ -105,6 +105,16 @@
       top: -109px;
     }
   }
+
+  @media (min-width: $desktop-content-width) {
+    &::before {
+      left: 39px;
+    }
+
+    &::after {
+      left: 69px;
+    }
+  }
 }
 
 

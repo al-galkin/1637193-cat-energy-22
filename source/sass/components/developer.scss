@@ -37,6 +37,10 @@
     margin-bottom: 8px;
   }
 
+  @media (min-width: $desktop-content-width) {
+    margin-bottom: 4px;
+  }
+
   &:hover + .developer__logo {
     fill: $color_basic_green;
   }
@@ -54,5 +58,10 @@
   @media (min-width: $tablet-width) {
     margin-right: -4px;
     margin-bottom: 7px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    margin-right: -7px;
+    margin-bottom: 2px;
   }
 }

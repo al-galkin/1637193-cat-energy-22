@@ -50,8 +50,7 @@
   font-family: $font, $font_family_reserve;
   font-size: $font_size_medium;
   font-weight: 400;
-  line-height: 20px; //переделал из-за картинки pixelperfect
-  //line-height: $line_height_base;
+  line-height: $line_height_medium;
   text-transform: uppercase;
   color: $color_special_black;
   margin: 29px 0 0 -1px;
@@ -66,7 +65,7 @@
   }
 
   @media (min-width: $desktop-content-width) {
-    margin-left: 75px;
+    margin-left: 76px;
   }
 }
 
@@ -93,7 +92,7 @@
 
   @media (min-width: $desktop-content-width) {
     text-align: left;
-    margin-right: 89px;
+    margin-right: 85px;
   }
 }
 

@@ -12,16 +12,14 @@
 
 .add-goods__title-wrapper {
   border-bottom: 2px solid $color_basic_green;
-  //margin-top: 25px;
   margin-bottom: 41px;
 
   @media (min-width: $tablet-width) {
-    //margin-top: 68px;
     margin-bottom: 92px;
   }
 
   @media (min-width: $desktop-content-width) {
-    margin: 0 0 79px -39px;
+    margin-bottom: 91px;
   }
 }
 
@@ -31,7 +29,6 @@
   font-size: $font_size_title_small;
   line-height: $line_height_title_small;
   color: $color_basic_black;
-  //padding: 0 21px 0 0;
   position: relative;
   z-index: 10;
   left: -21px;
@@ -48,8 +45,9 @@
   }
 
   @media (min-width: $desktop-content-width) {
-    padding: 0 39px 0 110px;
-    left: -90px;
+    padding: 0 40px 0 80px;
+    left: -117px;
+    margin-bottom: -13px;
   }
 }
 
@@ -66,8 +64,7 @@
 
   @media (min-width: $desktop-content-width) {
     max-width: 100%;
-    padding: 0 40px;
-    margin-bottom: -40px;
+    padding: 0 35px 0 37px;
   }
 }
 
@@ -193,6 +190,7 @@
     width: 288px;
     justify-content: space-between;
     align-items: center;
+    margin-top: 7px;
   }
 }
 
@@ -216,6 +214,14 @@
 
     &--water {
       margin-left: 58px;
+    }
+  }
+
+  @media (min-width: $desktop-content-width) {
+    margin-right: 1px;
+
+    &--water {
+      margin-right: 10px;
     }
   }
 }

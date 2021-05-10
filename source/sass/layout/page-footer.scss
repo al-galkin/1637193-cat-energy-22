@@ -5,6 +5,10 @@
   @media (min-width: $tablet-width) {
     padding-top: 46px;
   }
+
+  @media (min-width: $desktop-content-width) {
+    padding-top: 49px;
+  }
 }
 
 .page-footer__wrapper {
