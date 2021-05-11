@@ -2,7 +2,7 @@
   @include reset_list;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-start;
   margin-top: 12px;
   padding-bottom: 9px;
   border-bottom: 1px solid $color_border-link;

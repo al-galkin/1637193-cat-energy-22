@@ -9,6 +9,10 @@
     }
   }
 
+  &--form {
+    padding-bottom: 24px;
+  }
+
   @media (min-width: $tablet-width) {
     padding-bottom: 0;
   }
@@ -55,6 +59,10 @@
   color: $color_special_black;
   margin: 29px 0 0 -1px;
 
+  &--form {
+    margin: 29px 0 0 0;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: $font_size_middle;
     line-height: $line_height_title_intermediate;
@@ -78,6 +86,10 @@
   text-align: left;
   margin: 29px 0 0 2px;
   min-height: 60px;
+
+  &--form {
+    margin: 28px 0 0 0;
+  }
 
   @media (min-width: $tablet-width) {
     width: 159px;

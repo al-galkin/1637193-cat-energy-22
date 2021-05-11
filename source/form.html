@@ -15,9 +15,9 @@
   <div class="page-header__container">
     <a class="page-header__logo page-header__logo--noindex" href="index.html">
       <picture class="page-header__icon">
-        <source media="(min-width:1260px)" srcset="img/desktop/descktop-logo.svg">
+        <source media="(min-width:1300px)" srcset="img/desktop/descktop-logo.svg">
         <source media="(min-width:768px)" srcset="img/tablet/tablet-logo.svg">
-        <img src="img/mobile/logo-mobile.svg" width="100%" height="100%" alt="Иконка сайта Кэт Энерджи">
+        <img src="img/mobile/logo-mobile.svg" alt="Иконка сайта Кэт Энерджи">
       </picture>
       <svg class="page-header__label-icon" width="101" height="18" aria-label="Логотип компании Cat Energy">
         <use xlink:href="img/sprite.svg#logo-label-mobile"></use>
@@ -54,7 +54,7 @@
       Подбор программы
     </h1>
     <p class="page-main__text">
-      Заполните анкету, и мы подберем программу питания для вашего кота
+      Заполните анкету, и мы подберем <br>программу питания для вашего кота
     </p>
   </div>
 
@@ -63,23 +63,24 @@
       Заполните анкету
     </h2>
     <form class="form__fill" action="https://echo.htmlacademy.ru" method="post">
-      <div class="container">
-        <fieldset class="form__section form__section--cat-data">
+      <fieldset class="form__section form__section--cat-data">
+        <div class="form__container form__container--cat-data">
           <ul class="form__list form__list--cat-data">
             <li class="form__item">
-              <label class="form__label" for="cat-name">ИМЯ:*</label>
+              <label class="form__label form__label--cat-data" for="cat-name">ИМЯ:*</label>
               <input class="form__input form__input--name" type="text" name="cat-name" id="cat-name" placeholder="Барсик" required>
             </li>
             <li class="form__item">
-              <label class="form__label" for="cat-weight">Вес (кг):*</label>
+              <label class="form__label form__label--cat-data" for="cat-weight">Вес (кг):*</label>
               <input class="form__input form__input--weight" type="text" name="cat-weight" id="cat-weight" placeholder="7" required>
             </li>
             <li class="form__item">
-              <label class="form__label" for="cat-age">Возраст (лет):</label>
-              <input class="form__input form__input--age" type="text" name="cat-age" id="cat-age" placeholder="7" min="0" max="30">
+              <label class="form__label form__label--cat-data" for="cat-age">Возраст (лет):</label>
+              <input class="form__input form__input--age" type="text" name="cat-age" id="cat-age" placeholder="7">
             </li>
           </ul>
-
+        </div>
+        <div class="form__container form__container--radio">
           <ul class="form__list form__list--radio">
             <li class="form__item form__item--radio select">
               <input class="select__input select__input--radio" type="radio" name="reason" value="slim" id="slim" checked>
@@ -94,15 +95,17 @@
               <label class="select__radio" for="advice">Не знаю (Нужен ваш совет)</label>
             </li>
           </ul>
-        </fieldset>
-      </div>
-
+        </div>
+      </fieldset>
       <fieldset class="form__section form__section--owner">
-        <div class="form__title-wrapper">
+        <div class="form__title-wrapper form__title-wrapper--owner">
           <div class="container">
             <h2 class="form__title">
               <span class="form__title-background">
-                Контактные данные (владельца кота)
+                <span class="form__title-background--mobile">
+                  Контактные данные
+                </span>
+                (владельца кота)
               </span>
             </h2>
           </div>
@@ -110,14 +113,14 @@
         <div class="container">
           <ul class="form__list form__list--owner">
             <li class="form__item form__item--email">
-              <label class="form__label" for="owner-email">E-mail:*</label>
+              <label class="form__label form__label--owner" for="owner-email">E-mail:*</label>
               <input class="form__input form__input--email" type="email" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com" required>
               <svg class="form__icon form__icon--email" width="20" height="15" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite.svg#icon_email"></use>
               </svg>
             </li>
             <li class="form__item form__item--phone">
-              <label class="form__label" for="owner-phone">Телефон:*</label>
+              <label class="form__label form__label--owner" for="owner-phone">Телефон:*</label>
               <input class="form__input form__input--phone" type="tel" name="owner-phone" id="owner-phone" placeholder="8 (960) 900-60-90" required>
               <svg class="form__icon form__icon--phone" width="20" height="21" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite.svg#icon_phone"></use>
@@ -128,7 +131,7 @@
       </fieldset>
 
       <fieldset class="form__section form__section--textarea">
-        <div class="form__title-wrapper">
+        <div class="form__title-wrapper form__title-wrapper--textarea">
           <div class="container">
             <h2 class="form__title">
               <span class="form__title-background">
@@ -146,7 +149,7 @@
       </fieldset>
 
       <fieldset class="form__section form__section--additionally">
-        <div class="form__title-wrapper">
+        <div class="form__title-wrapper form__title-wrapper--additionally">
           <div class="container">
             <h2 class="form__title">
               <span class="form__title-background">
@@ -192,15 +195,15 @@
     </form>
   </section>
 
-  <section class="contacts contacts--noindex">
+  <section class="contacts contacts--noindex contacts--form">
     <h2 class="visually-hidden">
       Контакты
     </h2>
     <div class="contacts__wrapper">
-      <p class="contacts__title">
-          приглашаем к сотрудничеству дилеров!
+      <p class="contacts__title contacts__title--form">
+        приглашаем <br> к сотрудничеству дилеров!
       </p>
-      <address class="contacts__address">
+      <address class="contacts__address contacts__address--form">
         <p class="contacts__street">
           ул. Большая Конюшенная, д. 19/8
         </p>
