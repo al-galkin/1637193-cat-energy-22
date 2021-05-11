@@ -33,6 +33,10 @@
       cursor: pointer;
       display: inline-block;
       opacity: 1;
+
+      @media (min-width: $tablet-width) {
+        padding-left: 60px;
+      }
     }
 
     &:checked + label::before,
@@ -51,7 +55,9 @@
       opacity: 1;
 
       @media (min-width: $tablet-width) {
-        top: 1px;
+        width: 40px;
+        height: 40px;
+        top: -6px;
       }
     }
 
@@ -69,7 +75,10 @@
       opacity: 1;
 
       @media (min-width: $tablet-width) {
-        top: 9px;
+        width: 18px;
+        height: 18px;
+        top: 5px;
+        left: 11px;
       }
     }
 
@@ -118,6 +127,10 @@
       padding-left: 46px;
       cursor: pointer;
       display: inline-block;
+
+      @media (min-width: $tablet-width) {
+        padding-left: 59px;
+      }
     }
 
     &:checked + label::before,
@@ -132,7 +145,8 @@
       background: $color_basic_white;
 
       @media (min-width: $tablet-width) {
-        top: 1px;
+        width: 40px;
+        height: 40px;
       }
     }
 
@@ -147,7 +161,8 @@
       transition: all 0.1s ease;
 
       @media (min-width: $tablet-width) {
-        top: 9px;
+        top: 7px;
+        left: 11px;
       }
     }
 

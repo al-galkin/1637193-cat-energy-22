@@ -28,17 +28,17 @@
         <span class="main-nav__toggle"></span>
       </button>
       <ul class="main-nav__list site-list">
-        <li class="site-list__item">
+        <li class="site-list__item site-list__item--form">
           <a class="site-list__link site-list__link--nocurrent" href="index.html" aria-label="Переход на главную страницу 'Кэт энерджи'">
             Главная
           </a>
         </li>
-        <li class="site-list__item">
+        <li class="site-list__item site-list__item--form">
           <a class="site-list__link site-list__link--nocurrent" href="catalog.html" aria-label="Переход на страницу каталога 'Кэт энерджи'">
             Каталог продукции
           </a>
         </li>
-        <li class="site-list__item">
+        <li class="site-list__item site-list__item--form">
           <a class="site-list__link site-list__link--current" aria-label="Переход на страницу подбора программы 'Кэт энерджи'">
             Подбор программы
           </a>
@@ -66,15 +66,15 @@
       <fieldset class="form__section form__section--cat-data">
         <div class="form__container form__container--cat-data">
           <ul class="form__list form__list--cat-data">
-            <li class="form__item">
+            <li class="form__item form__item--cat-data">
               <label class="form__label form__label--cat-data" for="cat-name">ИМЯ:*</label>
               <input class="form__input form__input--name" type="text" name="cat-name" id="cat-name" placeholder="Барсик" required>
             </li>
-            <li class="form__item">
+            <li class="form__item form__item--cat-data">
               <label class="form__label form__label--cat-data" for="cat-weight">Вес (кг):*</label>
               <input class="form__input form__input--weight" type="text" name="cat-weight" id="cat-weight" placeholder="7" required>
             </li>
-            <li class="form__item">
+            <li class="form__item form__item--cat-data">
               <label class="form__label form__label--cat-data" for="cat-age">Возраст (лет):</label>
               <input class="form__input form__input--age" type="text" name="cat-age" id="cat-age" placeholder="7">
             </li>
@@ -113,7 +113,7 @@
         <div class="container">
           <ul class="form__list form__list--owner">
             <li class="form__item form__item--email">
-              <label class="form__label form__label--owner" for="owner-email">E-mail:*</label>
+              <label class="form__label form__label--owner form__label--email" for="owner-email">E-mail:*</label>
               <input class="form__input form__input--email" type="email" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com" required>
               <svg class="form__icon form__icon--email" width="20" height="15" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite.svg#icon_email"></use>
@@ -152,7 +152,7 @@
         <div class="form__title-wrapper form__title-wrapper--additionally">
           <div class="container">
             <h2 class="form__title">
-              <span class="form__title-background">
+              <span class="form__title-background form__title-background--additionally">
                 Дополнительно
               </span>
             </h2>
@@ -225,7 +225,7 @@
 
 <footer class="page-footer">
   <div class="container">
-    <div class="page-footer__wrapper">
+    <div class="page-footer__wrapper page-footer__wrapper--form">
       <div class="page-footer__copyright copyright">
         <a class="copyright__logo" href="index.html">
           <svg class="copyright__image" width="128" height="24" aria-label="Логотип CAT ENERGY">
@@ -266,8 +266,8 @@
       </section>
       <div class="page-footer__developer developer">
         <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
-          <p class="developer__text">HTML Academy</p>
-          <svg class="developer__logo" width="100%" height="100%" aria-label="Логотип HTML Academy">
+          <p class="developer__text developer__text--form">HTML Academy</p>
+          <svg class="developer__logo developer__logo--form" width="100%" height="100%" aria-label="Логотип HTML Academy">
             <use xlink:href="img/sprite.svg#htmlacademy"></use>
           </svg>
         </a>

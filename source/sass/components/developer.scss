@@ -35,6 +35,10 @@
   @media (min-width: $tablet-width) {
     margin-right: 15px;
     margin-bottom: 8px;
+
+    &--form {
+      margin-bottom: 7px;
+    }
   }
 
   @media (min-width: $desktop-content-width) {
@@ -58,6 +62,11 @@
   @media (min-width: $tablet-width) {
     margin-right: -4px;
     margin-bottom: 7px;
+
+    &--form {
+      margin-right: -6px;
+      margin-bottom: 6px;
+    }
   }
 
   @media (min-width: $desktop-content-width) {

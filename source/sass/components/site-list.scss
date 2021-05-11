@@ -66,6 +66,12 @@
     &:last-child {
       margin-right: 0;
     }
+
+    &--form {
+      &:first-child {
+        margin-right: 34px;
+      }
+    }
   }
 
   @media (min-width: $desktop-content-width) {
