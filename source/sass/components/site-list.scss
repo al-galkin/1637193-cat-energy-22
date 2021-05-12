@@ -78,6 +78,12 @@
     &:first-child {
       min-width: 70px;
     }
+
+    &--form {
+      &:first-child {
+        margin-right: 36px;
+      }
+    }
   }
 }
 

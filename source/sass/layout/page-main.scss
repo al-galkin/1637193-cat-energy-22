@@ -17,7 +17,10 @@
   }
 
   @media (min-width: $desktop-content-width) {
+    padding: 0 20px;
+
     &--catalog {
+      padding: 0;
       margin-bottom: 165px;
     }
   }
@@ -71,5 +74,9 @@
     line-height: $line_height_title_median;
     margin-top: 55px;
     margin-left: 1px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    margin-left: 0;
   }
 }

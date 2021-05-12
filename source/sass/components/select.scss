@@ -45,8 +45,6 @@
       position: absolute;
       left: 0;
       top: -8px;
-      //top: 50%;
-      //margin-top: - (30 / 2)px;
       width: 30px;
       height: 30px;
       border: 1px solid $color_frames_grey;
@@ -58,6 +56,10 @@
         width: 40px;
         height: 40px;
         top: -6px;
+      }
+
+      @media (min-width: $desktop-content-width) {
+        top: -5px;
       }
     }
 
@@ -79,6 +81,10 @@
         height: 18px;
         top: 5px;
         left: 11px;
+      }
+
+      @media (min-width: $desktop-content-width) {
+        top: 6px;
       }
     }
 
@@ -148,6 +154,10 @@
         width: 40px;
         height: 40px;
       }
+
+      @media (min-width: $desktop-content-width) {
+        top: -5px;
+      }
     }
 
     &:checked + label::after,
@@ -163,6 +173,10 @@
       @media (min-width: $tablet-width) {
         top: 7px;
         left: 11px;
+      }
+
+      @media (min-width: $desktop-content-width) {
+        top: 8px;
       }
     }
 
