@@ -1,5 +1,5 @@
 .reasons {
-  padding-bottom: 27px;
+  margin-bottom: 27px;
 
   @media (min-width: $desktop-content-width) {
     display: grid;
@@ -40,12 +40,13 @@
   color: $color_special_black;
   text-transform: uppercase;
   margin-top: 0;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
+  margin-left: 1px;
   padding-left: 70px;
 
   &::before {
     @include reset_pseudo-element-style;
-    top: 24px;
+    top: 21px;
     left: 22px;
     background-image: url("../img/mobile/cat_slim.svg");
     width: 50px;
@@ -57,6 +58,8 @@
       background-image: url("../img/mobile/cat_pro.svg");
       width: 67px;
       height: 50px;
+      top: 24px;
+      left: 13px;
     }
   }
 
@@ -111,17 +114,20 @@
   }
 }
 
-.reasons__item--weight-gain .reasons__title {
-  @media (max-width: $mobile-width-only) {
-    padding-left: 90px;
-  }
-}
+//.reasons__item--weight-gain .reasons__title {
+//  @media (max-width: $mobile-width-only) {
+//    padding-left: 90px;
+//  }
+//}
 
 .reasons__description {
-  margin-bottom: 42px;
+  margin-bottom: 17px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid $color_border-link;
 
   @media (min-width: $tablet-width) {
     margin-right: 220px;
+    border: none;
   }
 
   @media (min-width: $desktop-content-width) {
@@ -142,6 +148,10 @@
   }
 }
 
+.reasons__link {
+  margin-bottom: -3px;
+}
+
 .reasons__link-item {
   font-size: $font_size_medium;
   line-height: $line_height_middle;
@@ -149,16 +159,23 @@
   color: $color_basic_black;
   text-transform: uppercase;
   position: relative;
+  left: -1px;
   display: inline-block;
   width: 130px;
 
   &::before {
     @include reset_pseudo-element-style;
-    right: -5px;
+    right: -4px;
     top: 2px;
     width: 32px;
     height: 12px;
     background-image: url("../img/icon_arrow.svg");
+  }
+
+  &--weight-gain {
+    &::before {
+      right: -2px;
+    }
   }
 
   &:hover {

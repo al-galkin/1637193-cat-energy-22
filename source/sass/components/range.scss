@@ -49,14 +49,15 @@
 }
 
 .range__image {
-  min-height: 232px;
+  min-height: 240px;
 }
 
 .range__placeholder {
   display: flex;
   justify-content: center;
   position: relative;
-  top: -58px;
+  top: -7px;
+  left: -3px;
 }
 
 .range__button {
@@ -72,13 +73,14 @@
   margin: 0;
   padding: 0;
   outline-offset: 3px;
+  position: relative;
 
-  &:first-child {
-    padding-right: 16px;
+  &--before {
+    left: -16px;
   }
 
-  &:last-child {
-    padding-left: 16px;
+  &--after {
+    left: 20px;
   }
 
   &--disabled {
@@ -99,6 +101,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  bottom: -20px;
 
   @media (min-width: $tablet-width) {
     justify-self: center;
@@ -121,10 +125,12 @@
 .range__input {
   background: $color_basic_white;
   padding: 3px 6px 4px 6px;
-  width: 84px;
+  width: 83px;
   height: 14px;
   border: 1px solid $color_frames_grey;
   border-radius: 6px;
+  position: relative;
+  left: 3px;
 
   @media (min-width: $tablet-width) {
     position: relative;
@@ -144,15 +150,15 @@
   border-radius: 6px;
   position: relative;
   top: -12px;
-  left: -20px;
+  left: -19px;
 
   @media (max-width: $mobile-width-only) {
     &--medium {
-      left: 0;
+      left: -1px;
     }
 
     &--after {
-      left: 21px;
+      left: 19px;
     }
   }
 

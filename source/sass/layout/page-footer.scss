@@ -2,6 +2,10 @@
   padding: 40px 0 32px 0;
   background-color: $color_basic_grey;
 
+  &--index {
+    padding-top: 39px;
+  }
+
   @media (min-width: $tablet-width) {
     padding-top: 46px;
   }

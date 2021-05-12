@@ -110,6 +110,11 @@
   top: 1px;
   left: -1px;
 
+  &--index {
+    top: 0;
+    left: 0;
+  }
+
   @media (min-width: $tablet-width) {
     top: 0;
     left: 0;

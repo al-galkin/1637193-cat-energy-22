@@ -1,5 +1,5 @@
 .benefits {
-  margin-bottom: 40px;
+  margin-bottom: 46px;
 }
 
 .benefits__title {
@@ -9,7 +9,7 @@
   font-size: $font_size_title;
   line-height: $line_height_title_middle;
   color: $color_basic_black;
-  margin-bottom: 40px;
+  margin-bottom: 41px;
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_title_big;
@@ -63,7 +63,7 @@
     background-position: center;
     background-color: $color_basic_green;
     left: 0;
-    top: 0;
+    top: -2px;
   }
 
   &--leaf::before {
@@ -137,4 +137,5 @@
 
 .benefits__text {
   margin-top: 0;
+  margin-left: 10px;
 }
