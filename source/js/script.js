@@ -15,89 +15,76 @@ navButtonToggle.addEventListener('click', () => {
   pageHeader.classList.toggle('page-header--closed');
 });
 
-//-- Ползунок-переключатель состояния кота -- //
+//-- простой слайдер по клику - переключатель состояния кота -- //
 
-//получаем координаты ползунка
-function getCoords(elem) {
-  // (1)
-  let box = elem.getBoundingClientRect();
-
-  let body = document.body;
-  let docEl = document.documentElement;
-
-  // (2)
-  let scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
-  let scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
-
-  // (3)
-  let clientTop = docEl.clientTop || body.clientTop || 0;
-  let clientLeft = docEl.clientLeft || body.clientLeft || 0;
-
-  // (4)
-  let top = box.top + scrollTop - clientTop;
-  let left = box.left + scrollLeft - clientLeft;
-
-  return {
-    top: top,
-    left: left
-  };
-}
-
-// меняем местоположение ползунка
-const availableScreenWidth = window.screen.availWidth;
-let circleEl = document.getElementById('circle');
-let parent = document.getElementById('circle_parent');
-let parentParams = getCoords(parent);
 let slimCat = document.getElementById('slimcat');
+let mediumCat = document.getElementById('medium');
 let fatCat = document.getElementById('fatcat');
 let beforeToggle = document.getElementById('before');
 let afterToggle = document.getElementById('after');
+let circleEl = document.getElementById('circle');
 
-let listener = function(e) {
-  let offset = 0;
-  let circlePosition =  e.screenX;
-  let circleWidth =  circleEl.offsetWidth/2;
-  let sliderWidth = parent.offsetWidth;
-  let minPoint = parentParams.left;
-  let maxPoint = parentParams.left + sliderWidth;
+beforeToggle.addEventListener('click', () => {
+  afterToggle.classList.remove('range__button--disabled');
 
-  if(circlePosition > minPoint){
-    offset = ((circlePosition - minPoint)/sliderWidth ) * 100;
+  if (fatCat.classList.contains('range__picture--noshow')) {
+    if (mediumCat.classList.contains('range__picture--show')) {
+      mediumCat.classList.toggle('range__picture--noshow');
+      mediumCat.classList.toggle('range__picture--show');
+      if (circleEl.classList.contains('range__toggle--medium')) {
+        circleEl.classList.add('range__toggle--after');
+      }
+      circleEl.classList.toggle('range__toggle--medium');
+      fatCat.classList.add('range__picture--show');
+      fatCat.classList.remove('range__picture--noshow');
+    }
+
+    if (slimCat.classList.contains('range__picture--show')) {
+      slimCat.classList.add('range__picture--noshow');
+      slimCat.classList.remove('range__picture--show');
+      if (circleEl.classList.contains('range__toggle--medium')) {
+        circleEl.classList.add('range__toggle--after');
+      }
+      circleEl.classList.toggle('range__toggle--medium');
+      mediumCat.classList.toggle('range__picture--show');
+      mediumCat.classList.toggle('range__picture--noshow');
+    }
   }
 
-  if(circlePosition > maxPoint ){
-    offset = 100;
+  if (fatCat.classList.contains('range__picture--show')) {
+    beforeToggle.classList.add('range__button--disabled');
   }
 
-  offset = Math.round(offset);
-  fatCat.style.width = offset+"%";
-  slimCat.style.width = (100-offset)+"%";
+  circleEl.classList.remove('range__toggle--after');
+});
 
-  circleEl.style.left = "calc("+offset + "% - "+ circleWidth +"px";
-};
+afterToggle.addEventListener('click', () => {
+  beforeToggle.classList.remove('range__button--disabled');
 
-if (availableScreenWidth > 768) { // на таблет и пк - бегунок по мыши
-  circle.addEventListener('mousedown', e => {
-    document.addEventListener('mousemove', listener);
-  });
+  if (slimCat.classList.contains('range__picture--noshow')) {
+    if (mediumCat.classList.contains('range__picture--show')) {
+      mediumCat.classList.toggle('range__picture--noshow');
+      mediumCat.classList.toggle('range__picture--show');
+      if (circleEl.classList.contains('range__toggle--medium')) {
+        circleEl.classList.add('range__toggle--after');
+      }
+      circleEl.classList.toggle('range__toggle--medium');
+      slimCat.classList.add('range__picture--show');
+      slimCat.classList.remove('range__picture--noshow');
+    }
 
-  document.addEventListener('mouseup', e => {
-    document.removeEventListener('mousemove', listener);
-  });
-} else { //только на мобильном - простой слайдер по клику
-  beforeToggle.addEventListener('touchend', () => {
-    slimCat.classList.remove('range__slimcat--show');
-    slimCat.classList.add('range__slimcat--noshow');
-    fatCat.classList.remove('range__fatcat--noshow');
-    fatCat.classList.add('range__fatcat--show');
-    circleEl.classList.remove('range__toggle--after');
-  });
-
-  afterToggle.addEventListener('touchend', () => {
-    slimCat.classList.remove('range__slimcat--noshow');
-    slimCat.classList.add('range__slimcat--show');
-    fatCat.classList.remove('range__fatcat--show');
-    fatCat.classList.add('range__fatcat--noshow');
-    circleEl.classList.add('range__toggle--after');
-  });
-}
+    if (fatCat.classList.contains('range__picture--show')) {
+      fatCat.classList.add('range__picture--noshow');
+      fatCat.classList.remove('range__picture--show');
+      mediumCat.classList.toggle('range__picture--show');
+      if (circleEl.classList.contains('range__toggle--medium')) {
+        circleEl.classList.add('range__toggle--after');
+      }
+      circleEl.classList.toggle('range__toggle--medium');
+      mediumCat.classList.toggle('range__picture--noshow');
+    }
+  }
+  if (slimCat.classList.contains('range__picture--show')) {
+    afterToggle.classList.add('range__button--disabled');
+  }
+});
