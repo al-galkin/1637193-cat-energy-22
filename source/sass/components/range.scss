@@ -167,7 +167,7 @@
 }
 
 .range__input {
-  background: $color_basic_white;
+  background-color: $color_basic_white;
   padding: 3px 6px 4px 6px;
   width: 83px;
   height: 14px;
@@ -180,7 +180,7 @@
     position: relative;
     width: 427px;
     height: 6px;
-    background: $color_range_grey;
+    background-color: $color_range_grey;
     border: 0;
     border-radius: 6px;
   }
@@ -189,7 +189,7 @@
 .range__toggle {
   width: 35px;
   height: 6px;
-  background: $color_basic_green;
+  background-color: $color_basic_green;
   border: none;
   border-radius: 6px;
   position: relative;
@@ -219,7 +219,7 @@
     &::before {
       position: absolute;
       content: "";
-      background: $color_basic_green;
+      background-color: $color_basic_green;
       width: 8px;
       height: 8px;
       top: 12px;

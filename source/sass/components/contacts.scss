@@ -2,10 +2,10 @@
   padding-bottom: 25px;
 
   &--noindex {
-    background: $color_basic_grey;
+    background-color: $color_basic_grey;
 
     @media (min-width: $desktop-content-width) {
-      background: inherit;
+      background-color: inherit;
     }
   }
 

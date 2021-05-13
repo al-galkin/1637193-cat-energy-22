@@ -19,15 +19,16 @@
 
     &::before {
       @include reset_pseudo-element-style;
-      background: linear-gradient(to right, $color_transparent_green 0%, $color_transparent_green 100%) no-repeat, url("../img/desktop/index-background-desktop-1.png") 100% 0 no-repeat;
+      background-image: linear-gradient(to right, $color_transparent_green 0%, $color_transparent_green 100%), url("../img/desktop/index-background-desktop-1.png");
       background-size: cover;
+      background-position: 100% 0;
       width: 50%;
       height: 694px;
       right: 0;
       top: 0;
 
       @media (min-resolution: 2dppx) {
-        background: linear-gradient(to right, $color_transparent_green 0%, $color_transparent_green 100%) no-repeat, url("../img/desktop/index-background-desktop-1-@2x.png") 100% 0 no-repeat;
+        background-image: linear-gradient(to right, $color_transparent_green 0%, $color_transparent_green 100%), url("../img/desktop/index-background-desktop-1-@2x.png");
       }
     }
   }
@@ -35,14 +36,17 @@
 
 .promo__wrapper {
   position: relative;
-  background: linear-gradient(to bottom, $color_transparent_green 0%, $color_transparent_green 100%), url("../img/mobile/index-background-desktop-2.png") center/cover no-repeat;
+  background-image: linear-gradient(to bottom, $color_transparent_green 0%, $color_transparent_green 100%), url("../img/mobile/index-background-desktop-2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   min-height: 301px;
   margin-bottom: 140px;
   display: flex;
   flex-direction: column;
 
   @media (min-resolution: 2dppx) {
-    background: linear-gradient(to bottom, $color_transparent_green 0%, $color_transparent_green 100%), url("../img/mobile/index-background-desktop-2-@2x.png") center/cover no-repeat;
+    background-image: linear-gradient(to bottom, $color_transparent_green 0%, $color_transparent_green 100%), url("../img/mobile/index-background-desktop-2-@2x.png");
   }
 
   &::after {
