@@ -11,6 +11,7 @@
     column-gap: 80px;
     row-gap: 50px;
     min-height: 374px;
+    margin-bottom: 71px;
   }
 }
 
@@ -31,10 +32,8 @@
   }
 
   @media (min-width: $desktop-content-width) {
-    //max-width: none;
-    //margin-bottom: 0;
     height: 100%;
-    padding: 47px 51px 59px 52px;
+    padding: 47px 51px 31px 52px;
   }
 }
 
@@ -75,7 +74,7 @@
 
     &::before {
       background-image: url("../img/tablet/cat_slim.svg");
-      right: 66px;
+      right: 62px;
       left: auto;
       top: 81px;
       width: 200px;
@@ -85,7 +84,7 @@
     &--weight-gain {
       &::before {
         background-image: url("../img/tablet/cat_pro.svg");
-        right: 32px;
+        right: 28px;
         left: auto;
         top: 91px;
         width: 268px;
@@ -96,22 +95,25 @@
 
   @media (min-width: $desktop-content-width) {
     text-align: center;
-    padding-left: 100px;
+    padding-left: 20px;
+    padding-top: 30px;
 
     &::before {
       background-image: url("../img/desktop/cat_slim.svg");
       right: auto;
       left: 52px;
-      top: 47px;
+      top: 41px;
       width: 100px;
-      height: 100px;
+      height: 110px;
     }
 
     &--weight-gain {
+      padding-left: 61px;
+
       &::before {
         background-image: url("../img/desktop/cat_pro.svg");
-        left: 32px;
-        top: 50px;
+        left: 33px;
+        top: 47px;
         width: 268px;
         height: 200px;
       }
@@ -135,8 +137,9 @@
   }
 
   @media (min-width: $desktop-content-width) {
-    margin-top: 73px;
+    margin-top: 74px;
     margin-right: 0;
+    margin-bottom: 3px;
   }
 }
 
@@ -210,6 +213,19 @@
     &--weight-gain {
       &::before {
         right: -31px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-content-width) {
+    &::before {
+      right: -38px;
+      top: 8px;
+    }
+
+    &--weight-gain {
+      &::before {
+        right: -32px;
       }
     }
   }

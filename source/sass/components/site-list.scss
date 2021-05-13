@@ -4,10 +4,6 @@
     position: relative;
     text-align: right;
     left: -1px;
-
-    &--index {
-      left: -4px;
-    }
   }
 
   @media (min-width: $desktop-content-width) {

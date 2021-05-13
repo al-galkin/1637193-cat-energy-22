@@ -1,5 +1,5 @@
 .page-footer {
-  padding: 40px 0 32px 0;
+  padding: 40px 0 18px 0;
   background-color: $color_basic_grey;
 
   &--index {
@@ -8,6 +8,8 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 46px;
+    padding-bottom: 32px;
+    min-height: 147px;
   }
 
   @media (min-width: $desktop-content-width) {

@@ -5,9 +5,12 @@
   }
 
   @media (min-width: $desktop-content-width) {
-    padding-top: 65px;
-    width: 445px;
-    margin-right: 145px; //пробовать переделать на 125
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 0;
+    max-width: 445px;
+    min-height: 486px;
   }
 }
 
@@ -21,6 +24,7 @@
   @media (min-width: $desktop-content-width) {
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 52px;
   }
 }
 
@@ -70,8 +74,7 @@
   }
 
   @media (min-width: $desktop-content-width) {
-    margin-bottom: 50px;
-    margin-top: 191px;
+    margin-bottom: 0;
   }
 }
 

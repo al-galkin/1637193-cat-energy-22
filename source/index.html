@@ -166,12 +166,14 @@
         <div class="range">
           <div class="range__wrapper">
             <div class="range__placeholder">
-              <picture class="range__picture range__picture--fatcat range__picture--show range__picture--mobile-show" id="fatcat">
+              <picture class="range__picture range__picture--fatcat range__picture--show" id="fatcat">
                 <source type="image/webp" srcset="img/cat-fat.webp 1x, img/cat-fat-@2x.webp 2x">
                 <img class="range__image" width="100%" height="100%" src="img/cat-fat.png" srcset="img/cat-fat.png 1x, img/cat-fat-@2x.png 2x" alt="Кот до программы Cat Energy">
               </picture>
-              <picture class="range__picture range__picture--medium range__picture--noshow range__picture--mobile-no-show" id="medium">
+              <picture class="range__picture range__picture--medium range__picture--noshow" id="medium">
+                <source type="image/webp" media="(min-width:1440px)" srcset="img/desktop/image_cat_desktop.webp 1x, img/desktop/image_cat_desktop-@2x.webp 2x">
                 <source type="image/webp" srcset="img/cat_medium.webp 1x, img/cat_medium-@2x.webp 2x">
+                <source media="(min-width:1440px)" srcset="img/desktop/image_cat_desktop.png 1x, img/desktop/image_cat_desktop-@2x.png 2x">
                 <img class="range__image" width="100%" height="100%" src="img/cat_medium.png" srcset="img/cat_medium.png 1x, img/cat_medium-@2x.png 2x" alt="Кот с демонстрацией до\после">
               </picture>
               <picture class="range__picture range__picture--slimcat range__picture--noshow" id="slimcat">
@@ -179,7 +181,6 @@
                 <img class="range__image" width="100%" height="100%" src="img/cat-skinny.png" srcset="img/cat-skinny.png 1x, img/cat-skinny-@2x.png 2x" alt="Кот после программы Cat Energy">
               </picture>
             </div>
-
             <div class="range__control">
               <button class="range__button range__button--before" type="button" id="before">
                 Было
