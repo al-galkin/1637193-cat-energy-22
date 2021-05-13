@@ -2,7 +2,7 @@
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    min-height: 462px;
+    min-height: 526px;
   }
 
   @media (min-width: $desktop-content-width) {
@@ -39,11 +39,35 @@
     display: none;
   }
 
-  @media (min-width: $tablet-width) {
-    max-width: 700px;
+  &--show {
+    display: block;
   }
 
+  //&--mobile-show {
+  //  display: block;
+  //}
+  //
+  //&--mobile-no-show {
+  //  display: none;
+  //}
+
   @media (min-width: $tablet-width) {
+    max-width: 677px;
+
+    //&--fatcat {
+    //  display: none;
+    //}
+
+    //&--mobile-show {
+    //  display: none;
+    //}
+    //
+    //&--mobile-no-show {
+    //  display: block;
+    //}
+  }
+
+  @media (min-width: $desktop-content-width) {
     max-width: 610px;
   }
 }
@@ -58,6 +82,11 @@
   position: relative;
   top: -7px;
   left: -3px;
+
+  @media (min-width: $tablet-width) {
+    top: -107px;
+    left: 0;
+  }
 }
 
 .range__button {
@@ -66,7 +95,7 @@
   background-color: inherit;
   font-family: inherit;
   font-size: $font_size_medium;
-  line-height: $line_height_medium;
+  line-height: $line_height_title_median;
   text-transform: uppercase;
   color: $color_basic_black;
   cursor: pointer;
@@ -87,13 +116,28 @@
     pointer-events: none;
     cursor: default;
     opacity: 0.3;
+    border: none;
+  }
+
+  &:hover {
+    border-bottom: 1px solid $color_basic_black;
+  }
+
+  &:active {
+    border-bottom: 1px solid transparent;
   }
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_middle;
-    //pointer-events: none;
-    //cursor: default;
-    //border-bottom: 1px dotted $color_frames_grey
+    border-bottom: 1px dotted $color_frames_grey;
+
+    &--before {
+      left: -23px;
+    }
+
+    &--after {
+      left: 23px;
+    }
   }
 }
 
@@ -109,8 +153,8 @@
     grid-column: span 2;
     width: auto;
     position: absolute;
-    left: 25%;
-    bottom: 67px;
+    left: 12.85%;
+    bottom: 66px;
   }
 
   @media (min-width: $desktop-content-width) {
@@ -134,7 +178,7 @@
 
   @media (min-width: $tablet-width) {
     position: relative;
-    width: 428px;
+    width: 427px;
     height: 6px;
     background: $color_range_grey;
     border: 0;
@@ -164,9 +208,8 @@
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    left: 47%;
-    //    left: calc(100% - 17px);
-    top: -10px;
+    left: 46%;
+    top: -13px;
     border-radius: 50%;
     background-color: $color_basic_white;
     border: 1px solid $color_frames_grey;

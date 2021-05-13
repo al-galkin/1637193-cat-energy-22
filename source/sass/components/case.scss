@@ -5,7 +5,7 @@
   background: $color_background_grey;
 
   @media (min-width: $tablet-width) {
-    background: linear-gradient(to top, $color_background_grey 460px, $color_basic_white 460px) no-repeat;
+    background: linear-gradient(to top, $color_background_grey 462px, $color_basic_white 462px) no-repeat;
     background-size: 100% 100%, 100% 100%;
     padding-top: 0;
     padding-bottom: 0;
@@ -16,7 +16,7 @@
     padding-top: 0;
     padding-bottom: 0;
     margin-bottom: 0;
-    background: linear-gradient(to top, $color_basic_grey 460px, $color_basic_white 460px) no-repeat, linear-gradient(to top, $color_background_grey 460px, $color_basic_white 460px) no-repeat;
+    background: linear-gradient(to top, $color_basic_grey 462px, $color_basic_white 462px) no-repeat, linear-gradient(to top, $color_background_grey 462px, $color_basic_white 462px) no-repeat;
     background-size: 72.5% 100%, 100% 100%;
     border-top: 0;
   }
@@ -35,7 +35,7 @@
   @media (min-width: $tablet-width) {
     font-size: $font_size_title_big;
     line-height: $line_height_title_big;
-    margin-top: 41px;
+    margin-top: 43px;
     margin-bottom: 64px;
   }
 

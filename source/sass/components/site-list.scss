@@ -4,6 +4,10 @@
     position: relative;
     text-align: right;
     left: -1px;
+
+    &--index {
+      left: -4px;
+    }
   }
 
   @media (min-width: $desktop-content-width) {
@@ -102,6 +106,10 @@
 
 .site-list__link--current-index {
   cursor: default;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 7px;
+  }
 
   @media (min-width: $desktop-content-width) {
     border-bottom: 2px solid $color_basic_white;

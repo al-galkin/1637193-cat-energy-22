@@ -1,6 +1,7 @@
 .details {
   @media (min-width: $tablet-width) {
     margin-bottom: 58px;
+    min-height: 330px;
   }
 
   @media (min-width: $desktop-content-width) {
@@ -29,7 +30,9 @@
   justify-content: center;
 
   @media (min-width: $tablet-width) {
-    margin-right: 160px;
+    max-width: 366px;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop-content-width) {
@@ -47,7 +50,7 @@
     margin-right: 32px;
 
     @media (min-width: $tablet-width) {
-      margin-right: 43px;
+      margin-right: 42px;
     }
   }
 }
@@ -139,6 +142,7 @@
     font-size: $font_size_middle;
     line-height: $line_height_title_intermediate;
     text-align: right;
+    margin-top: 15px;
     margin-bottom: 0;
   }
 

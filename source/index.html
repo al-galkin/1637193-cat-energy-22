@@ -27,7 +27,7 @@
       <button class="main-nav__button" type="button" aria-label="Открыть меню">
         <span class="main-nav__toggle"></span>
       </button>
-      <ul class="main-nav__list site-list">
+      <ul class="main-nav__list site-list site-list--index">
         <li class="site-list__item">
           <a class="site-list__link site-list__link--index site-list__link--current site-list__link--current-index" aria-label="Переход на главную страницу 'Кэт энерджи'">
             Главная
@@ -89,7 +89,7 @@
       <h3 class="reasons__title reasons__title--weight-gain">
         Набор массы
       </h3>
-      <div class="reasons__description">
+      <div class="reasons__description reasons__description--weight-gain">
         <p class="reasons__text">
           Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить
           необходимые мышцы!
@@ -104,7 +104,7 @@
   </section>
 
   <section class="benefits container">
-    <h2 class="benefits__title title">
+    <h2 class="title benefits__title">
       Как это работает
     </h2>
     <ul class="benefits__list">
@@ -125,7 +125,7 @@
       </li>
       <li class="benefits__item benefits__item--time">
         <p class="benefits__text">
-          Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+          Уже через месяц наслаждайтесь изменениями к лучшему&#32;<br class="benefits__hidden">вашего питомца!
         </p>
       </li>
     </ul>
@@ -166,11 +166,11 @@
         <div class="range">
           <div class="range__wrapper">
             <div class="range__placeholder">
-              <picture class="range__picture range__picture--fatcat range__picture--show" id="fatcat">
+              <picture class="range__picture range__picture--fatcat range__picture--show range__picture--mobile-show" id="fatcat">
                 <source type="image/webp" srcset="img/cat-fat.webp 1x, img/cat-fat-@2x.webp 2x">
                 <img class="range__image" width="100%" height="100%" src="img/cat-fat.png" srcset="img/cat-fat.png 1x, img/cat-fat-@2x.png 2x" alt="Кот до программы Cat Energy">
               </picture>
-              <picture class="range__picture range__picture--medium range__picture--noshow" id="medium">
+              <picture class="range__picture range__picture--medium range__picture--noshow range__picture--mobile-no-show" id="medium">
                 <source type="image/webp" srcset="img/cat_medium.webp 1x, img/cat_medium-@2x.webp 2x">
                 <img class="range__image" width="100%" height="100%" src="img/cat_medium.png" srcset="img/cat_medium.png 1x, img/cat_medium-@2x.png 2x" alt="Кот с демонстрацией до\после">
               </picture>
@@ -269,7 +269,7 @@
       <div class="page-footer__developer developer">
         <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
           <p class="developer__text">HTML Academy</p>
-          <svg class="developer__logo" width="100%" height="100%" aria-label="Логотип HTML Academy">
+          <svg class="developer__logo developer__logo--index" width="100%" height="100%" aria-label="Логотип HTML Academy">
             <use xlink:href="img/sprite.svg#htmlacademy"></use>
           </svg>
         </a>
