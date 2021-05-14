@@ -2,23 +2,32 @@
   @include reset_list;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 7px;
-  //margin-bottom: 25px;
-  padding-bottom: 13px;
+  align-items: flex-start;
+  margin-top: 12px;
+  padding-bottom: 9px;
   border-bottom: 1px solid $color_border-link;
 
   @media (min-width: $tablet-width) {
     margin: 0;
     flex-wrap: wrap;
+    border: none;
+    align-items: baseline;
   }
 }
 
 .social__item {
-  margin: 10px 37px 10px 0;
+  margin: 10px 38px 10px -4px;
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 10px 33px 10px -6px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    margin: 6px 28px 11px -1px;
   }
 }
 
@@ -42,12 +51,46 @@
     }
   }
 
+  &--vkontakte {
+    width: 23px;
+    height: 16px;
+
+    @media (min-width: $tablet-width) {
+      width: 29px;
+      height: 27px;
+    }
+  }
+
+  &--instagram {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 1px;
+    left: 0;
+
+    @media (min-width: $tablet-width) {
+      width: 23px;
+      height: 23px;
+      top: -1px;
+    }
+
+    @media (min-width: $desktop-content-width) {
+      top: 0;
+      left: 1px;
+    }
+  }
+
   &--facebook {
     fill: transparent;
     stroke: $color_icons-grey;
     stroke-width: 1.1px;
     stroke-linecap: round;
     stroke-linejoin: round;
+    width: 21px;
+    height: 21px;
+    position: relative;
+    top: -2px;
+    left: -1px;
 
     &:hover {
       stroke: $color_basic_green;
@@ -57,37 +100,19 @@
       stroke: $color_basic_green;
       stroke-opacity: 0.3;
     }
-  }
-}
-
-.social__icon {
-  &--vkontakte {
-    width: 22px;
-    height: 13px;
 
     @media (min-width: $tablet-width) {
-      width: 29px;
-      height: 17px;
-    }
-  }
-
-  &--instagram {
-    width: 16px;
-    height: 16px;
-
-    @media (min-width: $tablet-width) {
-      width: 23px;
-      height: 23px;
-    }
-  }
-
-  &--facebook {
-    width: 10px;
-    height: 18px;
-
-    @media (min-width: $tablet-width) {
-      width: 13px;
+      width: 27px;
       height: 27px;
+      top: 0;
+      left: -5px;
+    }
+
+    @media (min-width: $desktop-content-width) {
+      width: 30px;
+      height: 30px;
+      top: 2px;
+      left: -6px;
     }
   }
 }

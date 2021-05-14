@@ -15,9 +15,9 @@
   <div class="page-header__container">
     <a class="page-header__logo  page-header__logo--noindex" href="index.html">
       <picture class="page-header__icon">
-        <source media="(min-width:1260px)" srcset="img/desktop/descktop-logo.svg">
+        <source media="(min-width:1300px)" srcset="img/desktop/descktop-logo.svg">
         <source media="(min-width:768px)" srcset="img/tablet/tablet-logo.svg">
-        <img src="img/mobile/logo-mobile.svg" width="61" height="50" alt="Иконка сайта Кэт Энерджи">
+        <img src="img/mobile/logo-mobile.svg" alt="Иконка сайта Кэт Энерджи">
       </picture>
       <svg class="page-header__label-icon" width="101" height="18" aria-label="Логотип компании Cat Energy">
         <use xlink:href="img/sprite.svg#logo-label-mobile"></use>
@@ -85,7 +85,7 @@
                   <span class="product__item-title">
                     Масса
                   </span>
-                  <span class="product__item-value">
+                  <span class="product__item-value product__item-value--weight">
                     500 г
                   </span>
                 </li>
@@ -108,7 +108,7 @@
               </ul>
             </div>
           </div>
-          <a class="button product__button" aria-label="Добавить в корзину 'Cat PRO Energy со вкусом курицы объемом 500 грамм'" href="blank.html">
+          <a class="button product__button" aria-label="Добавить в корзину 'Cat PRO Energy со вкусом курицы объемом 500 грамм'" href="form.html">
             заказать
           </a>
         </article>
@@ -139,7 +139,7 @@
                   <span class="product__item-title">
                     Масса
                   </span>
-                  <span class="product__item-value">
+                  <span class="product__item-value product__item-value--weight">
                     1000 г
                   </span>
                 </li>
@@ -193,7 +193,7 @@
                   <span class="product__item-title">
                     Масса
                   </span>
-                  <span class="product__item-value">
+                  <span class="product__item-value product__item-value--weight">
                     500 г
                   </span>
                 </li>
@@ -247,7 +247,7 @@
                   <span class="product__item-title">
                     Масса
                   </span>
-                  <span class="product__item-value">
+                  <span class="product__item-value product__item-value--weight">
                     1000 г
                   </span>
                 </li>
@@ -301,7 +301,7 @@
                   <span class="product__item-title">
                     Масса
                   </span>
-                  <span class="product__item-value">
+                  <span class="product__item-value product__item-value--weight">
                     500 г
                   </span>
                 </li>
@@ -355,7 +355,7 @@
                   <span class="product__item-title">
                     Масса
                   </span>
-                  <span class="product__item-value">
+                  <span class="product__item-value product__item-value--weight">
                     1000 г
                   </span>
                 </li>
@@ -398,7 +398,7 @@
                 <img src="img/mobile/catalog/catalog-7-desktop.png" alt="Cat Energy SLIM со вкусом риса объемом 500 грамм" class="product__image" srcset="img/mobile/catalog/catalog-7-desktop.png 1x, img/mobile/catalog/catalog-7-desktop-@2x.png 2x">
               </picture>
             </a>
-            <div class="product__description">
+            <div class="product__description product__description--rice">
               <a class="product__title-link" href="blank.html">
                 <h3 class="product__title">
                   Cat Energy slim 500 г
@@ -409,7 +409,7 @@
                   <span class="product__item-title">
                     Масса
                   </span>
-                  <span class="product__item-value">
+                  <span class="product__item-value product__item-value--weight">
                     500 г
                   </span>
                 </li>
@@ -491,7 +491,7 @@
               <p class="add-goods__quantity">
                 5 литров
               </p>
-              <p class="add-goods__value">
+              <p class="add-goods__value add-goods__value--water">
                 50 Р.
               </p>
             </div>
@@ -590,7 +590,7 @@
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Вконтакте">
               <span class="visually-hidden">Вконтакте</span>
-              <svg class="social__icon social__icon--vkontakte" width="29" height="17" aria-label="Вконтакте">
+              <svg class="social__icon" width="100%" height="100%" aria-label="Вконтакте">
                 <use xlink:href="img/sprite.svg#icon_vkontakte"></use>
               </svg>
             </a>
@@ -598,7 +598,7 @@
           <li class="social__item">
             <a class="social__link social__link--instagram" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Instagram">
               <span class="visually-hidden">Instagram</span>
-              <svg class="social__icon social__icon--instagram" width="23" height="23" aria-label="Instagram">
+              <svg class="social__icon" width="100%" height="100%" aria-label="Instagram">
                 <use xlink:href="img/sprite.svg#icon_instagram"></use>
               </svg>
             </a>
@@ -606,7 +606,7 @@
           <li class="social__item">
             <a class="social__link social__link--facebook" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Facebook">
               <span class="visually-hidden">Facebook</span>
-              <svg class="social__icon social__icon--facebook" width="23" height="27" aria-label="Facebook">
+              <svg class="social__icon" width="100%" height="100%" aria-label="Facebook">
                 <use xlink:href="img/sprite.svg#icon_facebook"></use>
               </svg>
             </a>
@@ -614,10 +614,9 @@
         </ul>
       </section>
       <div class="page-footer__developer developer">
-        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive"
-          aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
+        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
           <p class="developer__text">HTML Academy</p>
-          <svg class="developer__logo" width="27" height="34" aria-label="Логотип HTML Academy">
+          <svg class="developer__logo" width="100%" height="100%" aria-label="Логотип HTML Academy">
             <use xlink:href="img/sprite.svg#htmlacademy"></use>
           </svg>
         </a>

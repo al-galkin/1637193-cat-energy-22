@@ -12,7 +12,7 @@
 @mixin reset_button-style() {
   border: none;
   outline: none;
-  background: transparent;
+  background-color: transparent;
 }
 
 @mixin reset_pseudo-element-style() {

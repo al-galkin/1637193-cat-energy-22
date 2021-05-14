@@ -1,5 +1,9 @@
 .reasons {
-  padding-bottom: 27px;
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
 
   @media (min-width: $desktop-content-width) {
     display: grid;
@@ -7,6 +11,7 @@
     column-gap: 80px;
     row-gap: 50px;
     min-height: 374px;
+    margin-bottom: 71px;
   }
 }
 
@@ -22,14 +27,13 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 57px 62px 57px 52px;
+    padding: 77px 62px 60px 52px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: $desktop-content-width) {
-    //max-width: none;
-    //margin-bottom: 0;
     height: 100%;
-    padding: 47px 51px 59px 52px;
+    padding: 47px 51px 31px 52px;
   }
 }
 
@@ -40,12 +44,13 @@
   color: $color_special_black;
   text-transform: uppercase;
   margin-top: 0;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
+  margin-left: 1px;
   padding-left: 70px;
 
   &::before {
     @include reset_pseudo-element-style;
-    top: 24px;
+    top: 21px;
     left: 22px;
     background-image: url("../img/mobile/cat_slim.svg");
     width: 50px;
@@ -57,19 +62,21 @@
       background-image: url("../img/mobile/cat_pro.svg");
       width: 67px;
       height: 50px;
+      top: 24px;
+      left: 13px;
     }
   }
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_title;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
     padding-left: 0;
 
     &::before {
       background-image: url("../img/tablet/cat_slim.svg");
-      right: 24px;
+      right: 62px;
       left: auto;
-      top: 64px;
+      top: 81px;
       width: 200px;
       height: 211px;
     }
@@ -77,9 +84,9 @@
     &--weight-gain {
       &::before {
         background-image: url("../img/tablet/cat_pro.svg");
-        right: 24px;
+        right: 28px;
         left: auto;
-        top: 64px;
+        top: 91px;
         width: 268px;
         height: 200px;
       }
@@ -88,22 +95,25 @@
 
   @media (min-width: $desktop-content-width) {
     text-align: center;
-    padding-left: 100px;
+    padding-left: 20px;
+    padding-top: 30px;
 
     &::before {
       background-image: url("../img/desktop/cat_slim.svg");
       right: auto;
       left: 52px;
-      top: 47px;
+      top: 41px;
       width: 100px;
-      height: 100px;
+      height: 110px;
     }
 
     &--weight-gain {
+      padding-left: 61px;
+
       &::before {
         background-image: url("../img/desktop/cat_pro.svg");
-        left: 32px;
-        top: 50px;
+        left: 33px;
+        top: 47px;
         width: 268px;
         height: 200px;
       }
@@ -111,22 +121,25 @@
   }
 }
 
-.reasons__item--weight-gain .reasons__title {
-  @media (max-width: $mobile-width-only) {
-    padding-left: 90px;
-  }
-}
-
 .reasons__description {
-  margin-bottom: 42px;
+  margin-bottom: 17px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid $color_border-link;
 
   @media (min-width: $tablet-width) {
     margin-right: 220px;
+    margin-bottom: 27px;
+    border: none;
+
+    &--weight-gain {
+      margin-right: 254px;
+    }
   }
 
   @media (min-width: $desktop-content-width) {
-    margin-top: 73px;
+    margin-top: 74px;
     margin-right: 0;
+    margin-bottom: 3px;
   }
 }
 
@@ -142,6 +155,10 @@
   }
 }
 
+.reasons__link {
+  margin-bottom: -3px;
+}
+
 .reasons__link-item {
   font-size: $font_size_medium;
   line-height: $line_height_middle;
@@ -149,16 +166,23 @@
   color: $color_basic_black;
   text-transform: uppercase;
   position: relative;
+  left: -1px;
   display: inline-block;
   width: 130px;
 
   &::before {
     @include reset_pseudo-element-style;
-    right: -5px;
+    right: -4px;
     top: 2px;
     width: 32px;
     height: 12px;
     background-image: url("../img/icon_arrow.svg");
+  }
+
+  &--weight-gain {
+    &::before {
+      right: -2px;
+    }
   }
 
   &:hover {
@@ -179,10 +203,30 @@
   @media (min-width: $tablet-width) {
     font-size: $font_size_middle;
     line-height: 30px;
+    left: 0;
 
     &::before {
-      right: -25px;
+      right: -35px;
       top: 9px;
+    }
+
+    &--weight-gain {
+      &::before {
+        right: -31px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-content-width) {
+    &::before {
+      right: -38px;
+      top: 8px;
+    }
+
+    &--weight-gain {
+      &::before {
+        right: -32px;
+      }
     }
   }
 }

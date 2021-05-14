@@ -1,6 +1,20 @@
 .page-footer {
-  padding: 41px 0 32px 0;
+  padding: 40px 0 18px 0;
   background-color: $color_basic_grey;
+
+  &--index {
+    padding-top: 39px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 46px;
+    padding-bottom: 32px;
+    min-height: 147px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    padding-top: 49px;
+  }
 }
 
 .page-footer__wrapper {
@@ -9,5 +23,9 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     align-items: center;
+
+    &--form {
+      margin-top: 1px;
+    }
   }
 }

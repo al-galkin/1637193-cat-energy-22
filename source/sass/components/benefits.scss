@@ -1,5 +1,13 @@
 .benefits {
-  margin-bottom: 40px;
+  margin-bottom: 46px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: -14px;
+  }
+
+  @media (min-width: $desktop-content-width) {
+    margin-bottom: -6px;
+  }
 }
 
 .benefits__title {
@@ -9,7 +17,8 @@
   font-size: $font_size_title;
   line-height: $line_height_title_middle;
   color: $color_basic_black;
-  margin-bottom: 40px;
+  margin-top: 0;
+  margin-bottom: 41px;
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_title_big;
@@ -30,13 +39,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-column-gap: 154px;
+    grid-column-gap: 60px;
   }
 
   @media (min-width: $desktop-content-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    column-gap: 67px; //пробовать переделать на 78px
+    column-gap: 78px;
   }
 }
 
@@ -63,7 +72,7 @@
     background-position: center;
     background-color: $color_basic_green;
     left: 0;
-    top: 0;
+    top: -2px;
   }
 
   &--leaf::before {
@@ -92,12 +101,14 @@
 
     min-height: 280px;
     margin-bottom: 37px;
-    padding-top: 151px;
+    padding-top: 130px;
     padding-left: 0;
+    padding-right: 65px;
 
     &::before {
       width: 80px;
       height: 80px;
+      top: 17px;
     }
 
     &::after {
@@ -110,8 +121,8 @@
       line-height: 280px;
       text-align: center;
       position: absolute;
-      top: -40px;
-      right: 25%;
+      top: -21px;
+      right: 15%;
       z-index: -1;
       counter-increment: benefits-list;
       content: counter(benefits-list);
@@ -121,20 +132,34 @@
   @media (min-width: $desktop-content-width) {
     min-height: 280px;
     width: 247px;
-    padding-top: 151px;
+    padding-top: 114px;
     padding-left: 0;
+    padding-right: 0;
 
     &::before {
-      top: 0;
+      top: 2px;
     }
 
     &::after {
-      top: -38px;
-      left: 35%;
+      top: -37px;
+      left: 32%;
     }
   }
 }
 
 .benefits__text {
   margin-top: 0;
+  margin-left: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+  }
+}
+
+.benefits__hidden {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }

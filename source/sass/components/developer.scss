@@ -7,7 +7,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 18px;
+  height: 42px;
 
   @media (min-width: $tablet-width) {
     justify-content: flex-end;
@@ -32,8 +33,16 @@
   line-height: $line_height_base;
 
   @media (min-width: $tablet-width) {
-    margin-right: 22px;
-    margin-bottom: 0;
+    margin-right: 15px;
+    margin-bottom: 8px;
+
+    &--form {
+      margin-bottom: 7px;
+    }
+  }
+
+  @media (min-width: $desktop-content-width) {
+    margin-bottom: 4px;
   }
 
   &:hover + .developer__logo {
@@ -43,8 +52,26 @@
 
 .developer__logo {
   fill: $color_icons-grey;
+  width: 42px;
+  margin-right: -6px;
 
   &:hover {
     fill: $color_basic_green;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: -4px;
+    margin-bottom: 7px;
+
+    &--form,
+    &--index {
+      margin-right: -6px;
+      margin-bottom: 6px;
+    }
+  }
+
+  @media (min-width: $desktop-content-width) {
+    margin-right: -7px;
+    margin-bottom: 2px;
   }
 }

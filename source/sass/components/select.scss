@@ -29,10 +29,14 @@
     &:checked + label,
     &:not(:checked) + label {
       position: relative;
-      padding-left: 50px;
+      padding-left: 46px;
       cursor: pointer;
       display: inline-block;
       opacity: 1;
+
+      @media (min-width: $tablet-width) {
+        padding-left: 60px;
+      }
     }
 
     &:checked + label::before,
@@ -40,18 +44,22 @@
       content: "";
       position: absolute;
       left: 0;
-      top: -4px;
-      //top: 50%;
-      //margin-top: - (30 / 2)px;
+      top: -8px;
       width: 30px;
       height: 30px;
       border: 1px solid $color_frames_grey;
       border-radius: 100%;
-      background: $color_basic_white;
+      background-color: $color_basic_white;
       opacity: 1;
 
       @media (min-width: $tablet-width) {
-        top: 1px;
+        width: 40px;
+        height: 40px;
+        top: -6px;
+      }
+
+      @media (min-width: $desktop-content-width) {
+        top: -5px;
       }
     }
 
@@ -60,16 +68,23 @@
       content: "";
       width: 13px;
       height: 13px;
-      background: $color_basic_green;
+      background-color: $color_basic_green;
       position: absolute;
-      top: 4px;
+      top: 1px;
       left: 9px;
       border-radius: 100%;
       transition: all 0.1s ease;
       opacity: 1;
 
       @media (min-width: $tablet-width) {
-        top: 9px;
+        width: 18px;
+        height: 18px;
+        top: 5px;
+        left: 11px;
+      }
+
+      @media (min-width: $desktop-content-width) {
+        top: 6px;
       }
     }
 
@@ -115,9 +130,13 @@
     &:checked + label,
     &:not(:checked) + label {
       position: relative;
-      padding-left: 50px;
+      padding-left: 46px;
       cursor: pointer;
       display: inline-block;
+
+      @media (min-width: $tablet-width) {
+        padding-left: 59px;
+      }
     }
 
     &:checked + label::before,
@@ -125,14 +144,19 @@
       content: "";
       position: absolute;
       left: 0;
-      top: -4px;
+      top: -6px;
       width: 30px;
       height: 30px;
       border: 1px solid $color_frames_grey;
-      background: $color_basic_white;
+      background-color: $color_basic_white;
 
       @media (min-width: $tablet-width) {
-        top: 1px;
+        width: 40px;
+        height: 40px;
+      }
+
+      @media (min-width: $desktop-content-width) {
+        top: -5px;
       }
     }
 
@@ -142,12 +166,17 @@
       width: 18px;
       height: 14px;
       background-image: url("data:image/svg+xml,%3Csvg width='19' height='15' viewBox='0 0 19 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 11.718L1.3 5.26951L0.25 6.45739L7 14.0938L18.25 1.36648L17.2 0.09375L7 11.718Z' fill='%2368B738'/%3E%3C/svg%3E%0A");
-      top: 4px;
+      top: 2px;
       left: 6px;
       transition: all 0.1s ease;
 
       @media (min-width: $tablet-width) {
-        top: 9px;
+        top: 7px;
+        left: 11px;
+      }
+
+      @media (min-width: $desktop-content-width) {
+        top: 8px;
       }
     }
 

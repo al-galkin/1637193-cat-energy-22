@@ -15,11 +15,11 @@
   <div class="page-header__container">
     <a class="page-header__logo">
       <picture class="page-header__icon">
-        <source media="(min-width:1260px)" srcset="img/desktop/descktop-logo.svg">
+        <source media="(min-width:1300px)" srcset="img/desktop/descktop-logo.svg">
         <source media="(min-width:768px)" srcset="img/tablet/tablet-logo.svg">
-        <img src="img/mobile/logo-mobile.svg" width="61" height="50" alt="Иконка сайта Кэт Энерджи">
+        <img src="img/mobile/logo-mobile.svg" alt="Иконка сайта Кэт Энерджи">
       </picture>
-      <svg class="page-header__label-icon" width="101" height="18" aria-label="Логотип компании Cat Energy">
+      <svg class="page-header__label-icon page-header__label-icon--index" width="101" height="18" aria-label="Логотип компании Cat Energy">
         <use xlink:href="img/sprite.svg#logo-label-mobile"></use>
       </svg>
     </a>
@@ -27,7 +27,7 @@
       <button class="main-nav__button" type="button" aria-label="Открыть меню">
         <span class="main-nav__toggle"></span>
       </button>
-      <ul class="main-nav__list site-list">
+      <ul class="main-nav__list site-list site-list--index">
         <li class="site-list__item">
           <a class="site-list__link site-list__link--index site-list__link--current site-list__link--current-index" aria-label="Переход на главную страницу 'Кэт энерджи'">
             Главная
@@ -89,14 +89,14 @@
       <h3 class="reasons__title reasons__title--weight-gain">
         Набор массы
       </h3>
-      <div class="reasons__description">
+      <div class="reasons__description reasons__description--weight-gain">
         <p class="reasons__text">
           Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить
           необходимые мышцы!
         </p>
       </div>
       <div class="reasons__link">
-        <a class="reasons__link-item" href="catalog.html#pro" aria-label="Переход на страницу каталога на товары серии Cat Energy Pro">
+        <a class="reasons__link-item reasons__link-item--weight-gain" href="catalog.html#pro" aria-label="Переход на страницу каталога на товары серии Cat Energy Pro">
           каталог pro
         </a>
       </div>
@@ -104,7 +104,7 @@
   </section>
 
   <section class="benefits container">
-    <h2 class="benefits__title title">
+    <h2 class="title benefits__title">
       Как это работает
     </h2>
     <ul class="benefits__list">
@@ -125,7 +125,7 @@
       </li>
       <li class="benefits__item benefits__item--time">
         <p class="benefits__text">
-          Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+          Уже через месяц наслаждайтесь изменениями к лучшему&#32;<br class="benefits__hidden">вашего питомца!
         </p>
       </li>
     </ul>
@@ -165,37 +165,42 @@
         </div>
         <div class="range">
           <div class="range__wrapper">
-            <div class="range__picture">
-              <div class="range__placeholder">
-                <div class="range__fatcat range__fatcat--show" id="fatcat"></div>
-                <div class="range__slimcat range__slimcat--noshow" id="slimcat"></div>
-                <img src="img/cat-placeholder.png" alt="Фон-заглушка для котов">
-              </div>
+            <div class="range__placeholder">
+              <picture class="range__picture range__picture--fatcat range__picture--show" id="fatcat">
+                <source media="(min-width:768px)" type="image/webp" srcset="img/cat-fat.webp 1x, img/cat-fat-@2x.webp 2x">
+                <source type="image/webp" srcset="img/mobile/cat-fat.webp 1x, img/mobile/cat-fat-@2x.webp 2x">
+                <source media="(min-width:768px)" type="image/png" srcset="img/cat-fat.png 1x, img/cat-fat-@2x.png 2x">
+                <img class="range__image" width="100%" height="100%" src="img/mobile/cat-fat.png" srcset="img/mobile/cat-fat.png 1x, img/mobile/cat-fat-@2x.png 2x" alt="Кот до программы Cat Energy">
+              </picture>
+              <picture class="range__picture range__picture--medium range__picture--noshow" id="medium">
+                <source media="(min-width:1440px)" type="image/webp" srcset="img/desktop/image_cat_desktop.webp 1x, img/desktop/image_cat_desktop-@2x.webp 2x">
+                <source media="(min-width:768px)" type="image/webp" srcset="img/cat_medium.webp 1x, img/cat_medium-@2x.webp 2x">
+                <source type="image/webp" srcset="img/mobile/cat_medium.webp 1x, img/mobile/cat_medium-@2x.webp 2x">
+                <source media="(min-width:1440px)" type="image/png" srcset="img/desktop/image_cat_desktop.png 1x, img/desktop/image_cat_desktop-@2x.png 2x">
+                <source media="(min-width:768px)" type="image/png" srcset="img/cat_medium.png 1x, img/cat_medium-@2x.png 2x">
+                <img class="range__image" width="100%" height="100%" src="img/mobile/cat_medium.png" srcset="img/mobile/cat_medium.png 1x, img/mobile/cat_medium-@2x.png 2x" alt="Кот с демонстрацией до\после">
+              </picture>
+              <picture class="range__picture range__picture--slimcat range__picture--noshow" id="slimcat">
+                <source type="image/webp" media="(min-width:768px)" srcset="img/cat-skinny.webp 1x, img/cat-skinny-@2x.webp 2x">
+                <source type="image/webp" srcset="img/mobile/cat-skinny.webp 1x, img/mobile/cat-skinny-@2x.webp 2x">
+                <source media="(min-width:768px)" type="image/png" srcset="img/cat-skinny.png 1x, img/cat-skinny-@2x.png 2x">
+                <img class="range__image" width="100%" height="100%" src="img/mobile/cat-skinny.png" srcset="img/mobile/cat-skinny.png 1x, img/mobile/cat-skinny-@2x.png 2x" alt="Кот после программы Cat Energy">
+              </picture>
             </div>
-            <!--<picture>-->
-            <!--  <source type="image/webp" media="(min-width:1440px)" srcset="img/desktop/image_cat_desktop.webp 1x, img/desktop/image_cat_desktop_@2x.webp 2x">-->
-            <!--  <source type="image/webp" media="(min-width:768px)" srcset="img/tablet/image_cat_tablet.webp 1x, img/tablet/image_cat_tablet@2x.webp 2x">-->
-            <!--  <source type="image/webp" srcset="img/tablet/image_cat_tablet.webp 1x, img/tablet/image_cat_tablet@2x.webp 2x">-->
-
-            <!--  <source media="(min-width:1440px)" srcset="img/desktop/image_cat_desktop.png 1x, img/desktop/image_cat_desktop_@2x.png 2x">-->
-            <!--  <source media="(min-width:768px)" srcset="img/tablet/image_cat_tablet.png 1x, img/tablet/image_cat_tablet@2x.png 2x">-->
-            <!--  <img class="range__image" src="img/mobile/before-mobile_1.png" srcset="img/mobile/before-mobile_1.png 1x, img/mobile/before-mobile@2x.png 2x" alt="Кот с демонстрацией до\после">-->
-            <!--</picture>-->
             <div class="range__control">
-              <button class="range__text" id="before">
+              <button class="range__button range__button--before" type="button" id="before">
                 Было
               </button>
               <div class="range__input" id="circle_parent">
                 <button class="range__toggle" type="button" aria-label="Ползунок-переключатель состояния кота" id="circle"></button>
               </div>
-              <button class="range__text" id="after">
+              <button class="range__button range__button--after" type="button" id="after">
                 Стало
               </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   </section>
 
@@ -204,8 +209,8 @@
       Контакты
     </h2>
     <div class="contacts__wrapper">
-      <p class="contacts__title">
-        приглашаем к сотрудничеству дилеров!
+      <p class="contacts__title contacts__title--index">
+        приглашаем <br>к сотрудничеству дилеров!
       </p>
       <address class="contacts__address">
         <p class="contacts__street">
@@ -227,7 +232,7 @@
 
 </main>
 
-<footer class="page-footer">
+<footer class="page-footer page-footer--index">
   <div class="container">
     <div class="page-footer__wrapper">
       <div class="page-footer__copyright copyright">
@@ -245,7 +250,7 @@
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Вконтакте">
               <span class="visually-hidden">Вконтакте</span>
-              <svg class="social__icon" width="29" height="17" aria-label="Вконтакте">
+              <svg class="social__icon" width="100%" height="100%" aria-label="Вконтакте">
                 <use xlink:href="img/sprite.svg#icon_vkontakte"></use>
               </svg>
             </a>
@@ -253,7 +258,7 @@
           <li class="social__item">
             <a class="social__link social__link--instagram" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Instagram">
               <span class="visually-hidden">Instagram</span>
-              <svg class="social__icon" width="23" height="23" aria-label="Instagram">
+              <svg class="social__icon" width="100%" height="100%" aria-label="Instagram">
                 <use xlink:href="img/sprite.svg#icon_instagram"></use>
               </svg>
             </a>
@@ -261,7 +266,7 @@
           <li class="social__item">
             <a class="social__link social__link--facebook" href="#" aria-label="Переход на страницу HTML Academy в соц.сети Facebook">
               <span class="visually-hidden">Facebook</span>
-              <svg class="social__icon" width="23" height="27" aria-label="Facebook">
+              <svg class="social__icon" width="100%" height="100%" aria-label="Facebook">
                 <use xlink:href="img/sprite.svg#icon_facebook"></use>
               </svg>
             </a>
@@ -271,7 +276,7 @@
       <div class="page-footer__developer developer">
         <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
           <p class="developer__text">HTML Academy</p>
-          <svg class="developer__logo" width="27" height="34" aria-label="Логотип HTML Academy">
+          <svg class="developer__logo developer__logo--index" width="100%" height="100%" aria-label="Логотип HTML Academy">
             <use xlink:href="img/sprite.svg#htmlacademy"></use>
           </svg>
         </a>

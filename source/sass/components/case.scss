@@ -1,11 +1,12 @@
 .case {
   position: relative;
-  padding-top: 27px;
-  padding-bottom: 35px;
-  background: $color_background_grey;
+  padding-top: 26px;
+  padding-bottom: 19px;
+  background-color: $color_background_grey;
 
   @media (min-width: $tablet-width) {
-    background: linear-gradient(to top, $color_background_grey 460px, $color_basic_white 460px) no-repeat;
+    background-image: linear-gradient(to top, $color_background_grey 462px, $color_basic_white 462px);
+    background-repeat: no-repeat;
     background-size: 100% 100%, 100% 100%;
     padding-top: 0;
     padding-bottom: 0;
@@ -14,9 +15,10 @@
 
   @media (min-width: $desktop-content-width) {
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 4px;
     margin-bottom: 0;
-    background: linear-gradient(to top, $color_basic_grey 460px, $color_basic_white 460px) no-repeat, linear-gradient(to top, $color_background_grey 460px, $color_basic_white 460px) no-repeat;
+    background-image: linear-gradient(to top, $color_basic_grey 458px, $color_basic_white 458px), linear-gradient(to top, $color_background_grey 458px, $color_basic_white 458px);
+    background-repeat: no-repeat, no-repeat;
     background-size: 72.5% 100%, 100% 100%;
     border-top: 0;
   }
@@ -29,13 +31,13 @@
   font-size: $font_size_title;
   line-height: $line_height_title_middle;
   color: $color_basic_black;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
   margin-top: 0;
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_title_big;
     line-height: $line_height_title_big;
-    margin-top: 41px;
+    margin-top: 43px;
     margin-bottom: 64px;
   }
 
@@ -49,6 +51,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: -120px;
+    margin-top: -90px;
   }
 }
