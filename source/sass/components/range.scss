@@ -44,29 +44,8 @@
     display: block;
   }
 
-  //todo убрать комментарии и слэши перед сдачей
-  //&--mobile-show {
-  //  display: block;
-  //}
-  //
-  //&--mobile-no-show {
-  //  display: none;
-  //}
-
   @media (min-width: $tablet-width) {
     max-width: 677px;
-
-    //&--fatcat {
-    //  display: none;
-    //}
-
-    //&--mobile-show {
-    //  display: none;
-    //}
-    //
-    //&--mobile-no-show {
-    //  display: block;
-    //}
   }
 }
 
@@ -193,22 +172,21 @@
   background-color: $color_basic_green;
   border: none;
   border-radius: 6px;
-  position: relative;
-  top: -12px;
-  left: -19px;
+  position: absolute;
+  top: 3px;
+  left: 4px;
 
   @media (max-width: $mobile-width-only) {
     &--medium {
-      left: -1px;
+      left: 23px;
     }
 
     &--after {
-      left: 19px;
+      left: 42px;
     }
   }
 
   @media (min-width: $tablet-width) {
-    position: absolute;
     left: 46%;
     top: -13px;
     border-radius: 50%;
