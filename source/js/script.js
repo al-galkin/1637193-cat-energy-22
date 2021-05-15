@@ -18,73 +18,75 @@ navButtonToggle.addEventListener('click', () => {
 //-- простой слайдер по клику - переключатель состояния кота -- //
 
 let slimCat = document.getElementById('slimcat');
-let mediumCat = document.getElementById('medium');
-let fatCat = document.getElementById('fatcat');
-let beforeToggle = document.getElementById('before');
-let afterToggle = document.getElementById('after');
-let circleEl = document.getElementById('circle');
+if (slimCat) {
+  let mediumCat = document.getElementById('medium');
+  let fatCat = document.getElementById('fatcat');
+  let beforeToggle = document.getElementById('before');
+  let afterToggle = document.getElementById('after');
+  let circleEl = document.getElementById('circle');
 
-beforeToggle.addEventListener('click', () => {
-  afterToggle.classList.remove('range__button--disabled');
+  beforeToggle.addEventListener('click', () => {
+    afterToggle.classList.remove('range__button--disabled');
 
-  if (fatCat.classList.contains('range__picture--noshow')) {
-    if (mediumCat.classList.contains('range__picture--show')) {
-      mediumCat.classList.toggle('range__picture--noshow');
-      mediumCat.classList.toggle('range__picture--show');
-      if (circleEl.classList.contains('range__toggle--medium')) {
-        circleEl.classList.add('range__toggle--after');
+    if (fatCat.classList.contains('range__picture--noshow')) {
+      if (mediumCat.classList.contains('range__picture--show')) {
+        mediumCat.classList.toggle('range__picture--noshow');
+        mediumCat.classList.toggle('range__picture--show');
+        if (circleEl.classList.contains('range__toggle--medium')) {
+          circleEl.classList.add('range__toggle--after');
+        }
+        circleEl.classList.toggle('range__toggle--medium');
+        fatCat.classList.add('range__picture--show');
+        fatCat.classList.remove('range__picture--noshow');
       }
-      circleEl.classList.toggle('range__toggle--medium');
-      fatCat.classList.add('range__picture--show');
-      fatCat.classList.remove('range__picture--noshow');
-    }
 
-    if (slimCat.classList.contains('range__picture--show')) {
-      slimCat.classList.add('range__picture--noshow');
-      slimCat.classList.remove('range__picture--show');
-      if (circleEl.classList.contains('range__toggle--medium')) {
-        circleEl.classList.add('range__toggle--after');
+      if (slimCat.classList.contains('range__picture--show')) {
+        slimCat.classList.add('range__picture--noshow');
+        slimCat.classList.remove('range__picture--show');
+        if (circleEl.classList.contains('range__toggle--medium')) {
+          circleEl.classList.add('range__toggle--after');
+        }
+        circleEl.classList.toggle('range__toggle--medium');
+        mediumCat.classList.toggle('range__picture--show');
+        mediumCat.classList.toggle('range__picture--noshow');
       }
-      circleEl.classList.toggle('range__toggle--medium');
-      mediumCat.classList.toggle('range__picture--show');
-      mediumCat.classList.toggle('range__picture--noshow');
-    }
-  }
-
-  if (fatCat.classList.contains('range__picture--show')) {
-    beforeToggle.classList.add('range__button--disabled');
-  }
-
-  circleEl.classList.remove('range__toggle--after');
-});
-
-afterToggle.addEventListener('click', () => {
-  beforeToggle.classList.remove('range__button--disabled');
-
-  if (slimCat.classList.contains('range__picture--noshow')) {
-    if (mediumCat.classList.contains('range__picture--show')) {
-      mediumCat.classList.toggle('range__picture--noshow');
-      mediumCat.classList.toggle('range__picture--show');
-      if (circleEl.classList.contains('range__toggle--medium')) {
-        circleEl.classList.add('range__toggle--after');
-      }
-      circleEl.classList.toggle('range__toggle--medium');
-      slimCat.classList.add('range__picture--show');
-      slimCat.classList.remove('range__picture--noshow');
     }
 
     if (fatCat.classList.contains('range__picture--show')) {
-      fatCat.classList.add('range__picture--noshow');
-      fatCat.classList.remove('range__picture--show');
-      mediumCat.classList.toggle('range__picture--show');
-      if (circleEl.classList.contains('range__toggle--medium')) {
-        circleEl.classList.add('range__toggle--after');
-      }
-      circleEl.classList.toggle('range__toggle--medium');
-      mediumCat.classList.toggle('range__picture--noshow');
+      beforeToggle.classList.add('range__button--disabled');
     }
-  }
-  if (slimCat.classList.contains('range__picture--show')) {
-    afterToggle.classList.add('range__button--disabled');
-  }
-});
+
+    circleEl.classList.remove('range__toggle--after');
+  });
+
+  afterToggle.addEventListener('click', () => {
+    beforeToggle.classList.remove('range__button--disabled');
+
+    if (slimCat.classList.contains('range__picture--noshow')) {
+      if (mediumCat.classList.contains('range__picture--show')) {
+        mediumCat.classList.toggle('range__picture--noshow');
+        mediumCat.classList.toggle('range__picture--show');
+        if (circleEl.classList.contains('range__toggle--medium')) {
+          circleEl.classList.add('range__toggle--after');
+        }
+        circleEl.classList.toggle('range__toggle--medium');
+        slimCat.classList.add('range__picture--show');
+        slimCat.classList.remove('range__picture--noshow');
+      }
+
+      if (fatCat.classList.contains('range__picture--show')) {
+        fatCat.classList.add('range__picture--noshow');
+        fatCat.classList.remove('range__picture--show');
+        mediumCat.classList.toggle('range__picture--show');
+        if (circleEl.classList.contains('range__toggle--medium')) {
+          circleEl.classList.add('range__toggle--after');
+        }
+        circleEl.classList.toggle('range__toggle--medium');
+        mediumCat.classList.toggle('range__picture--noshow');
+      }
+    }
+    if (slimCat.classList.contains('range__picture--show')) {
+      afterToggle.classList.add('range__button--disabled');
+    }
+  });
+}
