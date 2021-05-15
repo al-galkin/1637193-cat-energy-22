@@ -1,6 +1,6 @@
 .gift {
   background-image: url("../img/icon_gift.svg"), url("../img/mobile/gift-photo-mobile.png");
-  background-repeat: no-repeat, no-repeat;
+  background-repeat: no-repeat;
   background-size: 79px 80px, cover;
   background-position: center 58px, center;
   width: 100%;
@@ -9,7 +9,7 @@
   margin: 40px 0 34px 0;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/icon_gift.svg"), url("../img/tablet/gift-photo-mobile@2x.png");
+    background-image: url("../img/icon_gift.svg"), url("../img/mobile/gift-photo-mobile@2x.png");
   }
 
   @media (min-width: $tablet-width) {
