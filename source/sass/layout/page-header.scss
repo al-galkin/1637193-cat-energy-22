@@ -118,6 +118,11 @@
   @media (min-width: $tablet-width) {
     top: 0;
     left: 0;
+
+    &--index {
+      top: -1px;
+      left: -1px;
+    }
   }
 
   @media (min-width: $desktop-content-width) {

@@ -15,6 +15,13 @@ navButtonToggle.addEventListener('click', () => {
   pageHeader.classList.toggle('page-header--closed');
 });
 
+// -- Отключает заглушку-карту при загрузке JS -- //
+let mapImage = document.getElementById('map__image');
+let mapIframe = document.getElementById('map__iframe');
+mapImage.classList.remove('map__image--nojs');
+mapIframe.classList.remove('map__iframe--nojs');
+
+
 //-- простой слайдер по клику - переключатель состояния кота -- //
 
 let slimCat = document.getElementById('slimcat');

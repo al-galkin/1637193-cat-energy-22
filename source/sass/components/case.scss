@@ -17,9 +17,9 @@
     padding-top: 0;
     padding-bottom: 4px;
     margin-bottom: 0;
-    background-image: linear-gradient(to top, $color_basic_grey 458px, $color_basic_white 458px), linear-gradient(to top, $color_background_grey 458px, $color_basic_white 458px);
+    background-image: linear-gradient(to top, $color_basic_grey 462px, $color_basic_white 462px), linear-gradient(to top, $color_background_grey 462px, $color_basic_white 462px);
     background-repeat: no-repeat;
-    background-size: 72.5% 100%, 100% 100%;
+    background-size: 73% 100%, 100% 100%;
     border-top: 0;
   }
 }
@@ -32,7 +32,7 @@
   line-height: $line_height_title_middle;
   color: $color_basic_black;
   margin-bottom: 33px;
-  margin-top: 0;
+  margin-top: 1px;
 
   @media (min-width: $tablet-width) {
     font-size: $font_size_title_big;
