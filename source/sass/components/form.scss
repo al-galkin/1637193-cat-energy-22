@@ -412,6 +412,10 @@
     outline: none;
   }
 
+  &:hover {
+    border: 1px solid $color_frames_grey;
+  }
+
   & + .form__icon--phone {
     fill: $color_basic_black;
   }
@@ -422,8 +426,9 @@
     stroke-width: 1.3px;
   }
 
-  &:focus {
-    border: 1px solid $color_text-dark-grey;
+  &:focus,
+  &:valid:focus:not(:placeholder-shown) {
+    border: 2px solid $color_text-dark-grey;
 
     & + .form__icon--phone {
       fill: $color_basic_green;
@@ -434,8 +439,9 @@
     }
   }
 
-  &--invalid {
-    border: 1px solid $color_status_error;
+  &--invalid,
+  &:invalid:not(:placeholder-shown) {
+    border: 2px solid $color_status_error;
 
     & + .form__icon--phone {
       fill: $color_status_error;

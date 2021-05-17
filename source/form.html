@@ -118,7 +118,7 @@
             </li>
             <li class="form__item form__item--phone">
               <label class="form__label form__label--owner" for="owner-phone">Телефон:*</label>
-              <input class="form__input form__input--phone" type="tel" name="owner-phone" id="owner-phone" placeholder="8 (960) 900-60-90" required>
+              <input class="form__input form__input--phone" type="tel" name="owner-phone" id="owner-phone" placeholder="8 (960) 900-60-90" pattern="[0-9]{9,17}" minlength="10" maxlength="17" required>
               <svg class="form__icon form__icon--phone" width="20" height="21" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite.svg#icon_phone"></use>
               </svg>
