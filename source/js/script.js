@@ -15,15 +15,30 @@ navButtonToggle.addEventListener('click', () => {
   pageHeader.classList.toggle('page-header--closed');
 });
 
+// -- Отключает заглушку-карту при загрузке JS -- //
+let mapImage = document.getElementById('map__image');
+let mapIframe = document.getElementById('map__iframe');
+mapImage.classList.remove('map__image--nojs');
+mapIframe.classList.remove('map__iframe--nojs');
+
+
 //-- простой слайдер по клику - переключатель состояния кота -- //
 
 let slimCat = document.getElementById('slimcat');
 if (slimCat) {
+  let availableScreenWidth = window.screen.availWidth;
   let mediumCat = document.getElementById('medium');
   let fatCat = document.getElementById('fatcat');
   let beforeToggle = document.getElementById('before');
   let afterToggle = document.getElementById('after');
   let circleEl = document.getElementById('circle');
+
+  if (availableScreenWidth > 767) {
+    mediumCat.classList.remove('range__picture--noshow');
+    mediumCat.classList.add('range__picture--show');
+    fatCat.classList.add('range__picture--noshow');
+    fatCat.classList.remove('range__picture--show');
+  }
 
   beforeToggle.addEventListener('click', () => {
     afterToggle.classList.remove('range__button--disabled');

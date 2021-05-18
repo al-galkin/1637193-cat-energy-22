@@ -4,6 +4,11 @@
       margin-bottom: 5px;
     }
   }
+
+  &:focus-within {
+    border-color: $color_text-dark-grey;
+    box-shadow: 0 0 0 2px $color_text-dark-grey;
+  }
 }
 
 .select__input {
@@ -24,7 +29,13 @@
   }
 
   &--radio {
-    display: none;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 
     &:checked + label,
     &:not(:checked) + label {
@@ -125,7 +136,13 @@
   }
 
   &--checkbox {
-    display: none;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 
     &:checked + label,
     &:not(:checked) + label {

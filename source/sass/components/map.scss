@@ -1,3 +1,20 @@
+.map__image {
+  display: none;
+
+  &--nojs {
+    display: block;
+    background-color: $color_basic_grey;
+    max-height: 362px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--nojs {
+      max-height: 401px;
+    }
+  }
+}
+
+
 .map__iframe {
   display: block;
   position: relative;
@@ -5,6 +22,10 @@
   height: 362px;
   border: none;
   outline: none;
+
+  &--nojs {
+    display: none;
+  }
 
   @media (min-width: $tablet-width) {
     height: 400px;

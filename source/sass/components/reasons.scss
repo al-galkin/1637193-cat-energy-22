@@ -20,14 +20,14 @@
   position: relative;
   background-color: $color_basic_grey;
   margin-bottom: 20px;
-  padding: 30px 20px 22px 20px;
+  padding: 30px 20px 19px 20px;
 
   &:last-child {
     margin-bottom: 0;
   }
 
   @media (min-width: $tablet-width) {
-    padding: 77px 62px 60px 52px;
+    padding: 77px 62px 59px 52px;
     margin-bottom: 30px;
   }
 
@@ -121,14 +121,21 @@
   }
 }
 
-.reasons__description {
+.reasons__text {
+  font-family: $font_second, $font_family_reserve;
+  font-size: $font_size_base;
+  line-height: $line_height_base;
+  color: $color_text-dark-grey;
   margin-bottom: 17px;
-  padding-bottom: 8px;
+  padding-bottom: 22px;
   border-bottom: 1px solid $color_border-link;
 
+
   @media (min-width: $tablet-width) {
+    font-size: $font_size_medium;
+    line-height: $line_height_title_small;
     margin-right: 220px;
-    margin-bottom: 27px;
+    margin-bottom: 29px;
     border: none;
 
     &--weight-gain {
@@ -143,22 +150,6 @@
   }
 }
 
-.reasons__text {
-  font-family: $font_second, $font_family_reserve;
-  font-size: $font_size_base;
-  line-height: $line_height_base;
-  color: $color_text-dark-grey;
-
-  @media (min-width: $tablet-width) {
-    font-size: $font_size_medium;
-    line-height: $line_height_title_small;
-  }
-}
-
-.reasons__link {
-  margin-bottom: -3px;
-}
-
 .reasons__link-item {
   font-size: $font_size_medium;
   line-height: $line_height_middle;
@@ -169,6 +160,7 @@
   left: -1px;
   display: inline-block;
   width: 130px;
+  margin-bottom: -3px;
 
   &::before {
     @include reset_pseudo-element-style;

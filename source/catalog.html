@@ -567,7 +567,15 @@
     <h2 class="visually-hidden">
       Карта
     </h2>
-    <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002974!2d30.320858715925198!3d59.938719169054394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1617794988999!5m2!1sru!2sru" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+    <picture class="map__image map__image--nojs" id="map__image">
+      <source media="(min-width:1440px)" type="image/webp" srcset="img/desktop/map.webp 1x, img/desktop/map@2x.webp 2x">
+      <source media="(min-width:768px)" type="image/webp" srcset="img/tablet/map.webp 1x, img/tablet/map@2x.webp 2x">
+      <source type="image/webp" srcset="img/mobile/map.webp 1x, img/mobile/map@2x.webp 2x">
+      <source media="(min-width:1440px)" type="image/png" srcset="img/desktop/map.png 1x, img/desktop/map@2x.png 2x">
+      <source media="(min-width:768px)" type="image/png" srcset="img/tablet/map.png 1x, img/tablet/map@2x.png 2x">
+      <img src="img/mobile/map.png" srcset="img/mobile/map.png 1x, img/mobile/map@2x.png 2x" alt="Местоположение компании Cat Energy - Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
+    </picture>
+    <iframe class="map__iframe map__iframe--nojs" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002974!2d30.320858715925198!3d59.938719169054394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1617794988999!5m2!1sru!2sru" style="border: 0;" allowfullscreen="" loading="lazy" id="map__iframe"></iframe>
   </section>
 
 </main>
@@ -575,13 +583,11 @@
 <footer class="page-footer">
   <div class="container">
     <div class="page-footer__wrapper">
-      <div class="page-footer__copyright copyright">
-        <a class="copyright__logo" href="index.html">
-          <svg class="copyright__image" width="128" height="24" aria-label="Логотип CAT ENERGY">
-            <use xlink:href="img/sprite.svg#footer-logo"></use>
-          </svg>
-        </a>
-      </div>
+      <a class="page-footer__copyright" href="index.html">
+        <svg class="copyright__image" width="128" height="24" aria-label="Логотип CAT ENERGY">
+          <use xlink:href="img/sprite.svg#footer-logo"></use>
+        </svg>
+      </a>
       <section class="social">
         <h2 class="visually-hidden">
           Социальные сети
@@ -613,14 +619,12 @@
           </li>
         </ul>
       </section>
-      <div class="page-footer__developer developer">
-        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
-          <p class="developer__text">HTML Academy</p>
-          <svg class="developer__logo" width="100%" height="100%" aria-label="Логотип HTML Academy">
-            <use xlink:href="img/sprite.svg#htmlacademy"></use>
-          </svg>
-        </a>
-      </div>
+      <a class="page-footer__developer developer" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на страницу 'HTML и CSS. Адаптивная вёрстка и автоматизация' от HTML Academy">
+        <p class="developer__text">HTML Academy</p>
+        <svg class="developer__logo" width="100%" height="100%" aria-label="Логотип HTML Academy">
+          <use xlink:href="img/sprite.svg#htmlacademy"></use>
+        </svg>
+      </a>
     </div>
   </div>
 </footer>
